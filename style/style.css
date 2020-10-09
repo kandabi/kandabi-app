@@ -5,7 +5,7 @@ body {
     padding:0;
     margin:0;
     position: absolute;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: 'robotoregular';
 }
 
@@ -19,12 +19,17 @@ img {
 
 h1 {
     font-family: 'robotobold';
+    cursor: default;
 }
 
 span {
     color: #fff;
     font-weight: normal;
     cursor: default;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */     
 }
 
 button {
@@ -47,9 +52,9 @@ button:focus {
 }
 
 .content{
-    width: 95%;
+    width: 95.5%;
     height: 25%;
-    margin-left: 80px;
+    margin-left: 4.5%;
     position: relative;
     overflow: hidden;
 }
@@ -92,11 +97,14 @@ button:focus {
 .home .contact_btn:hover{
     background-color:#FFF31C;;
     color:#FD1056;;
+    cursor:pointer;
+
 }
 
 .sidebar{
-    background-color: #181818;
-    min-width:80px;
+    background-color: #1D1D1D;
+    width: 4.5%;
+    min-width: 75px;
     height:100%;
     position: fixed;
     z-index: 1;
@@ -104,6 +112,13 @@ button:focus {
     left: 0;
     border-right: 1px solid #FD1056; 
     overflow: hidden;
+    filter: brightness(80%);
+    transition: 300ms ease-out;
+}
+
+.sidebar:hover{
+    filter: brightness(100%);
+    border-right: 1px solid #FFF31C; 
 }
 
 .sidebar .logo{
@@ -123,12 +138,50 @@ button:focus {
 }
 
 .sidebar .menu .item {
-    color:#FD1056   ;
     text-align: center;
-    padding-top: 25px;
-    padding-bottom:25px;
-    height:35px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    height: 35px;
+    width: 100%;
 }
+
+.sidebar .menu .item span{
+    background-color: rgba(253,16,86, 0.05);
+    color: #EADC19;
+    border: 1px solid rgba(234,220,25, 0.5);
+    border-right:0;
+    border-left:0;
+    position: absolute;
+    transition: 300ms ease-out;
+    text-align: center;
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin: 2px;
+    right: -0;
+    opacity: 0;
+    font-family: 'robotobold';
+}
+
+
+.sidebar .menu .item:hover span{
+    opacity:1;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sidebar .menu .item:hover img{
+    opacity: 0;
+}
+
+
+.sidebar .icon{
+    width:30px;
+    height:30px;
+    transition: 300ms ease-out;
+}
+
+
 
 .text-main {
     position:relative;
@@ -144,7 +197,6 @@ button:focus {
     font-size: 72px;
     margin: 0;
     padding:0;
-    cursor: default;
 }
 
 .text-main .letter{
@@ -165,7 +217,7 @@ button:focus {
     transition: bounce 0.3s ease-out;
 }
 
-.text-main .letter:hover{
+.text-main .letter:hover, .text-main .bounce:hover{
     color:#FFF31C;
 }
 
@@ -177,7 +229,6 @@ button:focus {
 }  
 
 .home .text-secondary span{
-    
     letter-spacing: 5px;
 }
 
@@ -210,9 +261,7 @@ button:focus {
     height:72px;
 }
 
-.about .text-main .bounce:hover{
-    color:#FFF31C;
-}
+
 
 .about video{
     z-index: 0;
@@ -220,17 +269,24 @@ button:focus {
     min-height:100%;
     position: absolute;
     top: 0;
-    -webkit-filter: blur(4px) brightness(30%);
-    -moz-filter: blur(4px) brightness(30%);
-    -o-filter: blur(4px) brightness(30%);
-    -ms-filter: blur(4px) brightness(30%);
-    filter: blur(0) brightness(25%);
+    -webkit-filter: brightness(30%);
+    -moz-filter: brightness(30%);
+    -o-filter: brightness(30%);
+    -ms-filter: brightness(30%);
+    filter: brightness(25%);
 }
 
 .portfolio .text-main{
     padding-top:50px;
     padding-bottom:50px;
 }
+
+
+.contact .text-main{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
 
 .swiper-container {
     height: 80%;

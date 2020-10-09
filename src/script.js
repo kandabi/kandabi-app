@@ -1,4 +1,5 @@
-$(function () {
+function Init()
+{
     Particles.init({
         selector: '#canvas',
         color: "#FD1056",
@@ -33,6 +34,10 @@ $(function () {
         $(this).removeClass("animation-spin")
     });
 
+    $(".letter").hover(function () {
+        $(this).addClass("animation-spin");
+    });
+    
     var mySwiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
@@ -60,4 +65,10 @@ $(function () {
         backDelay: 1200,
         startDelay: 700,
       });
+}
+
+
+
+$(function () {
+   Init();
 });
