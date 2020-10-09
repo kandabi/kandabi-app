@@ -7,30 +7,49 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src="./src/jquery-3.5.1.slim.min.js"></script>
     <script src="./src/particles.min.js"></script>
+    <script src="./src/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="./src/script.js"></script>
+    <link rel="stylesheet" href="./src/swiper.min.css">
     <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
      <div class='body'>
         <div class='sidebar'>
-            <a class="logo" href="./index.html">
+            <a class="bigspin logo" href="./index.html">
                 <img src="./resources/logo_yellow.png" alt="">
             </a>
-
             <div class="menu">
                 <div class="item">
                     Home
                 </div>
                 <div class="item">
-                    Portfolio
-                </div>
-                <div class="item">
                     About
                 </div>
+                <div class="item">
+                    My Work
+                </div>
+                <div class="item">
+                    Contact
+                </div>
+                <div class="item">
+                    Resume
+                </div>
+                <div class="item">
+                    Linkedin
+                </div>
+                <div class="item">
+                    Github
+                </div>
             </div>
-        </div>  
-        <div class='content'>
-            <div class="text-zone">
+        </div>
+
+        <div class="canvas">
+            <canvas id='canvas'></canvas>
+        </div>
+
+        <div class='content home'>
+            <div class="text-main">
                 <h1>
                     <span class="letter">H</span><!-- 
                 ---><span class="letter">i</span><!--  
@@ -39,7 +58,7 @@
                 ---><span class="letter">I</span><!-- 
                 ---><span class="letter">'</span><!-- 
                 ---><span class="letter">m</span>
-                    <img class="logo" src="./resources/logo_red.png"><!-- 
+                    <img class="bigspin logo" src="./resources/logo_red.png"><!-- 
                 ---><span class="letter">v</span><!-- 
                 ---><span class="letter">i</span><!-- 
                 ---><span class="letter">v</span><!-- 
@@ -64,13 +83,119 @@
                 ---><span class="letter">e</span><!-- 
                 ---><span class="letter">r</span><!-- 
                 ---><span class="letter">.</span> 
-                    
                 </h1>
             </div>
+            <div class="text-secondary">
+                <span>
+                    
+                    <div id="typed-strings">
+                        <p>C++</p>
+                        <p>C#</p>
+                        <p>Python</p>
+                        <p>Game</p>
+                        <p>Backend</p>
+                        <p>Machine Learning</p>
+                        <p></p>
+                        <p>:)</p>
+                      </div>
+                    <b id="typed"></b>
+                Programmer
+              </span>
+            </div>
+            <button class="contact_btn">
+                Contact Me!
+            </button>
         </div>  
-        <canvas class="canvas"></canvas>
+
+
+        <div class="content about">
+            <div class="text-main">
+                <h1>
+                    <img class="bounce logo" src="./resources/logo_red.png"><!--
+                ---><span class="bounce">b</span><!--
+                ---><span class="bounce">o</span><!--
+                ---><span class="bounce">u</span><!--
+                ---><span class="bounce">t</span>
+                    <span class="bounce">M</span><!--
+                ---><span class="bounce">e</span>
+                </h1>
+            </div>
+        
+            <div class="text-secondary">
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                    <br>
+                    <br>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <br>
+                    <br>
+                    Duis aute irure dolor in reprehenderit in
+                </span>
+            </div>
+        
+            <video autoplay loop>
+                <source src="./resources/drone.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="content portfolio">
+            <div class="text-main">
+                <h1>
+                    <img class="bounce logo" src="./resources/letter_P.png"><!--
+                ---><span class="bounce">r</span><!--
+                ---><span class="bounce">o</span><!--
+                ---><span class="bounce">j</span><!--
+                ---><span class="bounce">e</span><!--
+                ---><span class="bounce">c</span><!--
+                ---><span class="bounce">t</span><!--
+                ---><span class="bounce">s</span>
+                </h1>
+            </div>
+
+
+
+
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <iframe width="60%" height="85%" src="https://www.youtube.com/embed/_MmPO0d6ah8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <iframe width="60%" height="85%" src="https://www.youtube.com/embed/_MmPO0d6ah8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="swiper-slide">
+                        <iframe width="60%" height="85%" src="https://www.youtube.com/embed/_MmPO0d6ah8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+                    
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <div class="text-main">
+            <h1>
+                <span class="bounce">C</span><!--
+            ---><span class="bounce">o</span><!--
+            ---><span class="bounce">n</span><!--
+            ---><span class="bounce">t</span><!--
+            ---><span class="bounce">a</span><!--
+            ---><span class="bounce">c</span><!--
+            ---><span class="bounce">t</span>
+                <span class="bounce">M</span><!--
+            ---><span class="bounce">e</span>
+            </h1>
+        </div>
+
     </div> 
-    
     
 </body>
 </html>
