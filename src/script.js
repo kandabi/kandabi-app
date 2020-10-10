@@ -65,6 +65,15 @@ function Init()
         backDelay: 1200,
         startDelay: 700,
       });
+
+
+      $('.sidebar .item').click(function(){
+            var name = $(this).attr('value');
+            $('html, body').animate({
+                scrollTop: $("." + name).offset().top
+            }, 1500);
+             
+      });
 }
 
 

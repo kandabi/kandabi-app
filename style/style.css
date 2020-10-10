@@ -146,7 +146,7 @@ button:focus {
 }
 
 .sidebar .menu .item span{
-    background-color: rgba(253,16,86, 0.05);
+    background-color: rgba(253,16,86, 0.15);
     color: #EADC19;
     border: 1px solid rgba(234,220,25, 0.5);
     border-right:0;
@@ -176,8 +176,8 @@ button:focus {
 
 
 .sidebar .icon{
-    width:30px;
-    height:30px;
+    width:34px;
+    height:34px;
     transition: 300ms ease-out;
 }
 
