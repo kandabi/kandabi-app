@@ -130,9 +130,9 @@ button:focus {
 }
 
 .sidebar .menu{
-    height: 530px;
+    height: 100%;
     width: 100%;
-    top: 16%;
+    top: 11%;
     position: absolute;
     
 }
