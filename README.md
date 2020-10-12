@@ -1,1 +1,1 @@
-# kandabi-app
+# nelify-app
