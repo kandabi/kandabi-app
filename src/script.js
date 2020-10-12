@@ -1,12 +1,17 @@
+
+$(function () {
+    Init();
+    if(enableMap)
+        include("https://maps.googleapis.com/maps/api/js?key=AIzaSyDxWeygwBYan8igZjGE2F9MB0pcfDSw9yM&callback=initMap&libraries=&v=weekly")
+ });
+
+
 function Init()
 {
-    Particles.init({
-        selector: '#canvas',
-        color: "#FD1056",
-        sizeVariations: 4,
-        maxParticles: 140,
-        minDistance: 110,
-        connectParticles: true
+    console.log("device.mobile() === %s", device.mobile());
+
+    particlesJS.load('particles', './src/particles.json', function() {
+        console.log('callback - particles.js config loaded');
     });
 
     $(".sidebar .bigspin, .text-main .bigspin").hover(function () {
@@ -42,7 +47,7 @@ function Init()
         // Optional parameters
         direction: 'horizontal',
         centeredSlides: true,
-        loop: true,
+        // loop: true,
         autoplay: { delay: 3000, },
         // If we need pagination
         pagination: {
@@ -67,17 +72,33 @@ function Init()
       });
 
 
-      $('.sidebar .item').click(function(){
+      $('.sidebar .item, .contact_btn').click(function(){
             var name = $(this).attr('value');
             $('html, body').animate({
                 scrollTop: $("." + name).offset().top
             }, 1500);
              
       });
+
+
+      $(".form").submit(function(e) {
+        e.preventDefault();
+        console.log('submit form')
+    });
+
 }
 
+ function include(filename)
+ {
+    var head = document.getElementsByTagName('head')[0];
+ 
+    var script = document.createElement('script');
+    script.src = filename;
+    script.type = 'text/javascript';
+    script.add
+ 
+    head.appendChild(script)
+ }   
 
 
-$(function () {
-   Init();
-});
+

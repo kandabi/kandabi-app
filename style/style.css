@@ -22,6 +22,10 @@ h1 {
     cursor: default;
 }
 
+a:link{
+    text-decoration: none;
+}
+
 span {
     color: #fff;
     font-weight: normal;
@@ -33,9 +37,9 @@ span {
 }
 
 button {
-    border: 1px solid  #FFF31C;
+    border: 1px solid  #08FDD8;
     position: relative;
-    color: #FFF31C;
+    color: #08FDD8;
     font-family: 'robotomedium';
     font-size:18px;
     letter-spacing: 4.5px;
@@ -43,6 +47,10 @@ button {
 
 button:focus {
     outline:0;
+}
+
+textarea{
+    font-family: 'robotomedium';
 }
 
 .body{
@@ -59,50 +67,99 @@ button:focus {
     overflow: hidden;
 }
 
-.home{
-    /* border: 1px solid white; */
+/* .home{
+    border: 1px solid white;
 }
 
 .about{
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
 }
 
 .contact{
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
 } 
 
 .portfolio{
-    /* border: 1px solid purple; */
+    border: 1px solid purple;
     overflow: initial;
-}
+} */
 
-.canvas{
+.particles{
     width:100%;
-    height:25%;
-    /* display: block; */
+    height:100%;
     position: absolute;
     z-index: 0;
     top: 0;
     left: 0;
 }
 
-.home .contact_btn{
+.button{
+    background-color: transparent;
+   
+	color: #fff;
+	display: block;
+    position: relative;
+    z-index: 0;
+	border: 2px solid #08FDD8;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.button:hover {
+	color: #000 !important;
+	background-color: transparent;
+    text-shadow: nthree;
+    cursor:pointer;
+}
+.button:hover:before {
+	left: 0%;
+	right: auto;
+    width: 100%;
+}
+.button:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: #08FDD8;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.contact_btn {
+    margin-left: 210px;
     width: 190px;
     height: 60px;
-    background-color: transparent;
-    margin-left: 210px;
-    position: relative;
 }
 
-.home .contact_btn:hover{
-    background-color:#FFF31C;;
-    color:#FD1056;;
-    cursor:pointer;
 
+
+
+.sidebar .menu .item:hover .button{
+    opacity: 1;
 }
+.sidebar .menu .item:hover img{
+    opacity: 0;
+} 
+
+.sidebar .menu .item .button{
+    opacity: 0;
+    bottom: 41px;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    border:none;
+}
+
+
 
 .sidebar{
-    background-color: #1D1D1D;
+    background-color: #141414;
     width: 4.5%;
     min-width: 75px;
     height:100%;
@@ -110,16 +167,16 @@ button:focus {
     z-index: 1;
     top: 0;
     left: 0;
-    border-right: 1px solid #FD1056; 
+    border-right: 1px solid #08FDD8; 
     overflow: hidden;
-    filter: brightness(80%);
+     /* filter: brightness(85%);  */
     transition: 300ms ease-out;
 }
 
 .sidebar:hover{
-    filter: brightness(100%);
-    border-right: 1px solid #FFF31C; 
+    background-color:#122421;
 }
+
 
 .sidebar .logo{
     margin-top: 15px;
@@ -132,7 +189,7 @@ button:focus {
 .sidebar .menu{
     height: 100%;
     width: 100%;
-    top: 11%;
+    top: 20%;
     position: absolute;
     
 }
@@ -145,39 +202,10 @@ button:focus {
     width: 100%;
 }
 
-.sidebar .menu .item span{
-    background-color: rgba(253,16,86, 0.15);
-    color: #EADC19;
-    border: 1px solid rgba(234,220,25, 0.5);
-    border-right:0;
-    border-left:0;
-    position: absolute;
-    transition: 300ms ease-out;
-    text-align: center;
-    width: 100%;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    margin: 2px;
-    right: -0;
-    opacity: 0;
-    font-family: 'robotobold';
-}
-
-
-.sidebar .menu .item:hover span{
-    opacity:1;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.sidebar .menu .item:hover img{
-    opacity: 0;
-}
-
 
 .sidebar .icon{
-    width:34px;
-    height:34px;
+    width:35px;
+    height:35px;
     transition: 300ms ease-out;
 }
 
@@ -185,12 +213,13 @@ button:focus {
 
 .text-main {
     position:relative;
-    min-width: 700px;
+    width:670px;
     max-height: 90%;
     z-index: 5;
-    padding-top: 20%;
-    padding-left: 145px;
+    margin-top: 17%;
+    margin-left: 145px;
 }
+
 
 .text-main h1{
     line-height: 53px;
@@ -218,7 +247,7 @@ button:focus {
 }
 
 .text-main .letter:hover, .text-main .bounce:hover{
-    color:#FFF31C;
+    color:#08FDD8;
 }
 
 .text-main .logo{
@@ -227,6 +256,10 @@ button:focus {
     height: 62px;
     position: relative;
 }  
+
+.home .text-main{
+    margin-top:20%;
+}
 
 .home .text-secondary span{
     letter-spacing: 5px;
@@ -242,22 +275,26 @@ button:focus {
     position: relative;
     font-size: 28px;
     z-index: 1;
+    letter-spacing: 3px;
 }
 
 .about .text-main{
-    padding-left:200px;
-    padding-top: 22%;
-    z-index:1;
+    padding-left: 50px;
+    margin-top: 25%;
+    z-index: 1;
 }
 
 .about .text-secondary{
     margin-left: 205px;
-    letter-spacing: 3px;
+
     font-size: 19px;
 }
 
+
+
+
 .about .text-main .logo{
-    left: 0px;
+    left: 13px;
     height:72px;
 }
 
@@ -277,14 +314,112 @@ button:focus {
 }
 
 .portfolio .text-main{
-    padding-top:50px;
-    padding-bottom:50px;
+    margin-top:50px;
+    margin-bottom:50px;
 }
 
 
 .contact .text-main{
-    padding-top:50px;
-    padding-bottom:50px;
+    margin-top:120px;
+    margin-bottom:70px;
+}
+
+.contact .text-main span{
+    color:#08FDD8;
+}
+
+.contact .map{
+    height: 102%;
+    width: 53%;
+    position: absolute;
+    right: 0;
+    bottom: -23px;
+    /* border:1px solid orange; */
+}
+
+.contact .text-secondary{
+    font-size: 18px;
+    width: 35%;
+}
+
+
+.form{
+    width: 35%;
+    height: 50%;
+    margin-left: 145px;
+    position: relative;
+}
+
+.form input, .form textarea{
+    background-color: #2B2B2B;
+    color: #848484;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    margin: 5px;
+    transition: ease-in-out, width .35s ease-in-out;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    padding-left: 22px;
+    outline: none;
+}
+
+.input_container {
+    width: 100%;
+    height:70px;
+    margin-top: 15px;
+    margin-bottom:15px;
+    position: relative;
+    overflow: hidden;
+    /* overflow:hidden; */
+  }
+
+    .input_container.first{
+      width: 49%;
+    }
+
+    .input_container.second{
+        position: absolute;
+        width: 49%;
+        top: 0;
+        right: 0;
+        margin: 0;
+    }
+
+    .input_container.fourth{
+        height:220px;
+    }
+
+    .input_container.fourth textarea{
+        padding-top: 17px;
+
+    }
+  
+  input ~ .border, textarea ~ .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    width: 0;
+    height: 2px;
+    background-color: #08FDD8;
+    
+  }
+  
+  input:focus ~ .border, textarea:focus ~ .border {
+    width: 110%;
+    transition: 0.4s;
+  }
+
+
+.submit_btn {
+    right: 0;
+    /* margin-left: 310px; */
+    width: 150px;
+    height: 50px;
+    margin-top:25px;
+    position: absolute;
 }
 
 
@@ -311,6 +446,25 @@ button:focus {
     -webkit-align-items: center;
     align-items: center;
 }
+
+
+
+
+
+@media only screen and (max-height: 750px) {
+    .text-main{
+        margin-top: 8%;
+    }
+
+    .sidebar .menu{
+        top: 12%;     
+    }
+  }
+
+
+
+
+
 
 
 .animation-bounce {

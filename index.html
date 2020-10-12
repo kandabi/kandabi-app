@@ -5,13 +5,12 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Aviv Kandabi</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src="./src/jquery-3.5.1.min.js"></script>
-    <script src="./src/particles.min.js"></script>
-    <script src="./src/swiper.min.js"></script>
-    <script src="./src/typed.min.js"></script>
-    <script src="./src/script.js"></script>
     <link rel="stylesheet" href="./style/swiper.min.css">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="./src/current-device.min.js"></script>
+    <script>
+        var enableMap = false;
+    </script>
 </head>
 <body>
      <div class='body'>
@@ -22,48 +21,43 @@
             <div class="menu">
                 <div value='home' class="item">
                     <img class='icon' src="./resources/images/home.png">
-                    <span class='link'>Home</span>
+                    <button class='link button'>Home</button>
                 </div>
                 <div value='about' class="item">
                     <img class='icon' src="./resources/images/about.png">
-                    <span>About</span>
+                    <button class='link button'>About</button>
                 </div>
                 <div value='portfolio' class="item">
-                    <img class='icon' src="./resources/images/project.png">
-                    <span>Projects</span>
+                    <img class='icon' src="./resources/images/projects.png">
+                    <button class='link button'>Projects</button>
                 </div>
                 <div value='contact' class="item">
                     <img class='icon' src="./resources/images/email.png">
-                    <span>Contact</span>
+                    <button class='link button'>Contact</button>
                 </div>
+                <!-- <br> -->
                 <div class="item">
                     <img class='icon' src="./resources/images/resume.png">
-                    <a href="https://www.example.com" target="_blank">
-                        <span>Resume</span>
+                    <a href="./resources/קורות חיים מפתח.pdf" target="_blank">
+                        <button class='link button'>Resume</button>
                     </a>
                 </div>
                 <div class="item">
                     <img class='icon' src="./resources/images/linkedin.png">
                     <a href="https://www.linkedin.com/in/aviv-kandabi/" target="_blank">
-                        <span>
-                          Linkedin
-                        </span>
+                        <button class='link button'>Linkedin</button>
                     </a>
                 </div>
                 <div class="item">
                     <img class='icon' src="./resources/images/github.png">
                     <a href="https://github.com/kandabi" target="_blank"> 
-                        <span>
-                          Github
-                        </span>
+                        <button class='link button'>Github</button>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="canvas">
-            <canvas id='canvas'></canvas>
-        </div>
         <div class='content home'>
+            <div id="particles" class='particles'></div>
             <div class="text-main">
                 <h1>
                     <span class="letter">H</span><!-- 
@@ -109,13 +103,13 @@
                         <p>Game</p>
                         <p>Backend</p>
                         <p></p>
-                        <p>:P</p>
+                        <p>:)</p>
                       </div>
                     <b id="typed"></b>
                 Programmer
               </span>
             </div>
-            <button class="contact_btn">
+            <button class="contact_btn button" value='contact'>
                 Contact Me!
             </button>
         </div>  
@@ -124,7 +118,8 @@
         <div class="content about">
             <div class="text-main">
                 <h1>
-                    <img class="bounce logo" src="./resources/images/logo_red.png"><!--
+                    <!-- <span class="bounce">A</span> -->
+                    <img class="bounce logo" src="./resources/images/logo_red.png"> <!--
                 ---><span class="bounce">b</span><!--
                 ---><span class="bounce">o</span><!--
                 ---><span class="bounce">u</span><!--
@@ -155,7 +150,8 @@
         <div class="content portfolio">
             <div class="text-main">
                 <h1>
-                    <img class="bounce logo" src="./resources/images/letter_P.png"><!--
+                    <!-- <img class="bounce logo" src="./resources/images/letter_P.png"> -->
+                    <span class="bounce">P</span><!--
                 ---><span class="bounce">r</span><!--
                 ---><span class="bounce">o</span><!--
                 ---><span class="bounce">j</span><!--
@@ -175,14 +171,12 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <iframe width="60%" height="85%" src="https://www.youtube.com/embed/_MmPO0d6ah8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe width="60%" height="85%" src="https://www.youtube.com/embed/_MmPO0d6ah8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
                     </div>
                     <div class="swiper-slide">
-                        <iframe width="60%" height="85%" src="https://www.youtube.com/embed/_MmPO0d6ah8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="swiper-slide">
-                        <iframe width="60%" height="85%" src="https://www.youtube.com/embed/_MmPO0d6ah8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     </div>
                     
@@ -209,9 +203,52 @@
                 ---><span class="letter">e</span>
                 </h1>
             </div>
+            <div class="text-secondary">
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </span>
+            </div>
+
+            <form class="form">
+                <div class="input_container first">
+                    <input class="name" type='text' placeholder="Name">
+                    <span class="border"></span>
+               
+                </div>
+                 <div class="input_container second">
+                    <input class="email" type="email" placeholder="Email">
+                    <span class="border"></span>
+                </div> 
+                <div class="input_container third">
+                    <input type="text" placeholder="Subject">
+                    <span class="border"></span>
+                </div>
+                <div class="input_container fourth">
+                    <textarea placeholder="Message"></textarea>
+                    <span class="border"></span>
+                </div>
+                <!-- <input style='height:50px;' type="submit"> -->
+                <button class="submit_btn button" value='submit'>
+                    Send
+                </button>
+            </form>
+        
+
+
+            <div id='map' class="map"></div>
+
+
         </div>
 
     </div> 
     
+
+    <script src="./src/jquery-3.5.1.min.js"></script>
+    <script src="./src/particles.min.js"></script>
+    <script src="./src/swiper.min.js"></script>
+    <script src="./src/typed.min.js"></script>
+    <script src="./src/script.js"></script>
+    <script src="./src/map.js"></script>
 </body>
 </html>
