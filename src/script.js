@@ -86,7 +86,12 @@ function Init()
             alert("Thank you!");
         });
     });
+
+    $.get("/.netlify/functions/hello", function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
 }
+
 
 
 
