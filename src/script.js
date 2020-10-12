@@ -8,11 +8,9 @@ $(function () {
 
 function Init()
 {
-    console.log("device.mobile() === %s", device.mobile());
+    console.log("Is Mobile: %s", device.mobile());
 
-    particlesJS.load('particles', './src/particles.json', function() {
-        console.log('callback - particles.js config loaded');
-    });
+    particlesJS.load('particles', './src/particles.json');
 
     $(".sidebar .bigspin, .text-main .bigspin").hover(function () {
         $(this).addClass("animation-bigspin");
@@ -61,7 +59,7 @@ function Init()
       })
 
 
-      var typed = new Typed('#typed', {
+    var typed = new Typed('#typed', {
         stringsElement: '#typed-strings',
         loop: true,
         smartBackspace:false,
@@ -69,24 +67,30 @@ function Init()
         backSpeed: 100,
         backDelay: 1200,
         startDelay: 700,
-      });
+    });
 
 
-      $('.sidebar .item, .contact_btn').click(function(){
+    $('.sidebar .item, .contact_btn').click(function(){
             var name = $(this).attr('value');
             $('html, body').animate({
                 scrollTop: $("." + name).offset().top
             }, 1500);
              
-      });
-
-
-      $(".form").submit(function(e) {
-        e.preventDefault();
-        console.log('submit form')
     });
 
+    $(".form").submit(function(e) {
+        e.preventDefault();
+      
+        var $form = $(this);
+        $.post($form.attr("action"), $form.serialize()).then(function() {
+            alert("Thank you!");
+        });
+    });
 }
+
+
+
+
 
  function include(filename)
  {

@@ -210,22 +210,29 @@
                 </span>
             </div>
 
-            <form class="form">
+            <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <div style='display:none;' hidden aria-hidden="true">
+                    <label>
+                      Don’t fill this out if you're human: 
+                      <input name="bot-field" />
+                    </label>
+                </div>
+
                 <div class="input_container first">
-                    <input class="name" type='text' placeholder="Name">
+                    <input class="name" type='text' placeholder="Name" name='name'>
                     <span class="border"></span>
                
                 </div>
                  <div class="input_container second">
-                    <input class="email" type="email" placeholder="Email">
+                    <input class="email" type="email" placeholder="Email" required name='email' >
                     <span class="border"></span>
                 </div> 
                 <div class="input_container third">
-                    <input type="text" placeholder="Subject">
+                    <input type="text" placeholder="Subject" name='subject'>
                     <span class="border"></span>
                 </div>
                 <div class="input_container fourth">
-                    <textarea placeholder="Message"></textarea>
+                    <textarea placeholder="Message" required name='message'></textarea>
                     <span class="border"></span>
                 </div>
                 <!-- <input style='height:50px;' type="submit"> -->
