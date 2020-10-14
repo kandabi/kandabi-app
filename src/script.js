@@ -21,10 +21,6 @@ function Init()
     console.log("Is Mobile: %s", device.mobile());
     particlesJS.load('particles', './src/particles.json');
 
-    // $(".sidebar .bigspin, .text-main .bigspin").hover(function () {
-    //     $(this).addClass("animation-bigspin");
-    // });
-
     $(".letter").hover(function () {
         $(this).addClass("animation-spin");
     });
@@ -49,6 +45,11 @@ function Init()
           el: '.swiper-scrollbar',
           draggable: false,
           clickable: false,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
       })
 
