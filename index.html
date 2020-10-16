@@ -9,11 +9,10 @@
     <script src="./src/current-device.min.js"></script>
 </head>
 <body>
+    <div class='loader'>
+        <img src="./resources/images/loading.gif">
+    </div>
      <div class='body'>
-        <div class='loader'>
-            <img src="./resources/images/loading.gif">
-        </div>
-
         <div class='sidebar'>
             <a class="bounce logo" href="./index.html">
                 <img src="./resources/images/logo_yellow.png" alt="">
@@ -35,7 +34,6 @@
                     <img class='icon' src="./resources/images/email.png">
                     <button class='link button'>Contact</button>
                 </div>
-                <!-- <br> -->
                 <div class="item">
                     <img class='icon' src="./resources/images/resume.png">
                     <a href="./resources/קורות חיים מפתח.pdf" target="_blank">
@@ -63,17 +61,21 @@
                     <span class="bounce">H</span><!-- 
                 ---><span class="bounce">i</span><!--  
                 ---><span class="bounce">,</span><!-- 
-                ---><br><!-- 
-                ---><span class="bounce">I</span><!-- 
+                ---><br>
+
+                </h1>
+                <h1>
+                    <span class="bounce">I</span><!-- 
                 ---><span class="bounce">'</span><!-- 
                 ---><span class="bounce">m</span>
                     <img class="bounce logo" src="./resources/images/logo_red.png"><!-- 
                 ---><span class="bounce">v</span><!-- 
                 ---><span class="bounce">i</span><!-- 
                 ---><span class="bounce">v</span><!-- 
-                ---><span class="bounce">,</span><!-- 
-                ---><br><!--
-                ---><span class="bounce">S</span><!-- 
+                ---><span class="bounce">,</span>
+                </h1>
+                <h2>
+                    <span class="bounce">S</span><!-- 
                 ---><span class="bounce">o</span><!-- 
                 ---><span class="bounce">f</span><!-- 
                 ---><span class="bounce">t</span><!-- 
@@ -92,7 +94,7 @@
                 ---><span class="bounce">e</span><!-- 
                 ---><span class="bounce">r</span><!-- 
                 ---><span class="bounce">.</span> 
-                </h1>
+                </h2>
             </div>
             <div class="text-secondary">
                 <span>
@@ -116,7 +118,7 @@
 
         <div class="content about">
             <div class="text-main">
-                <h1>
+                <h2>
                     <!-- <img class="bounce logo" src="./resources/images/logo_red.png"> -->
                     <span class="bounce">A</span><!-- 
                 ---><span class="bounce">b</span><!--
@@ -125,12 +127,12 @@
                 ---><span class="bounce">t</span>
                     <span class="bounce">M</span><!--
                 ---><span class="bounce">e</span>
-                </h1>
+                </h2>
             </div>
         
             <div class="text-secondary">
                 <span>
-                    Experienced Software Developer, drone enthusiast, open-source advocator, boxer 
+                    Experienced Software Developer, drone enthusiast, open-source advocator 
                     and video-game fan at heart.
                     <br>
                     <br>
@@ -166,11 +168,18 @@
             </div>
 
             <div class="swiper-container">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <div class="swiper-pagination"></div>
+            
+                <div class="swiper-scrollbar"></div>
+
                 <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="project-text"> 
                                 <span>
-                                    <h1>Tello Drone Game</h1>
+                                    <h2>Tello Drone Game</h2>
                                     Developed an Augmented Reality drone video game, where the player is able to fly a real drone and use it to fire virtual weapons.
                                     <br>
                                     <br>
@@ -193,7 +202,7 @@
                         <div class="swiper-slide">
                             <div class="project-text"> 
                                 <span>
-                                    <h1>OpenFTP</h1>
+                                    <h2>OpenFTP</h2>
                                     Developed an open-source software for transferring large files between computers through the internet in a secure and fast manner.
                                     <br>
                                     <br>
@@ -213,7 +222,7 @@
                         <div class="swiper-slide">
                             <div class="project-text"> 
                                 <span>
-                                    <h1>Object Detectors</h1>
+                                    <h2>Object Detectors</h2>
                                     Developed Machine Learning based Object Detectors, able to detect people, vehicles, animals and many different types of complex objects.
                                     <br>
                                     <br>
@@ -235,7 +244,7 @@
                         <div class="swiper-slide">
                             <div class="project-text"> 
                                 <span>
-                                    <h1>Pixel Physics Simulation</h1>
+                                    <h2>Pixel Physics Simulation</h2>
                                     Developed an engaging particle physics simulation,
                                     simulating how water and sand interact with each other                                    
                                     <br>
@@ -256,13 +265,13 @@
                         <div class="swiper-slide">
                             <div class="project-text"> 
                                 <span>
-                                    <h1>avivkandabi.com</h1>
+                                    <h2>avivkandabi.com</h2>
                                     Managing a responsive and modern design, this website includes usage of many web-based plugins such as: 
                                     <br>
                                     jQuery, Google Maps, bounce.js, particles.js, swiper.js and more...
                                     <br>
                                     <br>
-                                    The application's backend is built entirely as a Nodejs server-less function hosted by Netlify.
+                                    The application's backend is built as a Nodejs server-less function hosted by Netlify.
                                     <br>
                                     <br>
                                     <span class='project-bottom-text'>
@@ -278,7 +287,7 @@
                         <div class="swiper-slide">
                             <div class="project-text"> 
                                 <span>
-                                    <h1>Just Donate</h1>
+                                    <h2>Just Donate</h2>
                                     Just Donate is an application that users can register to, and they pose challenges for themselves in which they "bet" with their friends. 
                                     <br>
                                     <br>
@@ -299,9 +308,9 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="project-text"> 
+                            <div class="project-text smaller"> 
                                 <span>
-                                    <h1>Fuze Tea Campaign App</h1>
+                                    <h2>Fuze Tea Campaign App</h2>
                                     Consumers who purchase Fuze Tea products during the activity accumulate "Fuzes" - a numerical value imprinted on the product, with a different value on each product. These "Fuzes" can be fed into the activity site, so the user could gain points. Each label was issued with a unique serial number, which had to be typed on the site, in order to verify the purchase of the product.
                                     <br>
                                     <br>
@@ -320,16 +329,16 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="project-text"> 
+                            <div class="project-text smaller"> 
                                 <span>
-                                    <h1>Coca-Cola Wow Tour 2017</h1>
+                                    <h2>Coca-Cola Wow Tour 2017</h2>
                                     The "Coca-Cola Wow Tour" activity allows registration to the site and accumulation of points by performing various activities.
                                     <br>
                                     <br>
                                     The activities include - digital tasks on the site (questionnaires, social tags, sharing with friends), performing various physical tasks (surprising parents with breakfast, reminding people at the pool and sea to apply sunscreen, ect.), and volunteering in various organizations throughout the country.
                                     <br>
                                     <br>
-                                    The participants who accumulate most of the points will receive tickets for Coca Cola's big summer event. Fly to the big journey of the Coca-Cola Wow Tour - in the US or Europe.                                    
+                                    The participants who accumulate most of the points will receive tickets for Coca Cola's big summer event.                               
                                     <br>
                                     <br>
                                     <span class='project-bottom-text'>
@@ -343,9 +352,9 @@
                         </div>
                         
                         <div class="swiper-slide">
-                            <div class="project-text"> 
+                            <div class="project-text smaller"> 
                                 <span>
-                                    <h1>Fuze Tea New Look or Not</h1>
+                                    <h2>Fuze Tea New Look or Not</h2>
                                     We developed an application for the Fuze Tea brand, in which the user is asked to browse between pictures in a "Tinder" style interface, and to determine whether the image is new or not.
                                     <br>
                                     <br>
@@ -363,9 +372,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="project-text"> 
+                            <div class="project-text smaller"> 
                                 <span>
-                                    <h1>Sprite Target Zero</h1>
+                                    <h2>Sprite Target Zero</h2>
                                     In the "Sprite Target Zero" activity, the users answer different trivia questions, which consist of text, images, graphics and video. Users who accumulate the most points in the fastest time, will be the winners.                                    <br>
                                     <br>
                                     A management system was established for the operation of the activity, which was used by the client and the advertising agency, in order to receive information about participants and winners, as well as management of the questions that appeared in the application.                                    <br>
@@ -382,15 +391,7 @@
                         </div>
                 </div>
 
-                <!-- Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
 
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
             </div>
         </div>
 
@@ -460,12 +461,15 @@
                         <span style='color:#08FDD8'>@: </span>kandabiaviv@gmail.com
                     </span>
                 </div>
+
+                <div id='map' class="map">
+
+
+                </div>
            </div>
 
-            <div id='map' class="map">
 
 
-            </div>
 
 
         </div>

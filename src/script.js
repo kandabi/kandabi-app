@@ -1,5 +1,6 @@
 
 $(function () {
+
     Init();
 
     var scrollPos = $(document).scrollTop();
@@ -19,7 +20,11 @@ function loadMap()
 function Init()
 {
     console.log("Is Mobile: %s", device.mobile());
-    particlesJS.load('particles', './src/particles.json');
+    particlesJS.load('particles', './src/particles.json', function(){
+        console.log('particles loaded')
+        particlesJS.interactivity.events.onhover.enable = false;
+    });
+    
 
     $(".letter").hover(function () {
         $(this).addClass("animation-spin");
