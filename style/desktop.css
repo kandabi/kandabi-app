@@ -5,8 +5,7 @@ body ,html{
     padding:0;
     margin:0;
     position: absolute;
-    /* overflow-x: hidden;  */
-    font-size:12px;
+    /* overflow-x: hidden; */
     font-family: 'robotoregular';
 }
 
@@ -18,17 +17,9 @@ img {
     max-width: 100%;
 }
 
-h1, h2 {
+h1 {
     font-family: 'robotobold';
     cursor: default;
-}
-
-h1{
-    font-size: 3rem;
-}
-
-h2{
-    font-size: 2.3rem;
 }
 
 a:link{
@@ -62,43 +53,44 @@ textarea{
     font-family: 'robotomedium';
 }
 
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }
+  
+
 .body{
     width: 100%;
     height: 400%;
     position: relative;
-    /* overflow-x:hidden; */
 }
 
 .content{
     /* display:none; */
     opacity:0;
+    width: 95.5%;
     height: 25%;
-    width: 100%;
+    margin-left: 4.5%;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
-.home{
-    /* border: 1px solid white; */
-    /* display:none; */
+/* .home{
+    border: 1px solid white;
 }
 
 .about{
-    /* border: 1px solid blue; */
-    /* display:none; */
+    border: 1px solid blue;
 }
 
-.portfolio {
-    /* border: 1px solid white; */
-    /* display:none; */
-}
-
-.contact{   
-    /* border: 1px solid yellow; */
-    height:45%;
-    /* display:none; */
+.contact{
+    border: 1px solid yellow;
 } 
 
+.portfolio{
+    border: 1px solid purple;
+    overflow: initial;
+} */
 
 .particles{
     width:100%;
@@ -146,7 +138,7 @@ textarea{
 }
 
 .contact_btn {
-    margin: auto;
+    margin-left: 14.5%;
     width: 190px;
     height: 60px;
 }
@@ -154,17 +146,19 @@ textarea{
 
 
 .sidebar{
-    opacity:0; 
+    /* display:none; */
+    opacity:0;
     background-color: #141414;
-    width: 100%;
-    height: 10%;
-    max-height:60px;
+    width: 4.5%;
+    /* min-width: 75px; */
+    height:100%;
     position: fixed;
-    z-index: 5;
+    z-index: 1;
     top: 0;
     left: 0;
-    border-bottom   : 1px solid #08FDD8; 
+    border-right: 1px solid #08FDD8; 
     overflow: hidden;
+     /* filter: brightness(85%);  */
     transition: 300ms ease-out;
 }
 
@@ -197,14 +191,15 @@ textarea{
 
 
 .sidebar .logo{
+    margin-top: 20%;
+    margin-bottom: 40%;
     display: block;
-    width: 10%;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .sidebar .menu{
-    display:none;
     height: 100%;
     width: 100%;
     top: 20%;
@@ -228,31 +223,25 @@ textarea{
 
 
 .text-main {
-    position: relative;
-    width: 80%;
+    position:relative;
+    width:670px;
     max-height: 90%;
-    z-index: 1;
-    margin: 0 10%;
+    z-index: 5;
+    margin-top: 17%;
+    margin-left: 12%;
 }
 
 
 .text-main h1{
-    font-size: 3rem;
-    margin-bottom:0;
-    margin-top:0;
-    text-align: left;
-    /* margin-left: 12%; */
-}
-
-.text-main h2{
-    text-align:left;
-    font-size: 2.3rem;
-    margin-top:0;
+    line-height: 53px;
+    font-size: 72px;
+    margin: 0;
+    padding:0;
 }
 
 .text-main .bounce{
-    margin-top:2px;
-    margin-bottom:2px;
+    margin-top:5px;
+    margin-bottom:5px;
     display: inline-block;
     transition: 0.2s;
     cursor: default;
@@ -270,14 +259,14 @@ textarea{
 
 
 .text-main .logo{
-    top: 3px;
-    left: 2px;
-    height: 30px;
+    top: 6px;
+    left: 5px;
+    height: 62px;
     position: relative;
 }  
 
 .home .text-main{
-    padding-top:45%;
+    margin-top:23%;
 }
 
 .home .text-main .bounce, .home .text-main .logo, .home .text-secondary, .contact_btn{
@@ -285,35 +274,32 @@ textarea{
 }
 
 .home .text-secondary span{
-    letter-spacing: 3.5px;
+    letter-spacing: 5px;
 }
 
 .text-secondary{
-    width: 75%;
+    max-width: 720px;
     display: block;
-    margin-left: 12.5%;
+    margin-left: 14.5%;
     margin-top: 2%;
-    margin-bottom: 12%;
+    margin-bottom: 4%;
     text-align: left;
     position: relative;
-    font-size: 1.3rem;
+    font-size: 28px;
     z-index: 1;
     letter-spacing: 3px;
 }
 
 .about .text-main{
-    margin-top: 40%;
+    margin-top: 18%;
     margin-left: 14.5%;
     z-index: 1;
     
 }
 
 .about .text-secondary{
-    /* font-size: 22px; */
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-    width: 90%;
-    margin: 0 5%;
+    font-size: 22px;
+    letter-spacing:1px;
 }
 
 
@@ -324,13 +310,11 @@ textarea{
 }
 
 
-.about{
-    overflow:hidden;
-}
 
 .about video{
     z-index: 0;
-    height:100%;
+    width: 100%;
+    min-height:100%;
     position: absolute;
     top: 0;
     -webkit-filter: brightness(30%);
@@ -338,12 +322,6 @@ textarea{
     -o-filter: brightness(30%);
     -ms-filter: brightness(30%);
     filter: brightness(25%);
-}
-
-.portfolio{
-    height:870px;
-    border-bottom:1px solid #08FDD8;
-    /* border:1px solid green; */
 }
 
 .portfolio .text-main{
@@ -360,11 +338,11 @@ textarea{
 
 
 .contact .text-main{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    margin-left: 7.5%;
-    /* width:35%; */
-    /* display:none; */
+    padding-top: 5%;
+    margin-top: initial;
+    margin-bottom: 2%;
+    margin-left:6%;
+    width:35%;
 }
 
 .contact .text-main span{
@@ -372,32 +350,27 @@ textarea{
 }
 
 .contact .map{
-    height: 100%;
-    width: 100%;
+    height: 102%;
+    width: 53%;
     position: absolute;
     right: 0;
-    bottom: 0;
-    left:0;
-    top:0;
-    
-    /* border:1px solid red; */
+    bottom: -23px;
+    border:1px solid #08FDD8;
     /* background-color: red; */
 }
 
 .contact .map_wrapper{
-    height: 600px;
-    width: 100%;
-    /* border:1px solid red; */
-    /* margin: 0 auto; */
+    height: 102%;
+    width: 53%;
     position: absolute;
-    /* right: 0;
-    bottom: -23px; */
+    right: 0;
+    bottom: -23px;
 }
 
 .contact .text-secondary{
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-    width: 90%;
+    font-size: 19px;
+    letter-spacing: 1.5px;
+    width: 35%;
     margin-left: 6%;
     margin-top: 10px;
     margin-bottom: 35px;
@@ -406,28 +379,27 @@ textarea{
 
 .contact .address{
     background-color: #000;
-    width: 75%;
+    width: 270px;
     position: absolute;
-    height: 90px;
-    bottom:5%;
-    left:50%;
-    transform: translate(-50%, 0);
-    padding: 15px;
+    height: 122px;
+    /* margin-right: 200px; */
+    top: 0;
+    left: 5%;
+    margin-top: 40px;
+    padding: 20px;
     z-index: 5;
-    border:1px solid #2B2B2B;
 }
 
 .contact .address span{
     text-align: left;
-    font-size:1.4rem;
+    font-size:22px;
 }
 
 .form{
-    width: 90%;
-    height: 410px;
-    margin: 0 5%;
+    width: 35%;
+    height: 55%;
+    margin-left: 6%;
     position: relative;
-    /* display:none; */
 }
 
 .form input, .form textarea{
@@ -447,7 +419,7 @@ textarea{
 
 .input_container {
     width: 100%;
-    height:55px;
+    height:60px;
     margin-top: 15px;
     margin-bottom:15px;
     position: relative;
@@ -467,7 +439,7 @@ textarea{
     }
 
     .input_container.fourth{
-        height:190px;
+        height:230px;
     }
 
     .input_container.fourth textarea{
@@ -501,9 +473,9 @@ textarea{
 
 
 .swiper-container {
-    height: 92%;
+    height: 80%;
     color: white;
-    /* border: 1px solid yellow; */
+    margin: 0 auto;
 }
 
 .swiper-slide {
@@ -526,35 +498,21 @@ textarea{
     background-color:#08FDD8;
 }
 
-.swiper-scrollbar{
-    /* display:none; */
-    top:32%;
-}
-
-.swiper-pagination{
-    top:34%;
-}
-
 .swiper-pagination .swiper-pagination-bullet{
-    width:12px;
-    height:12px;    
-    margin: 0 8px !important;
+    width:15px;
+    height:15px;    
+    margin: 0 12px !important;
     margin-bottom: 20px !important;
     background-color:#08FDD8;
     
 }
 
 .swiper-button-next, .swiper-button-prev{
-    z-index:13;
-    top: 40%;
-    padding: 0 5%;
+    bottom: 8%;
+    top: initial;
+    padding: 0 25%;
     color: #08FDD8;
 }
-
-    .swiper-button-next:focus, .swiper-button-prev:focus, .swiper-pagination-bullet:focus{
-        outline:0;
-    }
-
 
 .swiper-pagination .swiper-pagination-bullet-active{
     background-color:#08FDD8;
@@ -562,20 +520,19 @@ textarea{
 }
 
 .swiper-slide .project-content{
-    max-width: 95%;
-    width:95%;
-    height: 230px;
-    position: absolute;
-    top: 20px;
+    width: 50%;
+    height: 70%;
+    margin-bottom: 45px;
+    position: relative;
+    bottom:60px;
 }
 
 
 .swiper-slide .project-content img, .swiper-slide .project-content video{
-    max-width:95%;
-    max-height:100%; 
+    max-height:100%;
     transform: translate(-50%, -50%);
     position: absolute;
-    top:50%; 
+    top:50%;
     left:50%;
 }
 
@@ -587,28 +544,18 @@ textarea{
 
 
 .swiper-slide .project-text{
-    width: 90%;
-    position: absolute;
-    top:42%;
+    bottom:70px;
+    position: relative;
+    width: 30%;
+    padding:15px;
+    padding-right:5%;
     text-align: left;
+    font-size: 18px;
     letter-spacing: 1px;
-    font-size: 1.3rem;
-}
-
-
-.swiper-slide .project-text.smaller{
-    font-size: 1.1rem;
-}
-
-
-.swiper-slide .project-text h2{
-    font-size:1.5rem;
-    text-align: center;
 }
 
 .swiper-slide .project-text .project-bottom-text{
-    font-size:1.6rem;
-    font-weight: 900;
+    font-size:24px;
 }
 
 .swiper-slide .project-text a{
@@ -619,194 +566,37 @@ textarea{
 
 
 .loader{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-.loader img{
-    position: absolute;
+    position: fixed;
     top: 50%;
+    width: 250px;
+    height: 250px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 
-/* 
-@media only screen and (min-width: 768px) {
-    .content{
-        width: 95.5%;
-        margin-left: 4.5%;
+
+
+
+
+/* @media only screen and (max-height: 650px) {
+    .home .text-main, .about .text-main{
+        margin-top: 12% !important;
+    }
+}
+
+@media only screen and (max-height: 750px) {
+    .home .text-main, .about .text-main{
+        margin-top: 10% !important;
     }
 
-    .text-main{
-        width: 670px;
-        margin-top: 17%;
-        margin-left: 12%;
+
+    .contact .text-main .bounce{
+        font-size: 55px !important;
     }
 
-    .text-main .logo{
-        height: 53px;
-    }
-
-    .text-main h1{
-        font-size: 3rem;
-    }
-
-    .text-secondary{
-        font-size: 28px;
-    }
 } */
 
-@media (min-width:480px)  { 
-    /* smartphones, Android phones, landscape iPhone */ 
-}
-@media (min-width:600px)  { 
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
-}
-@media (min-width:801px)  { 
-    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-    .sidebar{
-        width: 4.5%;
-        max-height:initial;
-        height:100%;
-        border-bottom:initial;
-        border-right: 1px solid #08FDD8; 
-    }
-
-    .sidebar .logo{
-        margin-top: 20%;
-        margin-bottom: 40%;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-
-    .content{
-        margin-left:4.5%;
-        width:95.5%;
-    }
-
-    .home .text-main{
-        padding-top: 23%;
-        padding-left: 2%;
-    }
-
-    .text-main .logo {
-        top: 6px;
-        left: 5px;
-        height: 62px;
-    }
-
-    .text-main h1, .text-main h2{
-        font-size: 6rem;
-        line-height: 60px;
-    }
-
-    .home .text-secondary span {
-        letter-spacing: 5px;
-    }
-
-    .text-secondary {
-        padding-left: 1.5%;
-        margin-bottom: 3%;
-        bottom: 20px;
-        font-size: 2.3rem;
-    }
-
-    .contact_btn{
-        margin-left:14.5%;
-    }
-
-    .about video{
-        height:initial;
-        min-height: 100%;
-        width:100%;
-    }
-
-    .about .text-main{
-        margin-top: 18%;
-    }
-
-    .about .text-secondary{
-        max-width: 720px;
-        margin-left: 13%;
-        font-size: 22px;
-        letter-spacing: 1px;
-    }
-
-
-    .portfolio{
-        height:25%;
-        border-bottom:initial;
-    }
-
-    .swiper-container{
-        height:80%;   
-    }
-
-    .swiper-button-next, .swiper-button-prev{
-        bottom: 8%;
-        top: initial;
-        padding: 0 25%;
-    }
-
-    .swiper-pagination{
-        top:initial;
-    }
-
-    .swiper-pagination .swiper-pagination-bullet{
-        width:15px;
-        height:15px;    
-        margin: 0 12px !important;
-        margin-bottom: 20px !important;
-    }
-
-    .swiper-slide .project-text{
-        top:initial;
-        bottom: 70px;
-        position: relative;
-        width: 30%;
-        padding: 15px;
-        padding-right: 5%;
-        font-size: 1.6rem;
-        text-align: left;
-    }
-
-    .swiper-slide .project-content{
-        width: 50%;
-        height: 70%;
-        margin-bottom: 45px;
-        position: relative;
-        top:initial;
-        bottom: 60px;
-    }
-
-    .swiper-slide .project-text h2{
-        text-align:left;
-        font-size: 3rem;
-    }
-
-    .swiper-slide .project-text .project-bottom-text {
-        font-size: 3rem;
-        font-size: 2.1rem;
-    }
-
-    .swiper-slide .project-text.smaller{
-        font-size:1.6rem;
-    }
-
-    .swiper-scrollbar{
-        top:initial;
-    }
-}
-@media (min-width:1025px) { 
-    /* big landscape tablets, laptops, and desktops */ 
-}
-@media (min-width:1281px) { 
-    /* hi-res laptops and desktops */ 
-}
 
 
 .animation-bounce {

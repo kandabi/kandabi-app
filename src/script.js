@@ -14,12 +14,15 @@ function loadMap()
 {
     mapIncluded = true;
     window.onscroll = null;
-    //include("https://maps.googleapis.com/maps/api/js?key=AIzaSyCrH9vga3QM9PzgYfb_1goHhIGSSos_gQo&callback=initMap&libraries=&v=weekly")
+    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyCrH9vga3QM9PzgYfb_1goHhIGSSos_gQo&callback=initMap&libraries=&v=weekly")
 }
+
 
 function Init()
 {
     console.log("Is Mobile: %s", device.mobile());
+
+
     particlesJS.load('particles', './src/particles.json');
     
 
