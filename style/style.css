@@ -81,6 +81,7 @@ textarea{
 .home{
     /* border: 1px solid white; */
     /* display:none; */
+    overflow-x: hidden;
 }
 
 .about{
@@ -157,10 +158,9 @@ textarea{
     opacity:0; 
     background-color: #141414;
     width: 100%;
-    height: 10%;
-    max-height:60px;
+    min-height: 55px;
     position: fixed;
-    z-index: 5;
+    z-index: 15;
     top: 0;
     left: 0;
     border-bottom   : 1px solid #08FDD8; 
@@ -199,24 +199,43 @@ textarea{
 .sidebar .logo{
     display: block;
     width: 10%;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 15px;
+    margin-top: 11px;
+    z-index: 5;
+}
+
+.sidebar .hamburger_menu{
+    right: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+    width: 9%;
+    height: 35px;
+    margin-right: 20px;
+    margin-top: 14px;
+    z-index: 5;
 }
 
 .sidebar .menu{
-    display:none;
+    /* display:none; */
+    opacity:0;
     height: 100%;
     width: 100%;
-    top: 20%;
-    position: absolute;
+    top: -100%;
+    left: 0;
+    bottom:0;
+    right: 0;
+    z-index: 5;
+    position: fixed;
+    background-color: #122421;
 }
 
 .sidebar .menu .item {
     text-align: center;
-    margin-top: 25%;
-    margin-bottom: 25%;
-    height: 5%;
-    width: 100%;
+    margin: 7% auto;
+    height: 8%;
+    width: 65%;
+    border-bottom: 1px solid #08FDD8;
 }
 
 
@@ -302,16 +321,15 @@ textarea{
 }
 
 .about .text-main{
-    margin-top: 40%;
+    margin-top: 30%;
     margin-left: 14.5%;
     z-index: 1;
     
 }
 
 .about .text-secondary{
-    /* font-size: 22px; */
     letter-spacing: 1px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     width: 90%;
     margin: 0 5%;
 }
@@ -326,6 +344,7 @@ textarea{
 
 .about{
     overflow:hidden;
+    min-height: 650px;
 }
 
 .about video{
@@ -343,7 +362,6 @@ textarea{
 .portfolio{
     height:870px;
     border-bottom:1px solid #08FDD8;
-    /* border:1px solid green; */
 }
 
 .portfolio .text-main{
@@ -354,7 +372,7 @@ textarea{
 
 
 
-.content.portfolio, .content.contact{
+ .content.contact{
     overflow: visible;
 }
 
@@ -363,12 +381,17 @@ textarea{
     margin-top: 3%;
     margin-bottom: 3%;
     margin-left: 7.5%;
-    /* width:35%; */
-    /* display:none; */
 }
 
 .contact .text-main span{
     color:#08FDD8;
+}
+
+.contact .map_wrapper{
+    border-top: 1px solid #08FDD8;
+    height: 600px;
+    width: 100%;
+    position: absolute;
 }
 
 .contact .map{
@@ -379,19 +402,6 @@ textarea{
     bottom: 0;
     left:0;
     top:0;
-    
-    /* border:1px solid red; */
-    /* background-color: red; */
-}
-
-.contact .map_wrapper{
-    height: 600px;
-    width: 100%;
-    /* border:1px solid red; */
-    /* margin: 0 auto; */
-    position: absolute;
-    /* right: 0;
-    bottom: -23px; */
 }
 
 .contact .text-secondary{
@@ -546,7 +556,7 @@ textarea{
 }
 
 .swiper-button-next, .swiper-button-prev{
-    z-index:1;
+    z-index:11;
     top: 40%;
     padding: 0 5%;
     color: #08FDD8;
@@ -625,11 +635,11 @@ textarea{
 
 .overlay{
     display:none;
-    position:fixed;
+    position: absolute;;
     background-color:rgba(0,0,0,0.5);
     width:100%;
     height:100%;
-    z-index:1;
+    z-index:0;
     top:0;
     bottom:0;
     left:0;
@@ -640,11 +650,16 @@ textarea{
 .theater-mode{
     position: absolute !important;
     width: 100% !important;
-    height:100% !important;
+    max-width:100% !important;
+    height:75% !important;
     filter:brightness(100%) !important;
-    bottom:10px !important; 
+    top: 0px !important; 
     z-index: 15 !important;
-    /* background-color: #000 !important; */
+}
+
+.theater-mode img{
+    max-width:100% !important;
+    max-height:100% !important;
 }
 
 .height{
@@ -671,33 +686,6 @@ textarea{
     transform: translate(-50%, -50%);
 }
 
-
-/* 
-@media only screen and (min-width: 768px) {
-    .content{
-        width: 95.5%;
-        margin-left: 4.5%;
-    }
-
-    .text-main{
-        width: 670px;
-        margin-top: 17%;
-        margin-left: 12%;
-    }
-
-    .text-main .logo{
-        height: 53px;
-    }
-
-    .text-main h1{
-        font-size: 3rem;
-    }
-
-    .text-secondary{
-        font-size: 28px;
-    }
-} */
-
 @media (min-width:480px)  { 
     /* smartphones, Android phones, landscape iPhone */ 
 }
@@ -712,6 +700,10 @@ textarea{
         height:100%;
         border-bottom:initial;
         border-right: 1px solid #08FDD8; 
+    }
+
+    .sidebar .hamburger_menu{
+        display:none;
     }
 
     .sidebar .logo{
@@ -771,7 +763,7 @@ textarea{
     .about .text-secondary{
         max-width: 720px;
         margin-left: 13%;
-        font-size: 22px;
+        font-size: 1.8rem;
         letter-spacing: 1px;
     }
 
@@ -779,6 +771,7 @@ textarea{
     .portfolio{
         height:25%;
         border-bottom:initial;
+        overflow:hidden;
     }
 
     .swiper-container{
@@ -838,6 +831,64 @@ textarea{
 
     .swiper-scrollbar{
         top:initial;
+    }
+
+    .theater-mode{
+        height:100% !important;
+        bottom:10px !important;
+        top: initial !important;
+    }
+
+    .contact{
+        height:25%;
+    }
+
+    .contact .text-main{
+        width:35%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin-top:0;
+        margin-bottom:0;
+    }
+
+    .contact .text-secondary{
+        width:35%;
+        margin-bottom:20px;
+    }
+
+    .form{
+        width:34%;
+        height: 55%;
+        margin-left: 7.5%;
+        padding-left: 0;
+    }
+
+    .contact .map_wrapper{
+        height:100%;
+        width:53%;
+        position: absolute;
+        right: 0;
+        bottom:0;
+        border:1px solid #08FDD8;
+    }
+
+    .contact .address{
+        transform:initial;
+        width: 270px;
+        height: 115px;
+        top: 0;
+        left: 5%;
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+    .contact .text-secondary span{
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .contact .address span {
+        font-size:1.7rem;
     }
 }
 @media (min-width:1025px) { 

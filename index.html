@@ -18,6 +18,10 @@
             <a class="bounce logo" href="./index.html">
                 <img src="./resources/images/logo_yellow.png" alt="">
             </a>
+            <div class="hamburger_menu">
+                <img  src="./resources/images/menu.png">
+            </div>
+
             <div class="menu">
                 <div value='home' class="item">
                     <img class='icon' src="./resources/images/home.png">
@@ -47,7 +51,7 @@
                         <button class='link button'>Linkedin</button>
                     </a>
                 </div>
-                <div class="item">
+                <div style='border-bottom:none' class="item">
                     <img class='icon' src="./resources/images/github.png">
                     <a href="https://github.com/kandabi" target="_blank"> 
                         <button class='link button'>Github</button>
@@ -100,7 +104,6 @@
             <div class="text-secondary">
                 <span>
                     <div id="typed-strings">
-                        <p>:)</p>
                         <p></p>
                         <p>Python</p>
                         <p>C++</p>
@@ -190,7 +193,7 @@
                                 </span>
                             </div>
                             <div class="project-content">
-                                <iframe width=100% height=100% src="https://www.youtube.com/embed/_MmPO0d6ah8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe id='telloVideo' width=100% height=100% src="https://www.youtube.com/embed/_MmPO0d6ah8?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
 
@@ -392,6 +395,7 @@
                 <div class="swiper-pagination"></div>
                 <div class="swiper-scrollbar"></div>
 
+                <div class="overlay"></div>
             </div>
         </div>
 
@@ -462,14 +466,9 @@
                     </span>
                 </div>
 
-                <div id='map' class="map">
-
-
-                </div>
+                <div id='map' class="map"></div>
            </div>
         </div>
-
-        <div class="overlay"></div>
     </div> 
 
     
@@ -481,5 +480,7 @@
     <script src="./src/typed.min.js"></script>
     <script src="./src/script.js"></script>
     <script src="./src/map.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
 </body>
 </html>
