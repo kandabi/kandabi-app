@@ -90,8 +90,10 @@ function Init()
     });
 
 
-    $('.sidebar .item, .contact_btn').click(function(){
+    $('.sidebar .item, .contact_btn, .sidebar .logo').click(function(){
         var name = $(this).attr('value');
+        console.log('name:', name)
+
         $('html, body').stop().animate({
             scrollTop: $("." + name).offset().top
         }, 1500);
@@ -200,13 +202,13 @@ function toggleMenu() {
 }
 
 function openTheater(item) {
-    console.log('openTheater')
+    $('.overlay').css('display', 'block');
 
-    $('.overlay').fadeIn(500);
-    $('.portfolio').addClass('height');        
+           
     $(item).prev().addClass('blur');   
     $('.swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev').addClass('blur'); 
     $(item).addClass("theater-mode");
+    $('.portfolio').addClass('height'); 
 
     theaterItem = item;
     theaterActive = true;
@@ -215,12 +217,13 @@ function openTheater(item) {
 }
 
 function closeTheater() {
-    $('.overlay').fadeOut();
+    $('.overlay').css('display', 'none');
 
-    $('.portfolio').removeClass('height');     
+      
     $(theaterItem).prev().removeClass('blur');   
-    $('.swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev').removeClass('blur'); 
     $(theaterItem).removeClass("theater-mode");
+    $('.swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev').removeClass('blur'); 
+    $('.portfolio').removeClass('height');   
 
     theaterItem = null;
     theaterActive = false;

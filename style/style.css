@@ -35,6 +35,27 @@ a:link{
     text-decoration: none;
 }
 
+/*IE9*/
+*::selection 
+{
+    background-color:transparent;
+} 
+*::-moz-selection
+{
+    background-color:transparent;
+}
+*
+{        
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    /*IE10*/
+    -ms-user-select: none;
+    user-select: none;
+
+    /*You just need this if you are only concerned with android and not desktop browsers.*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}  
+
 span {
     color: #fff;
     font-weight: normal;
@@ -202,6 +223,7 @@ textarea{
     margin-left: 15px;
     margin-top: 11px;
     z-index: 5;
+    cursor: pointer;
 }
 
 .sidebar .hamburger_menu{
@@ -362,12 +384,14 @@ textarea{
 .portfolio{
     height:870px;
     border-bottom:1px solid #08FDD8;
+    transition: 300ms ease-out;
 }
 
 .portfolio .text-main{
     margin-top:3%;
     margin-bottom:3%;
     margin-left:7.5%;
+    transition: 300ms ease-out;
 }
 
 
@@ -581,6 +605,7 @@ textarea{
     transition: 300ms ease-out;
 }
 
+
 .swiper-slide .project-content:hover{
     cursor:pointer;
 }
@@ -609,6 +634,7 @@ textarea{
     text-align: left;
     letter-spacing: 1px;
     font-size: 1.3rem;
+    transition: 300ms ease-out;
 }
 
 
@@ -644,7 +670,7 @@ textarea{
     bottom:0;
     left:0;
     right:0;
-    transition: 1000ms ease-out;
+    transition: 300ms ease-out;
 }
 
 .theater-mode{
@@ -704,6 +730,26 @@ textarea{
 
     .sidebar .hamburger_menu{
         display:none;
+    }
+
+    .sidebar .menu{
+        /* display:none; */
+        height: 100%;
+        width: 100%;
+        top: 20%;
+        position: absolute;
+        opacity:1;
+        background-color: #141414;
+        
+    }
+
+    .sidebar .menu .item{
+        text-align: center;
+        margin-top: 25%;
+        margin-bottom: 25%;
+        height: 5%;
+        width: 100%;
+        border-bottom:none;
     }
 
     .sidebar .logo{
@@ -814,6 +860,7 @@ textarea{
         top:initial;
         bottom: 60px;
     }
+
 
     .swiper-slide .project-text h2{
         text-align:left;
