@@ -9,6 +9,8 @@ $(function () {
         loadMap();
  });
 
+var theaterItem = null;
+var theaterActive = false;
 var mapIncluded = false;
 function loadMap()
 {
@@ -75,18 +77,30 @@ function Init()
     });
 
 
+    swiper.on('slideChange', function () {
+        if(theaterActive)
+           closeTheater()
+    });
+
+    $('.project-content').click(function(){
+        if(theaterActive)
+            closeTheater()
+        else
+            openTheater($(this))
+    });
+
     $('.about, .contact').click(function(){
-        console.log('focus out')
         swiper.autoplay.start();
+        if(theaterActive)
+            closeTheater()
     });
 
 
     $('.sidebar .item, .contact_btn').click(function(){
-            var name = $(this).attr('value');
-            $('html, body').stop().animate({
-                scrollTop: $("." + name).offset().top
-            }, 1500);
-             
+        var name = $(this).attr('value');
+        $('html, body').stop().animate({
+            scrollTop: $("." + name).offset().top
+        }, 1500);
     });
 
     $(".form").submit(function(e) {
@@ -151,12 +165,38 @@ function Init()
          }
     };
 
-
 }
 
-$(window).on('popstate', function(event) {
-    alert("pop");
-   });
+function openTheater(item)
+{
+    console.log('openTheater')
+
+    $('.overlay').fadeIn(500);
+    $('.portfolio').addClass('height');        
+    $(item).prev().addClass('blur');   
+    $('.swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev').addClass('blur'); 
+    $(item).addClass("theater-mode");
+
+    theaterItem = item;
+    theaterActive = true;
+}
+
+
+function closeTheater()
+{
+    console.log('closeTheater')
+
+    $('.overlay').fadeOut();
+
+
+    $('.portfolio').removeClass('height');     
+    $(theaterItem).prev().removeClass('blur');   
+    $('.swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev').removeClass('blur'); 
+    $(theaterItem).removeClass("theater-mode");
+
+    theaterItem = null;
+    theaterActive = false;
+}
 
 
  function include(filename)
