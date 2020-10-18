@@ -142,30 +142,7 @@ textarea{
     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.button:hover {
-	color: #000 !important;
-	background-color: transparent;
-    text-shadow: nthree;
-    cursor:pointer;
-}
-.button:hover:before {
-	left: 0%;
-	right: auto;
-    width: 100%;
-}
-.button:before {
-	display: block;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	height: 100%;
-	width: 0px;
-	z-index: -1;
-	content: '';
-	color: #000 !important;
-	background: #08FDD8;
-    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-}
+
 
 .contact_btn {
     margin: auto;
@@ -774,6 +751,31 @@ textarea{
         top: 6px;
         left: 5px;
         height: 62px;
+    }
+
+    .button:hover {
+        color: #000 !important;
+        background-color: transparent;
+        text-shadow: nthree;
+        cursor:pointer;
+    }
+    .button:hover:before {
+        left: 0%;
+        right: auto;
+        width: 100%;
+    }
+    .button:before {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 0px;
+        z-index: -1;
+        content: '';
+        color: #000 !important;
+        background: #08FDD8;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
     }
 
     .text-main h1, .text-main h2{
