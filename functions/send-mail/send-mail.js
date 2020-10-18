@@ -1,17 +1,12 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-
-
-
-exports.handler = async event => {
-    var response;
-    try 
-    {
+exports.handler = function (event, context, callback){
+    try {
       const options = {
-          user: process.env.EMAIL_ADDRESS,
-          pass: process.env.EMAIL_PASS,
-          to: 'kandabiaviv@gmail.com',
+        user: process.env.EMAIL_ADDRESS,
+        pass: process.env.EMAIL_PASS,
+        to: 'kandabiaviv@gmail.com',
       };
-      
+
       const send = require('gmail-send')(options);
 
       send({ 
@@ -20,13 +15,13 @@ exports.handler = async event => {
       }, 
         (error, result, fullResult) => {
           if (error) {
-            response = {
+            return {
               statusCode: 500,
               body: error,
             }
           }
           else {
-            response = {
+            return {
               statusCode: 200,
               body: result,
             }
@@ -34,13 +29,13 @@ exports.handler = async event => {
       });
     }
     catch (error) {
-         response = { 
+         return { 
           statusCode: 500, 
           body: error.toString() 
         }
     }
 
-    return response;
+    return "should not get here";
 }
 
 
