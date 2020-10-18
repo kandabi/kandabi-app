@@ -2,12 +2,10 @@
 
 
 
-
-
 exports.handler = async event => {
+    var response;
     try 
     {
-      var response;
       const options = {
           user: process.env.EMAIL_ADDRESS,
           pass: process.env.EMAIL_PASS,
