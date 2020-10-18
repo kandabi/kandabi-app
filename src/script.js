@@ -103,21 +103,21 @@ function Init()
     });
 
     $(".form").submit(function(e) {
-        e.preventDefault();
+        // e.preventDefault();
 
-        var form = $(this);
-        $.ajax({
-            url: ".netlify/functions/send-mail", // url where to submit the request
-            type : "POST", // type of action POST || GET
-            dataType : 'json', // data type
-            data : form.serialize(), // post data 
-            success : function(result) {
-                console.log(result);
-            },
-            error: function(text) {
-                console.log(text);
-            }
-        })
+        // var form = $(this);
+        // $.ajax({
+        //     url: ".netlify/functions/send-mail", // url where to submit the request
+        //     type : "POST", // type of action POST || GET
+        //     dataType : 'json', // data type
+        //     data : form.serialize(), // post data 
+        //     success : function(result) {
+        //         console.log(result);
+        //     },
+        //     error: function(text) {
+        //         console.log(text);
+        //     }
+        // })
     });
 
     $('.loader').fadeOut(500 ,function(){
