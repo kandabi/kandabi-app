@@ -1,5 +1,7 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = function (event, context, callback){
+    return "should not get here";
+
     try {
       const options = {
         user: process.env.EMAIL_ADDRESS,
@@ -35,7 +37,7 @@ exports.handler = function (event, context, callback){
         }
     }
 
-    return "should not get here";
+
 }
 
 
