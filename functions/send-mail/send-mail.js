@@ -1,6 +1,9 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-exports.handler = function (event, context, callback){
-    return "should not get here";
+exports.handler = async (event, context) => {
+    return {
+      statusCode: 200,
+      body: "Hello, World"
+    };
 
     try {
       const options = {
