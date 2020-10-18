@@ -6,6 +6,11 @@ exports.handler = async (event, context) => {
     };
 
     try {
+      const body = JSON.parse(event.body).payload
+      response.body = body;
+
+      return response;
+
       const options = {
         user: process.env.EMAIL_ADDRESS,
         pass: process.env.EMAIL_PASS,
