@@ -6,13 +6,17 @@ exports.handler = async (event, context) => {
     };
 
     try {
+      response.body = 'try';
+
       const options = {
         user: process.env.EMAIL_ADDRESS,
         pass: process.env.EMAIL_PASS,
         to: 'kandabiaviv@gmail.com',
       };
 
+      response.body = 'options';
       const send = require('gmail-send')(options);
+      response.body = 'require';
 
       send({ 
         subject: 'subject' ,
@@ -27,6 +31,8 @@ exports.handler = async (event, context) => {
             response.body = result;
           }
       });
+
+      response.body = 'send';
     }
     catch (error) {
         response.statusCode = 500;
