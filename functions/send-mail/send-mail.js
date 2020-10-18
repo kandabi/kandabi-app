@@ -5,6 +5,8 @@ const options = {
     to: 'kandabiaviv@gmail.com',
 };
 
+return options;
+
 const send = require('gmail-send')(options);
 
 exports.handler = async event => {
