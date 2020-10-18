@@ -40,10 +40,6 @@ exports.handler = async event => {
           body: error.toString() 
         }
     }
-
-    
-    
-    return response;
 }
 
 
