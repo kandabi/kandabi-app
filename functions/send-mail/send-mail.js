@@ -7,6 +7,7 @@
 exports.handler = async event => {
     try 
     {
+      var response;
       const options = {
           user: process.env.EMAIL_ADDRESS,
           pass: process.env.EMAIL_PASS,
@@ -21,13 +22,13 @@ exports.handler = async event => {
       }, 
         (error, result, fullResult) => {
           if (error) {
-            return {
+            response = {
               statusCode: 500,
               body: error,
             }
           }
           else {
-           return {
+            response = {
               statusCode: 200,
               body: result,
             }
@@ -35,11 +36,13 @@ exports.handler = async event => {
       });
     }
     catch (error) {
-        return { 
+         response = { 
           statusCode: 500, 
           body: error.toString() 
         }
     }
+
+    return response;
 }
 
 
