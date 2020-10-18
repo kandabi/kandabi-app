@@ -302,8 +302,12 @@ textarea{
     opacity:0;
 }
 
+.home .text-secondary{
+    text-align: center;
+}
+
 .home .text-secondary span{
-    letter-spacing: 3.5px;
+    letter-spacing: 3.5px;   
 }
 
 .text-secondary{
@@ -312,8 +316,7 @@ textarea{
     margin-left: 12.5%;
     margin-top: 2%;
     margin-bottom: 12%;
-    /* text-align: left; */
-    text-align: center;
+    text-align: left;
     position: relative;
     font-size: 1.3rem;
     z-index: 1;
@@ -782,6 +785,10 @@ textarea{
     .text-main h1, .text-main h2{
         font-size: 6rem;
         line-height: 60px;
+    }
+
+    .home .text-secondary{
+        text-align: left;
     }
 
     .home .text-secondary span {

@@ -339,15 +339,13 @@
                 </span>
             </div>
 
-            <form action="thankyou.html" class="form" name="contact" method="POST" data-netlify="true" >
-                <!-- netlify-honeypot="bot-field" -->
-                <!-- <div style='display:none;' hidden aria-hidden="true">
+            <form action="thankyou.html" class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <div style='display:none;' hidden aria-hidden="true">
                     <label>
                       Don’t fill this out if you're human: 
                       <input name="bot-field" />
                     </label>
-                </div> -->
-
+                </div>
                 <div class="input_container first">
                     <input class="name" type='text' placeholder="Name" name='name'>
                     <span class="border"></span>
