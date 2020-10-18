@@ -104,25 +104,20 @@ function Init()
 
     $(".form").submit(function(e) {
         e.preventDefault();
-        // $.post("/functions/send-mail", $form.serialize()).then(function() {
-        //     alert("Thank you!");
-        // });
-        // var form = $(this);
-        // $.ajax({
-        //     url: ".netlify/functions/send-email", // url where to submit the request
-        //     type : "POST", // type of action POST || GET
-        //     dataType : 'json', // data type
-        //     data : form.serialize(), // post data 
-        //     success : function(result) {
-        //         console.log(result);
-        //     },
-        //     error: function(text) {
-        //         console.log(text);
-        //     }
-        // })
-        // $.post(, $form.serialize()).then(function(data, status){
-        //     console.log("response: " + data);
-        // });
+
+        var form = $(this);
+        $.ajax({
+            url: ".netlify/functions/send-mail", // url where to submit the request
+            type : "POST", // type of action POST || GET
+            dataType : 'json', // data type
+            data : form.serialize(), // post data 
+            success : function(result) {
+                console.log(result);
+            },
+            error: function(text) {
+                console.log(text);
+            }
+        })
     });
 
     $('.loader').fadeOut(500 ,function(){
