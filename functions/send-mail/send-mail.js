@@ -2,7 +2,7 @@
 const options = {
     user: process.env.EMAIL_ADDRESS,
     pass: process.env.EMAIL_PASS,
-    to:   'kandabiaviv@gmail.com',
+    to: 'kandabiaviv@gmail.com',
 };
 
 const send = require('gmail-send')(options);
@@ -15,13 +15,13 @@ exports.handler = async event => {
     }, 
       (error, result, fullResult) => {
         if (error) {
-          response = {
+          return {
             statusCode: 500,
             body: error,
           }
         }
         else {
-          response = {
+         return {
             statusCode: 200,
             body: result,
           }
