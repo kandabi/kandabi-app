@@ -1,8 +1,8 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event, context) => {
-    return {
+    var response = {
       statusCode: 200,
-      body: "Hello, World"
+      body: "Empty"
     };
 
     try {
@@ -20,27 +20,20 @@ exports.handler = async (event, context) => {
       }, 
         (error, result, fullResult) => {
           if (error) {
-            return {
-              statusCode: 500,
-              body: error,
-            }
+            response.statusCode = 500;
+            response.body = error.toString() ;
           }
           else {
-            return {
-              statusCode: 200,
-              body: result,
-            }
+            response.body = result;
           }
       });
     }
     catch (error) {
-         return { 
-          statusCode: 500, 
-          body: error.toString() 
-        }
+        response.statusCode = 500;
+        response.body = error.toString() ;
     }
 
-
+    return response;
 }
 
 
