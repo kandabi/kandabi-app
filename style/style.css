@@ -72,7 +72,7 @@ button {
     color: #08FDD8;
     font-family: 'robotomedium';
     font-size:18px;
-    letter-spacing: 4.5px;
+    letter-spacing: 4px;
 }
 
 button:focus {
@@ -102,7 +102,7 @@ textarea{
 .home{
     /* border: 1px solid white; */
     /* display:none; */
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .about{
@@ -146,7 +146,7 @@ textarea{
 
 .contact_btn {
     margin: auto;
-    width: 190px;
+    width: 195px;
     height: 60px;
 }
 
@@ -186,19 +186,23 @@ textarea{
     border:none;
 }
 
-
-
-
-.sidebar:hover{
-    background-color:#122421;
-}
-
-
 .sidebar .logo{
     display: block;
     width: 10%;
     margin-left: 15px;
     margin-top: 11px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.sidebar .phone{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 8%;
+    display: block;
+    margin-left: 18%;
+    margin-top: 15px;
     z-index: 5;
     cursor: pointer;
 }
@@ -227,6 +231,7 @@ textarea{
     z-index: 5;
     position: fixed;
     background-color: #122421;
+    transition: 300ms ease-out;
 }
 
 .sidebar .menu .item {
@@ -423,7 +428,7 @@ textarea{
     background-color: #000;
     width: 75%;
     position: absolute;
-    height: 90px;
+    height: 111px;
     bottom:5%;
     left:50%;
     transform: translate(-50%, 0);
@@ -630,7 +635,7 @@ textarea{
 }
 
 .swiper-slide .project-text .project-bottom-text{
-    font-size:1.6rem;
+    font-size:1.5rem;
     font-weight: 900;
 }
 
@@ -699,8 +704,10 @@ textarea{
 @media (min-width:600px)  { 
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
 }
-@media (min-width:801px)  { 
+
+@media (min-width:750px)  { 
     /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
     .sidebar{
         width: 4.5%;
         max-height:initial;
@@ -713,15 +720,33 @@ textarea{
         display:none;
     }
 
+    .sidebar .phone{
+        top: initial;
+        left: initial;
+        bottom: 35px;
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        text-align: center;
+        z-index: 6;
+    }
+
+    .sidebar .phone a{
+        width:50%;
+    }
+
+    .sidebar .phone a img{
+        max-width: 40%;
+    }
+
     .sidebar .menu{
         /* display:none; */
         height: 100%;
         width: 100%;
-        top: 20%;
+        top: 18%;
         position: absolute;
         opacity:1;
-        background-color: #141414;
-        
+        background-color: initial;        
     }
 
     .sidebar .menu .item{
@@ -747,14 +772,14 @@ textarea{
     }
 
     .home .text-main{
-        padding-top: 23%;
+        padding-top: 10%;
         padding-left: 2%;
     }
 
     .text-main .logo {
-        top: 6px;
-        left: 5px;
-        height: 62px;
+        top: 3px;
+        left: 4px;
+        height: 43px;
     }
 
     .button:hover {
@@ -783,7 +808,7 @@ textarea{
     }
 
     .text-main h1, .text-main h2{
-        font-size: 6rem;
+        font-size: 3.75rem;
         line-height: 60px;
     }
 
@@ -797,9 +822,9 @@ textarea{
 
     .text-secondary {
         padding-left: 1.5%;
-        margin-bottom: 3%;
+        margin-bottom: 1%;
         bottom: 20px;
-        font-size: 2.3rem;
+        font-size: 2rem;
         text-align: left;
     }
 
@@ -814,13 +839,13 @@ textarea{
     }
 
     .about .text-main{
-        margin-top: 18%;
+        margin-top: 8%;
     }
 
     .about .text-secondary{
         max-width: 720px;
         margin-left: 13%;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         letter-spacing: 1px;
     }
 
@@ -828,7 +853,11 @@ textarea{
     .portfolio{
         height:25%;
         border-bottom:initial;
-        overflow:hidden;
+        overflow:visible;
+    }
+
+    .height{
+        height:40% !important;
     }
 
     .swiper-container{
@@ -854,19 +883,18 @@ textarea{
 
     .swiper-slide .project-text{
         top:initial;
-        bottom: 70px;
+        bottom: 50px;
         position: relative;
-        width: 30%;
+        width: 35%;
         padding: 15px;
         padding-right: 5%;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         text-align: left;
     }
 
     .swiper-slide .project-content{
         width: 50%;
         height: 70%;
-        margin-bottom: 45px;
         position: relative;
         top:initial;
         bottom: 60px;
@@ -875,16 +903,16 @@ textarea{
 
     .swiper-slide .project-text h2{
         text-align:left;
-        font-size: 3rem;
+        font-size: 1.6rem;
     }
 
     .swiper-slide .project-text .project-bottom-text {
         font-size: 3rem;
-        font-size: 2.1rem;
+        font-size: 1.5rem;
     }
 
     .swiper-slide .project-text.smaller{
-        font-size:1.6rem;
+        font-size:1.4rem;
     }
 
     .swiper-scrollbar{
@@ -899,6 +927,7 @@ textarea{
 
     .contact{
         height:25%;
+        top:5%;
     }
 
     .contact .text-main{
@@ -912,6 +941,7 @@ textarea{
     .contact .text-secondary{
         width:35%;
         margin-bottom:20px;
+        font-size:1rem;
     }
 
     .form{
@@ -933,7 +963,7 @@ textarea{
     .contact .address{
         transform:initial;
         width: 270px;
-        height: 115px;
+        height: 135px;
         top: 0;
         left: 5%;
         margin-top: 40px;
@@ -948,12 +978,79 @@ textarea{
     .contact .address span {
         font-size:1.7rem;
     }
+
+    .sidebar:hover{
+        background-color:#122421 !important;
+    }
 }
-@media (min-width:1025px) { 
+
+@media (min-width:1025px) and (min-height: 700px) { 
     /* big landscape tablets, laptops, and desktops */ 
+    .home .text-main{
+        padding-top: 13%;
+    }
+
+    .about .text-main {
+        margin-top: 12%;
+        
+    }
+
+    .about .text-secondary{
+        font-size:1.5rem;
+    }
+
+
 }
-@media (min-width:1281px) { 
+@media (min-width:1200px) and (min-height: 700px){ 
     /* hi-res laptops and desktops */ 
+    .text-main h1, .text-main h2{
+        font-size: 5.5rem;
+    }
+
+    .home .text-main{
+        padding-top:21%;
+    }
+
+    .about .text-main {
+        margin-top: 18%;
+    }
+
+    .text-main .logo {
+        top: 4px;
+        left: 5px;
+        height: 62px;
+    }
+
+    .text-secondary{
+        font-size:2.3rem;
+    }
+
+    .swiper-slide .project-content{
+        margin-bottom:45px;
+    }
+
+    .swiper-slide .project-text{
+        font-size: 1.5rem;
+        bottom:70px;
+    }
+
+    .swiper-slide .project-text h2{
+        font-size: 3rem;
+    }
+
+    .swiper-slide .project-text .project-bottom-text{
+        font-size: 2.0rem;
+    }
+
+    .contact .text-secondary{
+        font-size:1.3rem;
+    }
+
+    .about .text-secondary{
+        font-size:1.6rem;
+    }
+
+
 }
 
 
