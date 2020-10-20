@@ -104,7 +104,6 @@ function Init()
 
     $(".form").submit(function(e) {
         // e.preventDefault();
-
         // var form = $(this);
         // $.ajax({
         //     url: ".netlify/functions/send-mail", // url where to submit the request
@@ -213,7 +212,6 @@ function openTheater(item) {
 
 function closeTheater() {
     $('.overlay').css('display', 'none');
-
       
     $(theaterItem).prev().removeClass('blur');   
     $(theaterItem).removeClass("theater-mode");
