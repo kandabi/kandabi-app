@@ -228,7 +228,7 @@ textarea{
     left: 0;
     bottom:0;
     right: 0;
-    z-index: 5;
+    z-index: 25;
     position: fixed;
     background-color: #122421;
     transition: 300ms ease-out;
@@ -745,6 +745,7 @@ textarea{
         width: 100%;
         top: 18%;
         position: absolute;
+        z-index: 5;
         opacity:1;
         background-color: initial;        
     }

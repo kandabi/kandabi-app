@@ -13,7 +13,6 @@ function loadMap()
 {
     mapIncluded = true;
     window.onscroll = null;
-    
     include("https://maps.googleapis.com/maps/api/js?key=AIzaSyCrH9vga3QM9PzgYfb_1goHhIGSSos_gQo&callback=initMap&libraries=&v=weekly")
 }
 
