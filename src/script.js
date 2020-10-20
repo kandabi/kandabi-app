@@ -13,7 +13,7 @@ function loadMap()
 {
     mapIncluded = true;
     window.onscroll = null;
-    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyCrH9vga3QM9PzgYfb_1goHhIGSSos_gQo&callback=initMap&libraries=&v=weekly")
+    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyAScQpWWuRroGpbJRjIYboHrpCQr9vl_Ts&callback=initMap&libraries=&v=weekly")
 }
 
 
@@ -182,7 +182,7 @@ function toggleMenu() {
 
 
     if(menuActive) {
-        $('.sidebar .menu').css('display','block').animate({
+        $('.sidebar .menu').animate({
             top: '-100%',
             opacity:'0',
         }, 350)
@@ -190,7 +190,7 @@ function toggleMenu() {
         console.log('toggleMenu: ', true)
     }
     else {
-        $('.sidebar .menu').css('display','block').animate({
+        $('.sidebar .menu').animate({
             top: '56px',
             opacity: '1',
         }, 350)
