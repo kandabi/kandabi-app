@@ -179,20 +179,28 @@ function onYouTubeIframeAPIReady() {
 }
 
 function toggleMenu() {
+
+
     if(menuActive) {
         $('.sidebar .menu').css('display','block').animate({
             top: '-100%',
             opacity:'0',
         }, 350)
+
+        console.log('toggleMenu: ', true)
     }
     else {
         $('.sidebar .menu').css('display','block').animate({
             top: '56px',
             opacity: '1',
         }, 350)
+
+        console.log('toggleMenu: ', false)
     }
 
     menuActive = !menuActive;
+
+
 }
 
 function openTheater(item) {
