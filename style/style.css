@@ -164,6 +164,8 @@ textarea{
     border-bottom   : 1px solid #08FDD8; 
     overflow: hidden;
     transition: 300ms ease-out;
+
+
 }
 
 
@@ -232,6 +234,10 @@ textarea{
     position: fixed;
     background-color: #122421;
     transition: 300ms ease-out;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 .sidebar .menu .item {
