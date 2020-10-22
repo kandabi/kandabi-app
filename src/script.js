@@ -179,21 +179,21 @@ function onYouTubeIframeAPIReady() {
 }
 
 function toggleMenu() {
-
-
     if(menuActive) {
-        $('.sidebar .menu').animate({
-            top: '-100%',
-            opacity:'0',
-        }, 350)
+        // $('.sidebar .menu').animate({
+        //     top: '-100%',
+        //     opacity:'0',
+        // }, 350)
 
         console.log('toggleMenu: ', true)
     }
     else {
-        $('.sidebar .menu').animate({
-            top: '56px',
-            opacity: '1',
-        }, 350)
+        // $('.sidebar .menu').animate({
+        //     top: '56px',
+        //     opacity: '1',
+        // }, 350)
+
+        
 
         console.log('toggleMenu: ', false)
     }
