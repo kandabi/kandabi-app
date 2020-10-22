@@ -92,8 +92,9 @@ function Init()
 
     $('.sidebar .item, .contact_btn, .sidebar .logo').click(function(){
         var name = $(this).attr('value');
-        console.log('name:', name)
+        if(!name) return;
 
+            console.log('name:', name)
         $('html, body').stop().animate({
             scrollTop: $("." + name).offset().top
         }, 1500);
@@ -145,8 +146,7 @@ function Init()
     
     }, 1500);
 
-    if(device.mobile())
-    {
+    if(device.mobile()) {
         $('.sidebar .hamburger_menu').click(function(){
             toggleMenu();
         })

@@ -133,7 +133,6 @@ textarea{
 
 .button{
     background-color: transparent;
-   
 	color: #fff;
 	display: block;
     position: relative;
@@ -142,15 +141,11 @@ textarea{
     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-
-
 .contact_btn {
     margin: auto;
     width: 195px;
     height: 60px;
 }
-
-
 
 .sidebar{
     opacity:0; 
