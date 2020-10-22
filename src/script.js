@@ -94,7 +94,7 @@ function Init()
         var name = $(this).attr('value');
         if(!name) return;
 
-            console.log('name:', name)
+        console.log('name:', name)
         $('html, body').stop().animate({
             scrollTop: $("." + name).offset().top
         }, 1500);
@@ -164,6 +164,10 @@ function Init()
             }
          }
     };
+
+    $(window).on('popstate', function(event) {
+        alert("pop");
+    });
 }
 
 var swiper = null;
@@ -182,35 +186,32 @@ function toggleMenu() {
     if(menuActive) {
         $('.sidebar').animate({
             height: '56px',
-        }, 350);
+        }, 500);
 
         $('.sidebar .menu').animate({
             opacity: '0',
-        }, 350);
+        }, 500);
 
         console.log('toggleMenu: ', true)
     }
     else {
         $('.sidebar').animate({
             height: '100%',  
-        }, 350);
+        }, 500);
 
         $('.sidebar .menu').animate({
             opacity: '1',
-        }, 350);
+        }, 500);
 
         console.log('toggleMenu: ', false)
     }
 
     menuActive = !menuActive;
-
-
 }
 
 function openTheater(item) {
     $('.overlay').css('display', 'block');
 
-           
     $(item).prev().addClass('blur');   
     $('.swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev').addClass('blur'); 
     $(item).addClass("theater-mode");

@@ -163,12 +163,6 @@ textarea{
     transition: 300ms ease-out;
 }
 
-.sidebar .menu .item:hover .button{
-    opacity: 1;
-}
-.sidebar .menu .item:hover img{
-    opacity: 0;
-} 
 
 .sidebar .menu .item .button{
     display: block;
@@ -747,6 +741,14 @@ textarea{
         height:80%;
     }
 
+    .sidebar .menu .item:hover .button{
+        opacity: 1;
+    }
+    .sidebar .menu .item:hover img{
+        opacity: 0;
+    } 
+    
+
     .sidebar .phone a{
         width:50%;
     }
@@ -830,7 +832,6 @@ textarea{
 
     .sidebar .menu .item .button{
         opacity: 0;
-        /* display: none; */
         bottom: 35px;
         letter-spacing: 0.5px;
         font-size: 15px;
