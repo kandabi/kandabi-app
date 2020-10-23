@@ -1,5 +1,2 @@
 # Redirect users in israel to /he
-/*  /he  301  Country=il
-
-# Redirect users with Hebrew language preference from /israel to /israel/he
-/he/*  /he/:splat  301  Language=he
+/*  /he  301!  Country=il
