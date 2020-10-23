@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank you for contacting me.</title>
+    <meta name="description" content="I'll make sure to get back to you as soon as I can.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/thankyou.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 >
+                Thank you! 
+            </h1>
+            <p>
+                Your form submission has been received, I'll get back to you as soon as I can.
+            </p>
+            <p>
+                <a id="back-link" >← Back to my site</a>
+            </p>
+        </div>
+
+    </div>
+    <script>
+        var element = document.getElementById('back-link');
+        element.setAttribute('href', document.referrer);
+        element.onclick = function() {
+          history.back();
+          return false;
+        }
+    </script>
+</body>
+</html>
