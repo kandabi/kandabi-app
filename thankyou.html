@@ -3,74 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Thank you for contacting me.</title>
+    <meta name="description" content="I'll make sure to get back to you as soon as I can.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        html,body{
-            /* background: rgb(14, 30, 37); */
-            /* background-color:rgb(14, 30, 37);  */
-            background: #141414;
-            color: white;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-        }
-
-        span{
-            font-weight: 300;
-            text-align: left;
-            width:100%;
-            position: absolute;
-            color:white;
-        }
-
-        h1{
-            color: #08FDD8;
-            
-        }    
-
-        p{
-            line-height: 20px;
-        }
-        
-        a{
-            color:white;
-        }
-
-        .card {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            width: 75%;
-            max-width: 364px;
-            padding: 24px;
-            /* background: white; */
-            background-color: #1D1D1D;
-            border:1px solid #08FDD8;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
-            font-family: 'robotoregular';
-            line-height: 10px;
-        }
-
-        .container{
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100vw;
-        }
-        @font-face {
-            font-family: 'robotoregular';
-            src: url('./resources/roboto-regular-webfont.woff2') format('woff2'),
-                 url('./resources/roboto-regular-webfont.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-    </style>
-
-
+    <link rel="stylesheet" href="./style/thankyou.css">
 </head>
 <body>
     <div class="container">
@@ -89,17 +24,7 @@
     </div>
     <script>
         var element = document.getElementById('back-link');
-        // Provide a standard href to facilitate standard browser features such as 
-        //  - Hover to see link
-        //  - Right click and copy link
-        //  - Right click and open in new tab
         element.setAttribute('href', document.referrer);
-
-        // We can't let the browser use the above href for navigation. If it does, 
-        // the browser will think that it is a regular link, and place the current 
-        // page on the browser history, so that if the user clicks "back" again,
-        // it'll actually return to this page. We need to perform a native back to
-        // integrate properly into the browser's history behavior
         element.onclick = function() {
           history.back();
           return false;
