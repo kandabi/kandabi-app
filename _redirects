@@ -1,5 +1,0 @@
-# Redirect users in israel to /israel
-/  /israel  302  Country=il
-
-# Redirect users with Hebrew language preference from /israel to /israel/he
-/israel/*  /israel/he/:splat  302  Language=he
