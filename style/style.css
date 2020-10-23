@@ -764,7 +764,7 @@ textarea{
         display:initial;
         flex-direction: initial;
         justify-content:  initial;
-        top: 18%;
+        top: 15%;
         position: absolute;
         z-index: 5;
         opacity:1;
@@ -790,8 +790,8 @@ textarea{
     }
 
     .content{
-        margin-left: 80px;
-        width:95.5%;
+        margin-left: 8%;
+        width:92%;
     }
 
     .home .text-main{
@@ -871,7 +871,7 @@ textarea{
     .about video{
         height:initial;
         min-height: 100%;
-        width:100%;
+        /* width:100%; */
     }
 
     .about .text-main{
@@ -918,12 +918,12 @@ textarea{
     }
 
     .swiper-slide .project-text{
-        top:initial;
-        bottom: 50px;
+        top: initial;
+        bottom: 35px;
         position: relative;
-        width: 35%;
+        width: 37%;
         padding: 15px;
-        padding-right: 5%;
+        padding-right: 3%;
         font-size: 1.2rem;
         text-align: left;
     }
@@ -991,6 +991,7 @@ textarea{
         height:100%;
         width:53%;
         position: absolute;
+        top:0;
         right: 0;
         bottom:0;
         border:1px solid #08FDD8;
@@ -1024,6 +1025,7 @@ textarea{
     /* big landscape tablets, laptops, and desktops */ 
     .content{
         margin-left:4.5%;
+        width: 95.5%;
     }
 
     .home .text-main{

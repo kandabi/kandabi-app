@@ -186,22 +186,26 @@ function toggleMenu() {
     if(menuActive) {
         $('.sidebar').animate({
             height: '56px',
-        }, 500);
+        }, 350);
 
         $('.sidebar .menu').animate({
             opacity: '0',
-        }, 500);
+        }, 250);
+
+        
 
         console.log('toggleMenu: ', true)
     }
     else {
         $('.sidebar').animate({
             height: '100%',  
-        }, 500);
+        }, 120 ,function (){
+            $('.sidebar .menu').animate({
+                opacity: '1',
+            }, 150);
+        });
 
-        $('.sidebar .menu').animate({
-            opacity: '1',
-        }, 500);
+        
 
         console.log('toggleMenu: ', false)
     }
