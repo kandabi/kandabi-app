@@ -253,6 +253,10 @@ textarea{
     margin: 0 10%;
 }
 
+.text-main #headers{
+    display:none;
+}   
+
 
 .text-main h1{
     font-size: 3rem;

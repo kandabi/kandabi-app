@@ -103,23 +103,6 @@ function Init()
             toggleMenu();
     });
 
-    $(".form").submit(function(e) {
-        // e.preventDefault();
-        // var form = $(this);
-        // $.ajax({
-        //     url: ".netlify/functions/send-mail", // url where to submit the request
-        //     type : "POST", // type of action POST || GET
-        //     dataType : 'json', // data type
-        //     data : form.serialize(), // post data 
-        //     success : function(result) {
-        //         console.log(result);
-        //     },
-        //     error: function(text) {
-        //         console.log(text);
-        //     }
-        // })
-    });
-
     $('.loader').fadeOut(500 ,function(){
         $('.content, .sidebar').animate({
             opacity: 1
@@ -128,14 +111,12 @@ function Init()
 
     var letters = $('.home .text-main .bounce, .home .text-main .logo');
     var time = 150;
-
     setTimeout(function(){
         letters.each(function(index) {
             setTimeout( function(){ 
                 $(letters[index]).css('opacity',1).addClass("animation-splat");
             }, time += 130 )
         });
-
         var items = $('.contact_btn, .home .text-secondary');
         time += 750;
         items.each(function(index) {
@@ -143,7 +124,6 @@ function Init()
                 $(items[index]).css('opacity',1).addClass("animation-splat");
             }, time += 150 )
         });
-    
     }, 1500);
 
     if(device.mobile()) {
@@ -164,10 +144,6 @@ function Init()
             }
          }
     };
-
-    $(window).on('popstate', function(event) {
-        alert("pop");
-    });
 }
 
 var swiper = null;
