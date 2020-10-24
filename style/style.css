@@ -1281,8 +1281,8 @@ textarea{
 
 @font-face {
     font-family: 'robotoblack';
-    src: url('../resources/roboto-black-webfont.woff2') format('woff2'),
-         url('../resources/roboto-black-webfont.woff') format('woff');
+    src: url('../resources/roboto/roboto-black.woff2') format('woff2'),
+         url('../resources/roboto/roboto-black.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -1290,8 +1290,8 @@ textarea{
 
 @font-face {
     font-family: 'robotobold';
-    src: url('../resources/roboto-bold-webfont.woff2') format('woff2'),
-         url('../resources/roboto-bold-webfont.woff') format('woff');
+    src: url('../resources/roboto/roboto-bold.woff2') format('woff2'),
+         url('../resources/roboto/roboto-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -1299,16 +1299,16 @@ textarea{
 
 @font-face {
     font-family: 'robotomedium';
-    src: url('../resources/roboto-medium-webfont.woff2') format('woff2'),
-         url('../resources/roboto-medium-webfont.woff') format('woff');
+    src: url('../resources/roboto/roboto-medium.woff2') format('woff2'),
+         url('../resources/roboto/roboto-medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'robotoregular';
-    src: url('../resources/roboto-regular-webfont.woff2') format('woff2'),
-         url('../resources/roboto-regular-webfont.woff') format('woff');
+    src: url('../resources/roboto/roboto-regular.woff2') format('woff2'),
+         url('../resources/roboto/roboto-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

@@ -1,0 +1,71 @@
+
+body ,html{
+    text-align: right;
+    font-family: 'rubikregular';
+}
+
+h1, h2 {
+    font-family: 'rubikmedium';
+}
+
+
+button {
+    font-family: 'rubikmedium';
+    letter-spacing: 3px;
+}
+
+textarea{
+    font-family: 'rubikmedium';
+}
+
+
+.text-main h1 , .text-main h2{
+    text-align: right; 
+}
+
+.sidebar .menu .item{
+    text-align: right;
+    padding-left:initial;
+    padding-right:28px;
+}
+
+.sidebar .menu .item .button{
+    text-align: right;
+    left:initial;
+    font-family: 'rubikregular';
+}
+
+
+
+@font-face {
+    font-family: 'rubikblack';
+    src: url('../resources/rubik/rubik-black.woff2') format('woff2'),
+        url('../resources/rubik/rubik-black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rubikbold';
+    src: url('../resources/rubik/rubik-bold.woff2') format('woff2'),
+        url('../resources/rubik/rubik-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rubikmedium';
+    src: url('../resources/rubik/rubik-medium.woff2') format('woff2'),
+        url('../resources/rubik/rubik-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rubikregular';
+    src: url('../resources/rubik/rubik-regular.woff2') format('woff2'),
+        url('../resources/rubik/rubik-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
