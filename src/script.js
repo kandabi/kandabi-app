@@ -1,10 +1,8 @@
-
 $(function () {
 
     Init();
 
     var scrollPos = $(document).scrollTop();
-    console.log('init scrolltop: ', scrollPos)
     if(scrollPos)
         loadMap();
  });
