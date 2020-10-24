@@ -67,7 +67,7 @@ function Init()
         typeSpeed: 180,
         backSpeed: 100,
         backDelay: 1200,
-        startDelay: 700,
+        startDelay: 400,
     });
 
     swiper.on('slideChange', function () {
