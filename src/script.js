@@ -11,7 +11,7 @@ function loadMap()
 {
     mapIncluded = true;
     window.onscroll = null;
-    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyAScQpWWuRroGpbJRjIYboHrpCQr9vl_Ts&callback=initMap&libraries=&v=weekly")
+    //include("https://maps.googleapis.com/maps/api/js?key=AIzaSyAScQpWWuRroGpbJRjIYboHrpCQr9vl_Ts&callback=initMap&libraries=&v=weekly")
 }
 
 
@@ -62,8 +62,8 @@ function Init()
         stringsElement: '#typed-strings',
         loop: true,
         smartBackspace:false,
-        typeSpeed: 180,
-        backSpeed: 100,
+        typeSpeed: 160,
+        backSpeed: 120,
         backDelay: 1200,
         startDelay: 400,
     });
@@ -113,16 +113,17 @@ function Init()
         letters.each(function(index) {
             setTimeout( function(){ 
                 $(letters[index]).css('opacity',1).addClass("animation-splat");
-            }, time += 130 )
+            }, time += 250 )
         });
+
         var items = $('.contact_btn, .home .text-secondary');
-        time += 750;
+        time += 350;
         items.each(function(index) {
             setTimeout( function(){ 
                 $(items[index]).css('opacity',1).addClass("animation-splat");
             }, time += 150 )
         });
-    }, 1500);
+    }, 1200);
 
     if(device.mobile()) {
         $('.sidebar .hamburger_menu').click(function(){
@@ -165,8 +166,6 @@ function toggleMenu() {
         $('.sidebar .menu').animate({
             opacity: '0',
         }, 250);
-
-        
 
         console.log('toggleMenu: ', true)
     }

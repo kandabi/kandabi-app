@@ -1,71 +1,62 @@
 
-body ,html{
+body ,html, .text-secondary, .text-main h1, .text-main h2, .sidebar .menu .item ,.sidebar .menu .item .button {
     text-align: right;
-    font-family: 'rubikregular';
 }
 
 h1, h2 {
-    font-family: 'rubikmedium';
+    font-family: 'secular';
 }
 
-
 button {
-    font-family: 'rubikmedium';
     letter-spacing: 3px;
 }
 
-textarea{
-    font-family: 'rubikmedium';
+.text-main h1 {
+    line-height: 49px;
 }
-
-
-.text-main h1 , .text-main h2{
-    text-align: right; 
+.text-main h2{
+    line-height: 40px; 
 }
 
 .sidebar .menu .item{
-    text-align: right;
     padding-left:initial;
-    padding-right:28px;
+    padding-right: 9%;
 }
 
 .sidebar .menu .item .button{
-    text-align: right;
     left:initial;
-    font-family: 'rubikregular';
+    bottom:40px;
+    right: 30%;
 }
 
+.contact .text-secondary{
+    padding-right: 6%;
+    font-size: 1.3rem;
+}
 
+.about .text-secondary {
+    margin: 0 7.5%;
+    width:85%;
+}
+
+.contact .text-secondary span{
+    line-height: 22px;
+}
+
+.input_container.second, .submit_btn{
+    right:initial;
+    left:0;
+}
+
+.form input, .form textarea{
+    padding-left: initial;
+    padding-right:12px;
+}
 
 @font-face {
-    font-family: 'rubikblack';
-    src: url('../resources/rubik/rubik-black.woff2') format('woff2'),
-        url('../resources/rubik/rubik-black.woff') format('woff');
+    font-family: 'secular';
+    src: url('../resources/fonts/secularone.woff2') format('woff2'),
+         url('../resources/fonts/secularone.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
-@font-face {
-    font-family: 'rubikbold';
-    src: url('../resources/rubik/rubik-bold.woff2') format('woff2'),
-        url('../resources/rubik/rubik-bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'rubikmedium';
-    src: url('../resources/rubik/rubik-medium.woff2') format('woff2'),
-        url('../resources/rubik/rubik-medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'rubikregular';
-    src: url('../resources/rubik/rubik-regular.woff2') format('woff2'),
-        url('../resources/rubik/rubik-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-

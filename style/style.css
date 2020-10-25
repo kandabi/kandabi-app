@@ -7,7 +7,7 @@ body ,html{
     position: absolute;
     /* overflow-x: hidden;  */
     font-size:12px;
-    font-family: 'robotoregular';
+    font-family: 'rubikregular';
 }
 
 div {
@@ -70,7 +70,7 @@ button {
     border: 1px solid  #08FDD8;
     position: relative;
     color: #08FDD8;
-    font-family: 'robotomedium';
+    font-family: 'rubikregular';
     font-size:18px;
     letter-spacing: 4px;
 }
@@ -80,7 +80,7 @@ button:focus {
 }
 
 textarea{
-    font-family: 'robotomedium';
+    font-family: 'rubikregular';
 }
 
 .body{
@@ -166,13 +166,13 @@ textarea{
 
 .sidebar .menu .item .button{
     display: block;
-    bottom: 41px;
-    left: 62px;
+    bottom: 38px;
+    left: 35%;
     letter-spacing: 1.5px;
     font-size: 1.5rem;
     padding-top: 8px;
     padding-bottom: 8px;
-    font-family: robotomedium;
+    font-family: 'rubikregular';
     width: 76%;
     text-align: left;
     border: none;
@@ -180,6 +180,8 @@ textarea{
 
 .sidebar .logo{
     display: block;
+    position: absolute;
+    left: 0;
     /* width: 6%; */
     max-width:32px;
     margin-left: 15px;
@@ -195,7 +197,7 @@ textarea{
     /* width: 6%; */
     max-width:28px;
     display: block;
-    margin-left: 16%;
+    margin-left: 57px;
     margin-top: 14px;
     z-index: 5;
     cursor: pointer;
@@ -222,7 +224,8 @@ textarea{
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 25;
+    top: 56px;
+    z-index: 1;
     position: relative;
     background: #141414;
     transition: 300ms ease-out;
@@ -231,19 +234,23 @@ textarea{
 
 .sidebar .menu .item {
     text-align: left;
-    padding-left: 28px;
+    padding-left: 9%;
     margin: 0 auto;
-    height: 9%;
-    width: 51%;
+    height: 10%;
+    width: 48%;
     border-bottom: 1px solid #08FDD8;
 }
 
 .sidebar .icon{
-    /* height:65%; */
     max-width:38px;
     transition: 300ms ease-out;
 }
 
+
+.A_letter{
+    color:#08FDD8;
+    /* font-size:3.8rem; */
+}
 
 .text-main {
     position: relative;
@@ -259,7 +266,7 @@ textarea{
 
 
 .text-main h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom:0;
     margin-top:0;
     text-align: left;
@@ -315,9 +322,9 @@ textarea{
 }
 
 .text-secondary{
-    width: 75%;
+    width: 100%;
     display: block;
-    margin-left: 12.5%;
+    /* margin-left: 12.5%; */
     margin-top: 2%;
     margin-bottom: 12%;
     text-align: left;
@@ -416,8 +423,8 @@ textarea{
 }
 
 .contact .text-secondary{
-    font-size: 1.4rem;
-    letter-spacing: 1px;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
     width: 90%;
     margin-left: 6%;
     margin-top: 10px;
@@ -699,9 +706,9 @@ textarea{
     transform: translate(-50%, -50%);
 }
 
-@media (min-width:320px)  { 
+@media (min-width:325px)  { 
     .text-main h2 {
-        font-size: 2.3rem;
+        font-size: 2.6rem;
     }
 }
 
@@ -1280,35 +1287,27 @@ textarea{
   }
 
 @font-face {
-    font-family: 'robotoblack';
-    src: url('../resources/roboto/roboto-black.woff2') format('woff2'),
-         url('../resources/roboto/roboto-black.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
     font-family: 'robotobold';
-    src: url('../resources/roboto/roboto-bold.woff2') format('woff2'),
-         url('../resources/roboto/roboto-bold.woff') format('woff');
+    src: url('../resources/fonts/roboto-bold.woff2') format('woff2'),
+         url('../resources/fonts/roboto-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'robotomedium';
-    src: url('../resources/roboto/roboto-medium.woff2') format('woff2'),
-         url('../resources/roboto/roboto-medium.woff') format('woff');
+    font-family: 'rubikregular';
+    src: url('../resources/fonts/rubik-regular.woff2') format('woff2'),
+        url('../resources/fonts/rubik-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'robotoregular';
-    src: url('../resources/roboto/roboto-regular.woff2') format('woff2'),
-         url('../resources/roboto/roboto-regular.woff') format('woff');
+    font-family: 'rubikmedium';
+    src: url('../resources/fonts/rubik-medium.woff2') format('woff2'),
+        url('../resources/fonts/rubik-medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
