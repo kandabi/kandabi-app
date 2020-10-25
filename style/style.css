@@ -336,7 +336,6 @@ textarea{
 
 .about .text-main{
     margin-top: 30%;
-    margin-left: 14.5%;
     z-index: 1;
     
 }
@@ -344,8 +343,8 @@ textarea{
 .about .text-secondary{
     letter-spacing: 1px;
     font-size: 1.3rem;
-    width: 90%;
-    margin: 0 5%;
+    margin: 0 7.5%;
+    width:85%;
 }
 
 
@@ -436,7 +435,7 @@ textarea{
     background-color: #000;
     width: 75%;
     position: absolute;
-    height: 111px;
+    height: 103px;
     bottom:5%;
     left:50%;
     transform: translate(-50%, 0);
@@ -562,6 +561,7 @@ textarea{
 
 .swiper-pagination{
     top:34%;
+    height:5%;
 }
 
 .swiper-pagination .swiper-pagination-bullet{
@@ -638,7 +638,7 @@ textarea{
 
 
 .swiper-slide .project-text h2{
-    font-size:1.5rem;
+    font-size:1.8rem;
     text-align: center;
 }
 
@@ -798,6 +798,7 @@ textarea{
         margin-left: auto;
         margin-right: auto;
         width: 50%;
+        position: relative;
     }
 
     .content{
@@ -861,6 +862,7 @@ textarea{
 
     .home .text-secondary{
         text-align: left;
+        margin-left:12.5%;
     }
 
     .home .text-secondary span {
@@ -887,6 +889,7 @@ textarea{
 
     .about .text-main{
         margin-top: 8%;
+        margin-left:14.5%;
     }
 
     .about .text-secondary{
@@ -1011,7 +1014,7 @@ textarea{
     .contact .address{
         transform:initial;
         width: 270px;
-        height: 135px;
+        height: 125px;
         top: 0;
         left: 5%;
         margin-top: 40px;
@@ -1045,7 +1048,6 @@ textarea{
 
     .about .text-main {
         margin-top: 12%;
-        
     }
 
     .about .text-secondary{
@@ -1113,8 +1115,8 @@ textarea{
 }
 
 .animation-splat {
-    -webkit-animation: splat 2100ms linear both;
-    animation: splat 2100ms linear both;
+    -webkit-animation: splat 2900ms linear both;
+    animation: splat 2900ms linear both;
 }
 
 

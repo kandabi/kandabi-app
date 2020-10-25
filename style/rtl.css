@@ -1,5 +1,5 @@
 
-body ,html, .text-secondary, .text-main h1, .text-main h2, .sidebar .menu .item ,.sidebar .menu .item .button {
+body ,html, .text-secondary, .text-main h1, .text-main h2, .sidebar .menu .item ,.sidebar .menu .item .button, .swiper-slide .project-text {
     text-align: right;
 }
 
@@ -12,7 +12,7 @@ button {
 }
 
 .text-main h1 {
-    line-height: 49px;
+    line-height: 47px;
 }
 .text-main h2{
     line-height: 40px; 
@@ -29,15 +29,16 @@ button {
     right: 30%;
 }
 
+.contact .text-main{
+    margin-left:initial;
+    margin-right:7.5%;
+}
+
 .contact .text-secondary{
-    padding-right: 6%;
+    margin-right: 6%;
     font-size: 1.3rem;
 }
 
-.about .text-secondary {
-    margin: 0 7.5%;
-    width:85%;
-}
 
 .contact .text-secondary span{
     line-height: 22px;
@@ -51,6 +52,73 @@ button {
 .form input, .form textarea{
     padding-left: initial;
     padding-right:12px;
+}
+
+@media (min-width: 750px){
+    .text-main h1, .text-main h2 {
+        line-height: 60px;
+    }
+
+    .text-secondary{
+        padding-left:initial;
+        padding-right:1.5%;
+    }
+
+    .sidebar{
+        left:initial;
+        right:0;
+        border-right:initial;
+        border-left: 1px solid #08FDD8; 
+    }
+
+    .sidebar .menu .item{
+        text-align: center;
+        padding-right:initial;
+    }
+
+    .home .text-secondary {
+        text-align: right;
+        margin-right: 12.5%;
+        margin-left:initial;
+    }
+
+    .contact_btn {
+        margin-left:initial;
+        margin-right: 14.5%;
+    }
+
+    .content{
+        margin-left:initial;
+        margin-right:7%;
+        width:92%;
+    }
+
+    .swiper-slide .project-text h2{
+        text-align: right;
+    }
+
+    .contact .map_wrapper{
+        left:0;
+        right:initial;
+    }
+
+    .contact .address{
+        right:5%;
+        left:initial;
+    }
+
+    .form{
+        margin-left:initial;
+        margin-right:7.5%;
+    }
+}
+
+
+@media (min-width:1025px) and (min-height: 700px) { 
+    .content{
+        margin-right:4.5%;
+        width: 95.5%;
+    }
 }
 
 @font-face {
