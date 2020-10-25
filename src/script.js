@@ -24,12 +24,8 @@ function Init()
         $(this).addClass("animation-spin");
     });
 
-    $(".bounce").hover(function () {
-        $(this).addClass("animation-bounce");
-    });
-
     $(".letter, .bounce").bind("webkitAnimationEnd mozAnimationEnd animationend", function () {
-        $(this).removeClass("animation-bounce animation-splat")
+        $(this).removeClass("animation-splat")
     });
     
     swiper = new Swiper('.swiper-container', {
@@ -107,7 +103,7 @@ function Init()
         }, 700);
     });
 
-    var letters = $('.home .text-main .bounce, .home .text-main .logo');
+    var letters = $('.home .text-main h1, .home .text-main h2');
     var time = 150;
     setTimeout(function(){
         letters.each(function(index) {

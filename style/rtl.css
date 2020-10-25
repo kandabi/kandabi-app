@@ -3,10 +3,6 @@ body ,html, .text-secondary, .text-main h1, .text-main h2, .sidebar .menu .item 
     text-align: right;
 }
 
-h1, h2 {
-    font-family: 'secular';
-}
-
 button {
     letter-spacing: 3px;
 }
@@ -121,10 +117,3 @@ button {
     }
 }
 
-@font-face {
-    font-family: 'secular';
-    src: url('../resources/fonts/secularone.woff2') format('woff2'),
-         url('../resources/fonts/secularone.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
