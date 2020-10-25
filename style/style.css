@@ -233,7 +233,11 @@ textarea{
 
 
 .A_letter{
-    color:#08FDD8;
+    color: #08FDD8;
+    font-size: 4rem;
+    top: 1px;
+    left: 2px;
+    position: relative;
 }
 
 .text-main {
@@ -841,6 +845,11 @@ textarea{
         line-height: 60px;
     }
 
+    .A_letter{
+        font-size:4.4rem;
+        left:3px
+    }
+
     .home .text-secondary{
         text-align: left;
         margin-left:12.5%;
@@ -1039,8 +1048,11 @@ textarea{
 @media (min-width:1200px) and (min-height: 700px){ 
     /* hi-res laptops and desktops */ 
     .text-main h1, .text-main h2{
-        /* font-size: 5rem; */
         font-size:4.5rem;
+    }
+    
+    .A_letter{
+        font-size:5rem;
     }
 
     .home .text-main{
