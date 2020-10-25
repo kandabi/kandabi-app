@@ -18,7 +18,7 @@ function loadMap()
 function Init()
 {
     console.log("Is Mobile: %s", device.mobile());
-    particlesJS.load('particles', (isRtl) ? '../src/particles.json' : './src/particles.json');
+    particlesJS.load('particles', '../src/particles.json');
 
     $(".letter").hover(function () {
         $(this).addClass("animation-spin");
