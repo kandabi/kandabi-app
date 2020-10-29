@@ -38,7 +38,7 @@ a{
     border:1px solid #08FDD8;
     border-radius: 8px;
     box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
-    font-family: 'robotoregular';
+    font-family: 'rubikregular';
     line-height: 10px;
 }
 
@@ -53,9 +53,9 @@ a{
 }
 
 @font-face {
-    font-family: 'robotoregular';
-    src: url('../resources/roboto-regular-webfont.woff2') format('woff2'),
-         url('../resources/roboto-regular-webfont.woff') format('woff');
+    font-family: 'rubikregular';
+    src: url('../resources/fonts/rubik-regular.woff2') format('woff2'),
+        url('../resources/fonts/rubik-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
