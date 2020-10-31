@@ -11,7 +11,7 @@ function loadMap()
 {
     mapIncluded = true;
     window.onscroll = null;
-    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyAScQpWWuRroGpbJRjIYboHrpCQr9vl_Ts&callback=initMap&libraries=&v=weekly&language=en")
+    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyAScQpWWuRroGpbJRjIYboHrpCQr9vl_Ts&callback=initMap&libraries=&v=weekly&language=he&region=il")
 }
 
 
@@ -213,6 +213,7 @@ function include(filename) {
     var script = document.createElement('script');
     script.src = filename;
     script.type = 'text/javascript';
+    script.defer = true;
     script.add
  
     head.appendChild(script)

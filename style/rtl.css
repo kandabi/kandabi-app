@@ -3,6 +3,10 @@ body ,html, .text-secondary, .text-main h1, .text-main h2, .sidebar .menu .item 
     text-align: right;
 }
 
+.text-main h1, .text-main h2, .sidebar .menu .item ,.sidebar .menu .item .button, .swiper-slide .project-text{
+    direction: rtl;
+}
+
 button {
     letter-spacing: 3px;
 }
