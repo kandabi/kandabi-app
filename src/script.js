@@ -1,5 +1,4 @@
 $(function () {
-
     Init();
 
     var scrollPos = $(document).scrollTop();
