@@ -11,9 +11,8 @@ function loadMap()
 {
     mapIncluded = true;
     window.onscroll = null;
-    //include("https://maps.googleapis.com/maps/api/js?key=AIzaSyAScQpWWuRroGpbJRjIYboHrpCQr9vl_Ts&callback=initMap&libraries=&v=weekly")
+    include("https://maps.googleapis.com/maps/api/js?key=AIzaSyAScQpWWuRroGpbJRjIYboHrpCQr9vl_Ts&callback=initMap&libraries=&v=weekly")
 }
-
 
 function Init()
 {
@@ -72,6 +71,17 @@ function Init()
             player.stopVideo();
     });
 
+    // swiper.on('transitionEnd', function() {
+    //     console.log('swiper_slide', swiper.realIndex);
+    //     gtag('event', 'select_content', {
+    //         content_type: "swiper_slide",
+    //         items: [{  
+    //             id: swiper.realIndex,
+    //             name: swiper.realIndex, 
+    //         }]
+    //     });
+    // });
+
     $('.project-content').click(function(){
         if(theaterActive)
             closeTheater()
@@ -84,13 +94,19 @@ function Init()
     });
 
 
-    $('.sidebar .item, .contact_btn, .sidebar .logo').click(function(){
-        var name = $(this).attr('value');
-        if(!name) return;
+    $('.sidebar .item, .contact_btn, .sidebar .logo, .phone').click(function(){
+        var value = $(this).attr('value');
+        console.assert(value);
 
-        console.log('name:', name)
+        console.log('button_clicked: ', value)
+        // gtag('event', 'select_content', { content_type: "button_clicked", items: [{ name: value }] });
+        gtag('event', 'click', { 'event_label': 'button_clicked', 'value': value });
+
+        if(value.includes('resume') || value.includes('linkedin') || value.includes('github') || value.includes('github'))
+            return;
+
         $('html, body').stop().animate({
-            scrollTop: $("." + name).offset().top
+            scrollTop: $("." + value).offset().top
         }, 1500);
 
         if(menuActive)
@@ -127,6 +143,24 @@ function Init()
         })
     }
 
+    var form = document.getElementById('form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('submit event')
+        setTimeout(submitForm, 1000);
+
+        var formSubmitted = false;
+        function submitForm() {
+          if (!formSubmitted) {
+            console.log('form submitted')
+            formSubmitted = true;
+            form.submit();
+          }
+        }
+
+        gtag('event', 'generate_lead', { 'event_callback': submitForm });
+    });
+
     window.onscroll = function() {
         console.log('window.onscroll')
         if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
@@ -139,6 +173,15 @@ function Init()
             }
          }
     };
+
+    $('.project-bottom-text a').click(function(){
+        var value = $(this).attr('value');
+        console.assert(value);
+        console.log('project_hyperlink_clicked', value);
+
+        // gtag('event', 'select_content', { content_type: "project_hyperlink_clicked", items: [{  name: value }] });
+        gtag('event', 'click', { 'event_label': 'slide_hyperlink_clicked', 'value': value });
+    })
 }
 
 var swiper = null;
@@ -150,7 +193,32 @@ var player = null;
 
 
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('telloVideo');
+    player = new YT.Player('telloVideo', {
+        events: {
+            'onStateChange': onPlayerStateChange
+          }
+    });
+}
+
+function onPlayerStateChange(event) {
+    var player_state;
+    switch(event.data){
+        case YT.PlayerState.PLAYING:
+            player_state = 'playing';
+            break;
+        case YT.PlayerState.PAUSED:
+            player_state = 'paused';
+            break;
+        case YT.PlayerState.ENDED:
+            player_state = 'ended';
+            break;
+    }
+
+    if(player_state) {
+        console.log('youtube_statechanged', player_state)
+        // gtag('event', 'select_content', { content_type: "youtube_statechanged", items: [{  name: player_state }] });
+        gtag('event', 'click', { 'event_label': 'youtube_statechanged', 'value': player_state });
+    }
 }
 
 function toggleMenu() {
@@ -163,7 +231,7 @@ function toggleMenu() {
             opacity: '0',
         }, 250);
 
-        console.log('toggleMenu: ', true)
+        console.log('toggleMenu:', true)
     }
     else {
         $('.sidebar').animate({
@@ -174,10 +242,12 @@ function toggleMenu() {
             }, 150);
         });
 
-        console.log('toggleMenu: ', false)
+        console.log('toggleMenu:', false)
+        gtag('event', 'click', { 'event_label': 'open_menu' });
     }
 
     menuActive = !menuActive;
+    
 }
 
 function openTheater(item) {
@@ -192,6 +262,11 @@ function openTheater(item) {
     theaterActive = true;
 
     swiper.autoplay.stop();
+    var value = $(item).attr('value');
+    
+    console.log('theater_clicked', value);
+    // gtag('event', 'select_content', { content_type: "theater_clicked", items: [{ name: value }] });
+    gtag('event', 'click', { 'event_label': 'theater_mode', 'value': value });
 }
 
 function closeTheater() {
@@ -218,3 +293,15 @@ function include(filename) {
  
     head.appendChild(script)
  }   
+
+ function createFunctionWithTimeout(callback, opt_timeout) {
+    var called = false;
+    function fn() {
+      if (!called) {
+        called = true;
+        callback();
+      }
+    }
+    setTimeout(fn, opt_timeout || 1000);
+    return fn;
+}

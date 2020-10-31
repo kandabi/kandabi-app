@@ -11,10 +11,23 @@ function initMap() {
       title:"Aviv Kandabi",
       icon: "../resources/images/map-marker.png",
       size: new google.maps.Size(4, 4),
-  });
+    });
 
-  marker.setMap(map);
-  console.log("map loaded.")
+    marker.setMap(map);
+    console.log("map loaded.")
+
+
+    var mapInteracted = false;
+    map.addListener("center_changed", () => {
+          // 3 seconds after the center of the map has changed, pan back to the
+          // marker.
+          if(!mapInteracted)
+          {
+            mapInteracted = true;
+            console.log('map_interacted')
+            gtag('event', 'click', { 'event_label': 'map_interacted'});
+          }
+    });
 }
 
 

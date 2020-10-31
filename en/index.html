@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PP6CT5C');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVNVGK53ZC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TVNVGK53ZC');
+    </script>
 
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,11 +28,6 @@
     </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP6CT5C"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <div class='loader'>
         <img src="../resources/images/loading.gif">
     </div>
@@ -42,7 +39,7 @@
             <div class="hamburger_menu">
                 <img  src="../resources/images/menu.png">
             </div>
-            <div class="phone bounce">
+            <div value='phone' class="phone bounce">
                 <a href="tel:+972-53-4267886">
                     <img src="../resources/images/phone.png">
                 </a>
@@ -64,19 +61,19 @@
                     <img class='icon' src="../resources/images/email.png">
                     <button class='link button'>Contact</button>
                 </div>
-                <div class="item">
+                <div value='resume'  class="item">
                     <img class='icon' src="../resources/images/resume.png">
                     <a href="../resources/קורות חיים מפתח.pdf" target="_blank">
                         <button class='link button'>Resume</button>
                     </a>
                 </div>
-                <div class="item">
+                <div value='linkedin' class="item">
                     <img class='icon' src="../resources/images/linkedin.png">
                     <a href="https://www.linkedin.com/in/aviv-kandabi/" target="_blank">
                         <button class='link button'>Linkedin</button>
                     </a>
                 </div>
-                <div style='border-bottom:none' class="item">
+                <div value='github' class="item" style='border-bottom:none'>
                     <img class='icon' src="../resources/images/github.png">
                     <a href="https://github.com/kandabi" target="_blank"> 
                         <button class='link button'>Github</button>
@@ -169,7 +166,7 @@
                                     <br>
                                     <br>
                                     <span class='project-bottom-text'>
-                                        Developed the game as a Freelance developer for <a target="_blank" href='https://dgcore.co/'>DGCore</a>.
+                                        Developed the game as a Freelance developer for <a value='dgcore' target="_blank" href='https://dgcore.co/'>DGCore</a>.
                                     </span>
                                 </span>
                             </div>
@@ -189,11 +186,11 @@
                                     <br>
                                     <br>
                                     <span class='project-bottom-text'>
-                                        Developed as an open-source project, hosted on <a target="_blank" href='https://github.com/kandabi/OpenFTP'>Github</a>.
+                                        Developed as an open-source project, hosted on <a value='openftp' target="_blank" href='https://github.com/kandabi/OpenFTP'>Github</a>.
                                     </span>
                                 </span>
                             </div>
-                            <div class="project-content">
+                            <div value='openftp' class="project-content">
                                 <img src="../resources/images/openftp.gif">
                             </div>
                         </div>
@@ -213,7 +210,7 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="project-content">
+                            <div value='object_detector' class="project-content">
                                 <video autoplay loop>
                                     <source src="../resources/videos/object-detector.mp4" type="video/mp4">
                                 </video>
@@ -232,11 +229,11 @@
                                     <br>
                                     <br>
                                     <span class='project-bottom-text'>
-                                        Developed as a hobby project, released as open-source on <a target="_blank" href='https://github.com/kandabi/Pixel-Physics-Simulation'>Github</a>.
+                                        Developed as a hobby project, released as open-source on <a value='pixel-physics-simulation' target="_blank" href='https://github.com/kandabi/Pixel-Physics-Simulation'>Github</a>.
                                     </span>
                                 </span>
                             </div>
-                            <div class="project-content">
+                            <div value='pixel-physics-simulation' class="project-content">
                                 <img src="../resources/images/pixel-simulation.gif">
                             </div>
                         </div>
@@ -254,11 +251,11 @@
                                     <br>
                                     <br>
                                     <span class='project-bottom-text'>
-                                        The entire application is available, released as open-source on <a target="_blank" href='https://github.com/kandabi/kandabi-app'>Github</a>.
+                                        The entire application is available, released as open-source on <a value='avivkandabi.com' target="_blank" href='https://github.com/kandabi/kandabi-app'>Github</a>.
                                     </span>
                             </span>
                             </div>
-                            <div class="project-content">
+                            <div value='avivkandabi.com' class="project-content">
                                 <img class='this-app' src="../resources/images/avivkandabi.gif">
                             </div>
                         </div>
@@ -277,12 +274,12 @@
                                     <br>
                                     <br>
                                     <span class='project-bottom-text'>
-                                        Developed the application's Backend as an employee at  <a target="_blank" href='https://slash.co.il/en/portfolio/development-of-challenges-and-donations-application-just-donate'>Slash Apps</a>.
+                                        Developed the application's Backend as an employee at  <a value='slashapps' target="_blank" href='https://slash.co.il/en/portfolio/development-of-challenges-and-donations-application-just-donate'>Slash Apps</a>.
                                     </span>
                             </span>
                                     
                             </div>
-                            <div class="project-content">
+                            <div value='slashapps' class="project-content">
                                 <img src="../resources/images/justdonate.gif">
                             </div>
                         </div>
@@ -315,7 +312,7 @@
                 </span>
             </div>
 
-            <form action="thankyou.html" class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <form action="thankyou.html" id='form' class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                 <div style='display:none;' hidden aria-hidden="true">
                     <label>
                       Don’t fill this out if you're human: 
