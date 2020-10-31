@@ -110,7 +110,7 @@ function Init()
         }, 1500);
 
         if(menuActive)
-            toggleMenu();
+            closeMenu();
     });
 
     $('.loader').fadeOut(500 ,function(){
@@ -138,10 +138,21 @@ function Init()
     }, 1200);
 
     if(device.mobile()) {
-        $('.sidebar .hamburger_menu').click(function(){
-            toggleMenu();
+        $('.sidebar .hamburger_icon').click(function(){
+            if(menuActive)
+                closeMenu();
+            else
+                openMenu();
         })
     }
+
+    $('.sidebar .lang_icon').click(function(){
+        if(langMenuActive)
+            closeLangMenu();
+        else
+            openLangMenu();
+    })
+
 
     var form = document.getElementById('form');
     form.addEventListener('submit', function(event) {
@@ -189,8 +200,9 @@ var theaterItem = null;
 var theaterActive = false;
 var mapIncluded = false;
 var menuActive = false;
+var langMenuActive = false;
+var menuAnimating = false;
 var player = null;
-
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('telloVideo', {
@@ -221,34 +233,101 @@ function onPlayerStateChange(event) {
     }
 }
 
-function toggleMenu() {
-    if(menuActive) {
-        $('.sidebar').animate({
-            height: '56px',
-        }, 350);
+function openMenu()
+{
+    if(menuAnimating) {
+        return;
+    }
+    else if(langMenuActive) {
+        closeLangMenu();
+        setTimeout(openMenu , 550);
+        return;
+    }
 
+        
+    menuAnimating = true;
+    $('.sidebar').animate({
+        height: '100%',  
+    }, 250 ,function (){
         $('.sidebar .menu').animate({
-            opacity: '0',
-        }, 250);
+            opacity: '1',
+        }, 220);
+        menuAnimating = false;
+    });
 
-        console.log('toggleMenu:', true)
-    }
-    else {
-        $('.sidebar').animate({
-            height: '100%',  
-        }, 120 ,function (){
-            $('.sidebar .menu').animate({
-                opacity: '1',
-            }, 150);
-        });
-
-        console.log('toggleMenu:', false)
-        gtag('event', 'click', { 'event_label': 'open_menu' });
-    }
-
-    menuActive = !menuActive;
-    
+    console.log('openMenu')
+    gtag('event', 'click', { 'event_label': 'open_menu' });
+    menuActive = true;
 }
+
+function closeMenu() {
+    if(menuAnimating) {
+        return;
+    }
+
+    menuAnimating = true;
+    $('.sidebar').animate({
+        height: '56px',
+    }, 450, function(){
+        menuAnimating = false;
+    });
+
+    $('.sidebar .menu').animate({
+        opacity: '0',
+    }, 450);
+
+    console.log('closeMenu')
+    menuActive = false;
+}
+
+
+function openLangMenu() {
+    if(menuAnimating) {
+        return;
+    }
+    else if(menuActive) {
+        closeMenu();
+        setTimeout(openLangMenu , 500);
+        return;
+    }
+
+    menuAnimating = true;
+    $('.sidebar').animate({
+        height: '110px',  
+    }, 250 ,function (){
+        $('.sidebar .lang_menu').animate({
+            opacity: '1',
+        }, 220, function(){
+            menuAnimating = false;
+        });
+    });
+
+    console.log('openLangMenu')
+    gtag('event', 'click', { 'event_label': 'open_lang_menu' });
+
+    langMenuActive = true;
+}
+
+function closeLangMenu() {
+    if(menuAnimating) {
+        return;
+    }
+
+    menuAnimating = true;
+    $('.sidebar').animate({
+        height: '56px',
+    }, 450);
+
+    $('.sidebar .lang_menu').animate({
+        opacity: '0',
+    }, 450,function(){
+        menuAnimating = false;
+    });
+
+    console.log('closeLangMenu')
+    langMenuActive = false;
+}
+
 
 function openTheater(item) {
     $('.overlay').css('display', 'block');
