@@ -76,6 +76,13 @@ button {
         padding-right:initial;
     }
 
+    .sidebar .menu .item .button{
+        right: 0;
+        bottom: 32px;
+        font-size: 13px;
+        text-align: center;
+    }
+
     .home .text-secondary {
         text-align: right;
         margin-right: 12.5%;
