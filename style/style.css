@@ -7,7 +7,6 @@ body ,html{
     position: absolute;
     font-size:12px;
     font-family: 'rubikregular';
-    overflow-x:hidden;
 }
 
 div {
@@ -397,6 +396,7 @@ textarea{
     bottom: 0;
     left:0;
     top:0;
+    overflow-x: hidden;
 }
 
 .contact .text-secondary{
