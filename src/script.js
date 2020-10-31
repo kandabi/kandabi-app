@@ -240,15 +240,14 @@ function openMenu()
     }
     else if(langMenuActive) {
         closeLangMenu();
-        setTimeout(openMenu , 550);
+        setTimeout(openMenu , 450);
         return;
     }
-
         
     menuAnimating = true;
     $('.sidebar').animate({
         height: '100%',  
-    }, 250 ,function (){
+    }, 150 ,function (){
         $('.sidebar .menu').animate({
             opacity: '1',
         }, 220);
@@ -268,18 +267,17 @@ function closeMenu() {
     menuAnimating = true;
     $('.sidebar').animate({
         height: '56px',
-    }, 450, function(){
+    }, 200, function(){
         menuAnimating = false;
     });
 
     $('.sidebar .menu').animate({
         opacity: '0',
-    }, 450);
+    }, 200);
 
     console.log('closeMenu')
     menuActive = false;
 }
-
 
 function openLangMenu() {
     if(menuAnimating) {
@@ -287,17 +285,17 @@ function openLangMenu() {
     }
     else if(menuActive) {
         closeMenu();
-        setTimeout(openLangMenu , 500);
+        setTimeout(openLangMenu , 450);
         return;
     }
 
     menuAnimating = true;
     $('.sidebar').animate({
         height: '110px',  
-    }, 250 ,function (){
+    }, 100 ,function (){
         $('.sidebar .lang_menu').animate({
             opacity: '1',
-        }, 220, function(){
+        }, 100, function(){
             menuAnimating = false;
         });
     });
@@ -316,11 +314,11 @@ function closeLangMenu() {
     menuAnimating = true;
     $('.sidebar').animate({
         height: '56px',
-    }, 450);
+    }, 350);
 
     $('.sidebar .lang_menu').animate({
         opacity: '0',
-    }, 450,function(){
+    }, 350 ,function(){
         menuAnimating = false;
     });
 
