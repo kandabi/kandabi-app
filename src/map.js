@@ -1,8 +1,8 @@
-let map;
 function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
+    const map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: 31.4037192, lng: 34.9606799 },
       zoom: 7,
+      scaleControl: true,
       styles: stylers,
       disableDefaultUI: true,
     });
@@ -15,11 +15,11 @@ function initMap() {
       size: new google.maps.Size(4, 4),
   });
 
-
   marker.setMap(map);
+  console.log("map loaded.")
 }
 
-console.log("map.js loaded")
+
 
 var stylers = [
     {
