@@ -222,21 +222,20 @@ textarea{
 
 .sidebar .lang_menu .item{
     border: 2px solid #08FDD8;
-    height: 30px;
-    line-height: 30px;
-    width: 93px;
+    line-height: 31px;
+    width: 92px;
     font-size: 1.4rem;
     text-align: center;
     display: inline-block;
-    padding: 3px;
     vertical-align: middle;
-    border-radius: 11px;
-    margin: 0 4px;
+    border-radius: 9px;
+    margin: 3px 4px;
     letter-spacing: 1.5px;
 }
 
 .sidebar .lang_menu .item a{
-    color:#fff;
+    padding: 15px;
+    color: #fff;
 }
 
 .sidebar .menu{
