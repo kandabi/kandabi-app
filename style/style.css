@@ -361,9 +361,6 @@ textarea{
     font-size:3rem;
 }
 
-
-
-
  .content.contact{
     overflow: visible;
 }
@@ -385,13 +382,11 @@ textarea{
     height:58%;
     width: 100%;
     position: absolute;
-    direction: ltr;
     /* bottom:0; */
 }
 
 .contact .map{
     height: 100%;
-    direction: ltr;
     /* width: 100%;
     position: absolute; */
     /* right: 0;
