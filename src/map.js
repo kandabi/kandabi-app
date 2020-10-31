@@ -2,11 +2,9 @@ function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: 31.4037192, lng: 34.9606799 },
       zoom: 7,
-      scaleControl: true,
       styles: stylers,
       disableDefaultUI: true,
     });
-
 
     var marker = new google.maps.Marker({
       position: { lat: 31.975194, lng: 34.7433674 },
