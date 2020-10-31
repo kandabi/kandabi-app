@@ -199,6 +199,17 @@ textarea{
     z-index: 5;
 }
 
+.sidebar .lang_menu{
+    right: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+    max-width: 40px;
+    margin-right: 65px;
+    margin-top: 9px;
+    z-index: 5;
+}
+
 .sidebar .menu{
     opacity: 0;
     display: flex;
