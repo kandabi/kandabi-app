@@ -17,7 +17,7 @@ img {
     max-width: 100%;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'secular';
     cursor: default;
     color: #fff;
@@ -27,7 +27,7 @@ h1{
     font-size: 3rem;
 }
 
-h2{
+h2, h3{
     font-size: 2.3rem;
 }
 
@@ -292,20 +292,20 @@ textarea{
 }   
 
 
-.text-main h1{
+.text-main h1, .text-main h2{
     font-size: 3.5rem;
     margin-bottom:0;
     margin-top:0;
     text-align: left;
 }
 
-.text-main h2{
+.text-main h3{
     text-align:left;
     font-size: 1.8rem;
     margin-top:0;
 }
 
-.text-main h1, .text-main h2{
+.text-main h1, .text-main h2, .text-main h3{
     line-height: 45px;
     transition: 0.2s;
     cursor: default;
@@ -325,12 +325,12 @@ textarea{
     padding-top:58%;
 }
 
-.home .text-main h1, .home .text-main h2{
+.home .text-main h1, .home .text-main h2, .home .text-main h3{
     left:150px;
     position: relative;
 }
 
-.home .text-main h1, .home .text-main h2, .home .text-main .logo, .home .text-secondary, .contact_btn{
+.home .text-main h1, .home .text-main h2, .home .text-main h3, .home .text-main .logo, .home .text-secondary, .contact_btn{
     opacity:0;
     transition: 300ms ease-out;
 }
@@ -416,7 +416,7 @@ textarea{
     margin-left: 7.5%;
 }
 
-.contact .text-main h1{
+.contact .text-main h2{
     color:#08FDD8;
 }
 
@@ -711,7 +711,11 @@ textarea{
         padding-top:65%;
     } 
 
-    .text-main h2 {
+    .text-main h2{
+        font-size: 3rem;
+    }
+
+     .text-main h3{
         font-size: 2.2rem;
     }
 }
@@ -926,7 +930,7 @@ textarea{
         text-align: center;
     }
 
-    .text-main h1, .text-main h2{
+    .text-main h1, .text-main h2, .text-main h3{
         font-size: 3.75rem;
         line-height: 60px;
     }
@@ -1111,8 +1115,8 @@ textarea{
 @media (min-width:1025px) and (min-height: 700px) { 
     /* big landscape tablets, laptops, and desktops */ 
     .content{
-        margin-left:4.5%;
-        width: 95.5%;
+        margin-left:5%;
+        width: 95%;
     }
 
     .home .text-main{
@@ -1129,7 +1133,7 @@ textarea{
 }
 @media (min-width:1200px) and (min-height: 700px){ 
     /* hi-res laptops and desktops */ 
-    .text-main h1, .text-main h2{
+    .text-main h1, .text-main h2, .text-main h3{
         font-size:4.5rem;
     }
     

@@ -99,7 +99,7 @@ function Init()
         }, 700);
     });
 
-    var letters = $('.home .text-main h1, .home .text-main h2');
+    var letters = $('.home .text-main h1, .home .text-main h2, .home .text-main h3');
     var time = 150;
     setTimeout(function(){
         letters.each(function(index) {
