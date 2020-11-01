@@ -19,10 +19,6 @@ function Init()
     console.log("Is Mobile: %s", device.mobile());
     particlesJS.load('particles', '../src/particles.json');
 
-    $(".letter").hover(function () {
-        $(this).addClass("animation-spin");
-    });
-
     $(".letter, .bounce").bind("webkitAnimationEnd mozAnimationEnd animationend", function () {
         $(this).removeClass("animation-splat")
     });
@@ -71,17 +67,6 @@ function Init()
             player.stopVideo();
     });
 
-    // swiper.on('transitionEnd', function() {
-    //     console.log('swiper_slide', swiper.realIndex);
-    //     gtag('event', 'select_content', {
-    //         content_type: "swiper_slide",
-    //         items: [{  
-    //             id: swiper.realIndex,
-    //             name: swiper.realIndex, 
-    //         }]
-    //     });
-    // });
-
     $('.project-content').click(function(){
         if(theaterActive)
             closeTheater()
@@ -124,16 +109,23 @@ function Init()
     setTimeout(function(){
         letters.each(function(index) {
             setTimeout( function(){ 
-                $(letters[index]).css('opacity',1).addClass("animation-splat");
-            }, time += 250 )
+                // $(letters[index]).css('opacity',1).addClass("animation-splat");
+                $(letters[index]).animate({
+                    left: '0',
+                    opacity: 1
+                }, 450);
+            }, time += 350 )
         });
 
         var items = $('.contact_btn, .home .text-secondary');
-        time += 350;
+        time += 600;
         items.each(function(index) {
             setTimeout( function(){ 
-                $(items[index]).css('opacity',1).addClass("animation-splat");
-            }, time += 150 )
+                $(items[index]).animate({
+                    opacity: 1
+                }, 500);
+                // $(items[index]).css('opacity',1).addClass("animation-splat");
+            }, time += 350 )
         });
     }, 1200);
 

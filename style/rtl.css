@@ -54,6 +54,10 @@ button {
     padding-right:12px;
 }
 
+.home .text-main h1, .home .text-main h2{
+    left:-150px;
+}
+
 @media (min-width: 750px){
     .text-main h1, .text-main h2 {
         line-height: 60px;
@@ -79,7 +83,7 @@ button {
     .sidebar .menu .item .button{
         right: 0;
         bottom: 32px;
-        font-size: 13px;
+        /* font-size: 13px; */
         text-align: center;
     }
 
