@@ -1,7 +1,5 @@
 $(function () {
-
     Init();
-
     var scrollPos = $(document).scrollTop();
     if(scrollPos)
         loadMap();
@@ -47,7 +45,7 @@ function Init()
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-      });
+    });
 
     var typed = new Typed('#typed', {
         stringsElement: '#typed-strings',
@@ -81,10 +79,7 @@ function Init()
 
     $('.sidebar .item, .contact_btn, .sidebar .logo, .phone').click(function(){
         var value = $(this).attr('value');
-        console.assert(value);
-
         console.log('button_clicked: ', value)
-        // gtag('event', 'select_content', { content_type: "button_clicked", items: [{ name: value }] });
         gtag('event', 'click', { 'event_label': 'button_clicked', 'value': value });
 
         if(value.includes('resume') || value.includes('linkedin') || value.includes('github') || value.includes('github'))
@@ -109,7 +104,6 @@ function Init()
     setTimeout(function(){
         letters.each(function(index) {
             setTimeout( function(){ 
-                // $(letters[index]).css('opacity',1).addClass("animation-splat");
                 $(letters[index]).animate({
                     left: '0',
                     opacity: 1
@@ -124,7 +118,6 @@ function Init()
                 $(items[index]).animate({
                     opacity: 1
                 }, 500);
-                // $(items[index]).css('opacity',1).addClass("animation-splat");
             }, time += 350 )
         });
     }, 1200);
@@ -171,7 +164,7 @@ function Init()
             {
                 loadMap();
             }
-            else{
+            else {
                 window.onscroll = null;
             }
          }
@@ -181,8 +174,6 @@ function Init()
         var value = $(this).attr('value');
         console.assert(value);
         console.log('project_hyperlink_clicked', value);
-
-        // gtag('event', 'select_content', { content_type: "project_hyperlink_clicked", items: [{  name: value }] });
         gtag('event', 'click', { 'event_label': 'slide_hyperlink_clicked', 'value': value });
     })
 }
@@ -220,13 +211,11 @@ function onPlayerStateChange(event) {
 
     if(player_state) {
         console.log('youtube_statechanged', player_state)
-        // gtag('event', 'select_content', { content_type: "youtube_statechanged", items: [{  name: player_state }] });
         gtag('event', 'click', { 'event_label': 'youtube_statechanged', 'value': player_state });
     }
 }
 
-function openMenu()
-{
+function openMenu() {
     if(menuAnimating) {
         return;
     }
@@ -334,7 +323,6 @@ function openTheater(item) {
     var value = $(item).attr('value');
     
     console.log('theater_clicked', value);
-    // gtag('event', 'select_content', { content_type: "theater_clicked", items: [{ name: value }] });
     gtag('event', 'click', { 'event_label': 'theater_mode', 'value': value });
 }
 

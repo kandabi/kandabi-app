@@ -29,6 +29,10 @@ button {
     right: 30%;
 }
 
+.about .text-secondary{
+    font-size:1.3rem;
+}
+
 .contact .text-main{
     margin-left:initial;
     margin-right:7.5%;
@@ -38,7 +42,6 @@ button {
     margin-right: 6%;
     font-size: 1.3rem;
 }
-
 
 .contact .text-secondary span{
     line-height: 22px;
@@ -123,7 +126,6 @@ button {
         margin-right:7.5%;
     }
 }
-
 
 @media (min-width:1025px) and (min-height: 700px) { 
     .content{

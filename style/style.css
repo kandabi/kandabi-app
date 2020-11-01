@@ -35,24 +35,19 @@ a:link{
     text-decoration: none;
 }
 
-/*IE9*/
-*::selection 
-{
+*::selection  {
     background-color:transparent;
 } 
-*::-moz-selection
-{
+
+*::-moz-selection {
     background-color:transparent;
 }
-*
-{        
+
+* {        
     -webkit-user-select: none;
     -moz-user-select: -moz-none;
-    /*IE10*/
     -ms-user-select: none;
     user-select: none;
-
-    /*You just need this if you are only concerned with android and not desktop browsers.*/
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }  
 
@@ -60,10 +55,10 @@ span {
     color: #fff;
     font-weight: normal;
     cursor: default;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */     
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;     
+    user-select: none;          
 }
 
 button {
@@ -155,7 +150,6 @@ textarea{
     transition: 300ms ease-out;
 }
 
-
 .sidebar .menu .item .button{
     display: block;
     bottom: 38px;
@@ -221,7 +215,6 @@ textarea{
     opacity: 0;
     z-index: 1;
     direction: ltr;
-    /* left:100%; */
 }
 
 .sidebar .lang_menu .lang_text{
@@ -278,7 +271,6 @@ textarea{
     transition: 300ms ease-out;
 }
 
-
 .A_letter{
     color: #08FDD8;
     font-size: 4rem;
@@ -333,7 +325,6 @@ textarea{
     padding-top:58%;
 }
 
-
 .home .text-main h1, .home .text-main h2{
     left:150px;
     position: relative;
@@ -366,24 +357,22 @@ textarea{
 }
 
 .about .text-main{
-    margin-top: 30%;
+    margin-top: 23%;
     z-index: 1;
 }
 
 .about .text-secondary{
     letter-spacing: 1px;
-    font-size: 1.3rem;
-    margin: 3% 7.5%;
-    width:85%;
+    font-size: 1.2rem;
+    margin: 3% 5%;
+    width:90%;
 }
-
 
 .about .text-main .logo{
     left: 15px;
     height: 72px;
     top: 7px;
 }
-
 
 .about{
     overflow:hidden;
@@ -433,21 +422,13 @@ textarea{
 
 .contact .map_wrapper{
     border-top: 1px solid #08FDD8;
-    /* height: 600px; */
     height:58%;
     width: 100%;
     position: absolute;
-    /* bottom:0; */
 }
 
 .contact .map{
     height: 100%;
-    /* width: 100%;
-    position: absolute; */
-    /* right: 0;
-    bottom: 0;
-    left:0;
-    top:0; */
 }
 
 .contact .text-secondary{
@@ -483,7 +464,6 @@ textarea{
     height: 410px;
     margin: 0 5%;
     position: relative;
-    /* display:none; */
 }
 
 .form input, .form textarea{
@@ -560,7 +540,6 @@ textarea{
     height: 92%;
     color: white;
     z-index:2;
-    /* border: 1px solid yellow; */
 }
 
 .swiper-slide {
@@ -584,7 +563,6 @@ textarea{
 }
 
 .swiper-scrollbar{
-    /* display:none; */
     top:32%;
 }
 
@@ -628,11 +606,9 @@ textarea{
     transition: 300ms ease-out;
 }
 
-
 .swiper-slide .project-content:hover{
     cursor:pointer;
 }
-
 
 .swiper-slide .project-content img, .swiper-slide .project-content video{
     max-width:95%;
@@ -643,12 +619,9 @@ textarea{
     left:50%;
 }
 
-
 .swiper-slide .project-content .this-app{
     border: 1px solid#08FDD8;
 }
-
-
 
 .swiper-slide .project-text{
     width: 90%;
@@ -720,7 +693,6 @@ textarea{
     z-index:0 !important;
 }
 
-
 .loader{
     position: absolute;
     width: 100%;
@@ -745,20 +717,11 @@ textarea{
     }
 }
 
-@media (min-width:360px)  { 
-
-}
-
-@media (min-width:480px)  { 
-    /* smartphones, Android phones, landscape iPhone */ 
-}
-@media (min-width:600px){ 
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
-}
+/* @media (min-width:480px) { smartphones, Android phones, landscape iPhone } */
+/* @media (min-width:600px) { portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android)  } */
 
 @media (min-width:750px)   { 
     /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-
     .sidebar{
         z-index:15;
         width: 5%;
@@ -812,7 +775,6 @@ textarea{
     .sidebar .menu .item:hover img{
         opacity: 0;
     } 
-    
 
     .sidebar .phone a{
         width:50%;
@@ -899,7 +861,6 @@ textarea{
         opacity:0;
     }
 
-
     .sidebar .logo{
         margin-top: 20%;
         margin-bottom: 40%;
@@ -931,11 +892,13 @@ textarea{
         text-shadow: nthree;
         cursor:pointer;
     }
+
     .button:hover:before {
         left: 0%;
         right: auto;
         width: 100%;
     }
+
     .button:before {
         display: block;
         position: absolute;
@@ -1063,7 +1026,6 @@ textarea{
         bottom: 60px;
     }
 
-
     .swiper-slide .project-text h2{
         text-align:left;
         font-size: 1.6rem;
@@ -1166,8 +1128,6 @@ textarea{
     .about .text-secondary{
         font-size:1.5rem;
     }
-
-
 }
 @media (min-width:1200px) and (min-height: 700px){ 
     /* hi-res laptops and desktops */ 
@@ -1217,7 +1177,6 @@ textarea{
     .contact .text-secondary{
         font-size:1.3rem;
     }
-
 }
   
 @font-face {
