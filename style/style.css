@@ -654,7 +654,6 @@ textarea{
     color:#08FDD8;
 }
 
-
 .overlay{
     display:none;
     position: absolute;;
@@ -960,7 +959,6 @@ textarea{
     .about video{
         height:initial;
         min-height: 100%;
-        /* width:100%; */
     }
 
     .about .text-main{
