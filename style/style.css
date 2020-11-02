@@ -950,10 +950,12 @@ textarea{
     .home .text-secondary{
         text-align: left;
         margin-left:12.5%;
+        width: 80%;
+        line-height: 35px;
     }
 
     .home .text-secondary span {
-        letter-spacing: 5px;
+        letter-spacing: 4px;
     }
 
     .text-secondary {
