@@ -47,6 +47,11 @@ button {
     line-height: 22px;
 }
 
+.input_container{
+    border-left:none;
+    border-right:2px solid #08FDD8;
+}
+
 .input_container.second, .submit_btn{
     right:initial;
     left:0;
