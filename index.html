@@ -32,7 +32,18 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="shortcut icon" href="./resources/images/favicon.ico">
     <script src="./src/current-device.min.js"></script>
-    <script> var isRtl = false; </script>
+    <script> 
+        var isRtl = false; 
+        var language = navigator.language || navigator.browserLanguage; 
+        var hebrew = language.startsWith('he');
+        cookie = key=>((new RegExp((key || '=')+'=(.*?); ','gm')).exec(document.cookie+'; ') ||['',null])[1]
+        var redirected = cookie('redirected')
+        if(hebrew && !redirected) {
+            window.location.href = "./he/";
+        }
+        
+    </script>
+
 </head>
 <body>
     <div class='loader'>
