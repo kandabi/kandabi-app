@@ -1,2 +1,2 @@
 # Redirect users in israel to /he
-/index.html  /he  301  Country=il
+/*  /he  301  Country=il
