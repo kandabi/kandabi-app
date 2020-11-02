@@ -14,9 +14,8 @@ button {
     line-height: 47px;
 }
 .text-main h2, .text-main h3{
-    line-height: 40px; 
+    line-height: 34px; 
 }
-
 
 .sidebar .menu .item{
     padding-left:initial;
@@ -96,7 +95,8 @@ button {
 
     .home .text-secondary {
         text-align: right;
-        margin-right: 12.5%;
+        margin-right: 10%;
+        padding-right:0;
         margin-left:initial;
     }
 

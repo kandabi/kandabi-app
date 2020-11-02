@@ -47,16 +47,6 @@ function Init()
         },
     });
 
-    var typed = new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        loop: true,
-        smartBackspace:false,
-        typeSpeed: 160,
-        backSpeed: 120,
-        backDelay: 1200,
-        startDelay: 400,
-    });
-
     swiper.on('slideChange', function () {
         if(theaterActive)
             closeTheater()
