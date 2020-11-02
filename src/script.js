@@ -47,16 +47,6 @@ function Init()
         },
     });
 
-    var typed = new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        loop: true,
-        smartBackspace:false,
-        typeSpeed: 160,
-        backSpeed: 120,
-        backDelay: 1200,
-        startDelay: 400,
-    });
-
     swiper.on('slideChange', function () {
         if(theaterActive)
             closeTheater()
@@ -99,7 +89,7 @@ function Init()
         }, 700);
     });
 
-    var letters = $('.home .text-main h1, .home .text-main h2');
+    var letters = $('.home .text-main h1, .home .text-main h2, .home .text-main h3');
     var time = 150;
     setTimeout(function(){
         letters.each(function(index) {
