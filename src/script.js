@@ -15,7 +15,8 @@ function loadMap()
 function Init()
 {
     console.log("Is Mobile: %s", device.mobile());
-    particlesJS.load('particles', '../src/particles.json');
+    var prePath = (isRtl) ? '..' : '.';
+    particlesJS.load('particles', prePath + '/src/particles.json');
 
     $(".letter, .bounce").bind("webkitAnimationEnd mozAnimationEnd animationend", function () {
         $(this).removeClass("animation-splat")

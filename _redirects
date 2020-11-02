@@ -1,4 +1,2 @@
 # Redirect users in israel to /he
-/  /he  301  Country=il
-
-/  /en  301
+/  /he  301!  Country=il
