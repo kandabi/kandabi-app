@@ -65,7 +65,7 @@ button {
     left:-150px;
 }
 
-@media (min-width: 750px){
+@media (min-width: 600px) and (min-height: 420px){
     .text-main h1, .text-main h2, .text-main h3 {
         line-height: 60px;
     }
@@ -132,20 +132,28 @@ button {
 
     .about .text-secondary{
         margin-left:initial;
-        margin-right:13%;
+        margin-right:10%;
         font-size:1.5rem;
     }
 
     .about .text-main{
         margin-left:initial;
-        margin-right: 14.5%;
+        margin-right: 11.5%;
     }
 }
 
-@media (min-width:1025px) and (min-height: 700px) { 
+@media (min-width:1025px) and (min-height: 570px) { 
     .content{
         margin-right:5%;
         width: 95%;
+    }
+
+    .about .text-main{
+        margin-right: 14.5%;
+    }
+
+    .about .text-secondary{
+        margin-right:13%;
     }
 }
 
