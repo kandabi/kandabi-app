@@ -73,7 +73,7 @@ function Init()
         console.log('button_clicked: ', value)
         gtag('event', 'click', { 'event_label': 'button_clicked', 'value': value });
 
-        if(value.includes('resume') || value.includes('linkedin') || value.includes('github') || value.includes('github'))
+        if(value.includes('phone') || value.includes('linkedin') || value.includes('github'))
             return;
 
         $('html, body').stop().animate({

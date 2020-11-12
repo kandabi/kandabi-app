@@ -15,7 +15,7 @@ span{
 }
 
 h1{
-    color: #08FDD8;
+    color: #FFA838;
     
 }    
 
@@ -35,7 +35,7 @@ a{
     max-width: 364px;
     padding: 24px;
     background-color: #1D1D1D;
-    border:1px solid #08FDD8;
+    border:1px solid #FFA838;
     border-radius: 8px;
     box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
     font-family: 'rubikregular';

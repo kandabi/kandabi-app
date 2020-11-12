@@ -48,7 +48,7 @@ button {
 
 .input_container{
     border-left:none;
-    border-right:2px solid #08FDD8;
+    border-right:2px solid #FFA838;
 }
 
 .input_container.second, .submit_btn{
@@ -79,7 +79,7 @@ button {
         left:initial;
         right:0;
         border-right:initial;
-        border-left: 1px solid #08FDD8; 
+        border-left: 1px solid #FFA838; 
     }
 
     .sidebar .menu .item{

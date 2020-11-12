@@ -62,9 +62,9 @@ span {
 }
 
 button {
-    border: 1px solid  #08FDD8;
+    border: 1px solid  #FFA838;
     position: relative;
-    color: #08FDD8;
+    color: #FFA838;
     font-family: 'rubikregular';
     font-size:18px;
     letter-spacing: 4px;
@@ -121,7 +121,7 @@ textarea{
 	display: block;
     position: relative;
     z-index: 0;
-	border: 4px solid #08FDD8;
+	border: 4px solid #FFA838;
     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
@@ -145,7 +145,7 @@ textarea{
     z-index: 30;
     top: 0;
     left: 0;
-    border-bottom   : 1px solid #08FDD8; 
+    border-bottom   : 1px solid #FFA838; 
     overflow: hidden;
     transition: 300ms ease-out;
 }
@@ -222,7 +222,7 @@ textarea{
 }
 
 .sidebar .lang_menu .item{
-    border: 2px solid #08FDD8;
+    border: 2px solid #FFA838;
     line-height: 31px;
     width: 30%;
     font-size: 1.3rem;
@@ -263,7 +263,7 @@ textarea{
     margin: 0 auto;
     height: 10%;
     width: 48%;
-    border-bottom: 1px solid #08FDD8;
+    border-bottom: 1px solid #FFA838;
 }
 
 .sidebar .icon{
@@ -272,7 +272,7 @@ textarea{
 }
 
 .A_letter{
-    color: #08FDD8;
+    color: #FFA838;
     font-size: 3.5rem;
     top: 1px;
     left: 2px;
@@ -399,7 +399,7 @@ textarea{
 
 .portfolio{
     height:870px;
-    border-bottom:1px solid #08FDD8;
+    border-bottom:1px solid #FFA838;
     transition: 300ms ease-out;
 }
 
@@ -423,11 +423,11 @@ textarea{
 }
 
 .contact .text-main h2{
-    color:#08FDD8;
+    color:#FFA838;
 }
 
 .contact .map_wrapper{
-    border-top: 1px solid #08FDD8;
+    border-top: 1px solid #FFA838;
     height:58%;
     width: 100%;
     position: absolute;
@@ -494,7 +494,7 @@ textarea{
     margin-bottom:15px;
     position: relative;
     overflow: hidden;
-    border-left:2px solid #08FDD8;
+    border-left:2px solid #FFA838;
   }
 
     .input_container.first{
@@ -525,7 +525,7 @@ textarea{
     right:0;
     width: 0;
     height: 2px;
-    background-color: #08FDD8;
+    background-color: #FFA838;
     
   }
   
@@ -566,7 +566,7 @@ textarea{
 }
 
 .swiper-scrollbar .swiper-scrollbar-drag {
-    background-color:#08FDD8;
+    background-color:#FFA838;
 }
 
 .swiper-scrollbar{
@@ -583,7 +583,7 @@ textarea{
     height:12px;    
     margin: 0 8px !important;
     margin-bottom: 20px !important;
-    background-color:#08FDD8;
+    background-color:#FFA838;
     
 }
 
@@ -591,7 +591,7 @@ textarea{
     z-index:11;
     top: 40%;
     padding: 0 5%;
-    color: #08FDD8;
+    color: #FFA838;
 }
 
     .swiper-button-next:focus, .swiper-button-prev:focus, .swiper-pagination-bullet:focus{
@@ -600,8 +600,8 @@ textarea{
 
 
 .swiper-pagination .swiper-pagination-bullet-active{
-    background-color:#08FDD8;
-    border:1px solid #08FDD8;
+    background-color:#FFA838;
+    border:1px solid #FFA838;
 }
 
 .swiper-slide .project-content{
@@ -627,7 +627,7 @@ textarea{
 }
 
 .swiper-slide .project-content .this-app{
-    border: 1px solid#08FDD8;
+    border: 1px solid#FFA027;
 }
 
 .swiper-slide .project-text{
@@ -658,7 +658,7 @@ textarea{
 
 .swiper-slide .project-text a{
     text-decoration: underline;
-    color:#08FDD8;
+    color:#FFA838;
 }
 
 .overlay{
@@ -739,7 +739,7 @@ textarea{
         max-height:initial;
         height:100%;
         border-bottom:initial;
-        border-right: 1px solid #08FDD8; 
+        border-right: 1px solid #FFA027; 
     }
 
     .sidebar .hamburger_icon{
@@ -919,7 +919,7 @@ textarea{
         z-index: -1;
         content: '';
         color: #000 !important;
-        background: #08FDD8;
+        background: #FFA838;
         transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
     }
 
@@ -1094,7 +1094,7 @@ textarea{
         top:0;
         right: 0;
         bottom:0;
-        border:1px solid #08FDD8;
+        border:1px solid #FFA838;
     }
 
     .contact .address{
@@ -1125,7 +1125,8 @@ textarea{
     }
 
     .sidebar:hover{
-        background-color:#122421 !important;
+        background-color:#1C1C1C !important;
+        /* background-color:#122421 !important; */
     }
 }
 
