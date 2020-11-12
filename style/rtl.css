@@ -48,7 +48,7 @@ button {
 
 .input_container{
     border-left:none;
-    border-right:2px solid #08FDD8;
+    border-right:2px solid #FFA838;
 }
 
 .input_container.second, .submit_btn{
@@ -65,7 +65,7 @@ button {
     left:-150px;
 }
 
-@media (min-width: 750px){
+@media (min-width: 600px) and (min-height: 420px){
     .text-main h1, .text-main h2, .text-main h3 {
         line-height: 60px;
     }
@@ -79,7 +79,7 @@ button {
         left:initial;
         right:0;
         border-right:initial;
-        border-left: 1px solid #08FDD8; 
+        border-left: 1px solid #FFA838; 
     }
 
     .sidebar .menu .item{
@@ -132,20 +132,28 @@ button {
 
     .about .text-secondary{
         margin-left:initial;
-        margin-right:13%;
+        margin-right:10%;
         font-size:1.5rem;
     }
 
     .about .text-main{
         margin-left:initial;
-        margin-right: 14.5%;
+        margin-right: 11.5%;
     }
 }
 
-@media (min-width:1025px) and (min-height: 700px) { 
+@media (min-width:1025px) and (min-height: 570px) { 
     .content{
         margin-right:5%;
         width: 95%;
+    }
+
+    .about .text-main{
+        margin-right: 14.5%;
+    }
+
+    .about .text-secondary{
+        margin-right:13%;
     }
 }
 

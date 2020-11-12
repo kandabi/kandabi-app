@@ -15,7 +15,7 @@ function loadMap()
 function Init()
 {
     console.log("Is Mobile: %s", device.mobile());
-    var prePath = (isRtl) ? '..' : '.';
+    var prePath = (language == 'en') ? '.' : '..';
     particlesJS.load('particles', prePath + '/src/particles.json');
 
     $(".letter, .bounce").bind("webkitAnimationEnd mozAnimationEnd animationend", function () {
@@ -73,7 +73,7 @@ function Init()
         console.log('button_clicked: ', value)
         gtag('event', 'click', { 'event_label': 'button_clicked', 'value': value });
 
-        if(value.includes('resume') || value.includes('linkedin') || value.includes('github') || value.includes('github'))
+        if(value.includes('phone') || value.includes('linkedin') || value.includes('github'))
             return;
 
         $('html, body').stop().animate({
