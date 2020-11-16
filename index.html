@@ -37,17 +37,18 @@
         cookie = key=>((new RegExp((key || '=')+'=(.*?); ','gm')).exec(document.cookie+'; ') ||['',null])[1]
         var redirected = cookie('redirected')
 
-        console.log('redirected', redirected, 'language', browserLanguage);
+        console.log('redirected' , redirected ,' language' , browserLanguage);
 
         if(!redirected)
         {
             switch(browserLanguage)
             {
                 case 'he':
-                window.location.href = "./he/"
-                    break;
+                    document.cookie = "redirected=true; domain=avivkandabi.com; path=/";
+                    window.location.href = "./he/"
                 case 'es':
-                window.location.href = "./es/"
+                    document.cookie = "redirected=true; domain=avivkandabi.com; path=/";
+                    window.location.href = "./es/"
                     break;
             }
         }
@@ -312,6 +313,20 @@
                             </div>
                             <div value='slashapps' class="project-content">
                                 <img src="./resources/images/justdonate.gif" alt="just donate past project">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="project-text"> 
+                                <span>
+                                    <h2>mega-building.co.il</h2>
+                                    <span class='project-bottom-text'>
+                                        Developed as a freelance developer for <a value='mega-building' target="_blank" href='http://mega-building.co.il/'>mega-building</a>.
+                                    </span>
+                            </span>
+                            </div>
+                            <div value='avivkandabi.com' class="project-content">
+                                <img src="./resources/images/mega-building.png" alt="megabuilding past project">
                             </div>
                         </div>
                 </div>
