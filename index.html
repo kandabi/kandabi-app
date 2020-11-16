@@ -37,7 +37,7 @@
         cookie = key=>((new RegExp((key || '=')+'=(.*?); ','gm')).exec(document.cookie+'; ') ||['',null])[1]
         var redirected = cookie('redirected')
 
-        console.log('redirected', redirected, 'language', browserLanguage);
+        alert.log('redirected', redirected, 'language', browserLanguage);
 
         if(!redirected)
         {
