@@ -37,17 +37,18 @@
         cookie = key=>((new RegExp((key || '=')+'=(.*?); ','gm')).exec(document.cookie+'; ') ||['',null])[1]
         var redirected = cookie('redirected')
 
-        alert('redirected :' + redirected + ' language :' + browserLanguage);
+        console.log('redirected' , redirected ,' language' , browserLanguage);
 
         if(!redirected)
         {
             switch(browserLanguage)
             {
                 case 'he':
-                window.location.href = "./he/"
-                    break;
+                    document.cookie = "redirected=true; domain=dev.avivkandabi.com; path=/";
+                    window.location.href = "./he/"
                 case 'es':
-                window.location.href = "./es/"
+                    document.cookie = "redirected=true; domain=dev.avivkandabi.com; path=/";
+                    window.location.href = "./es/"
                     break;
             }
         }
