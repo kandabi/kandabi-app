@@ -1,159 +1,201 @@
-body ,html, .text-secondary, .text-main h1, .text-main h2, .text-main h3, .sidebar .menu .item ,.sidebar .menu .item .button, .swiper-slide .project-text {
-    text-align: right;
+body,
+html,
+.text-secondary,
+.text-main h1,
+.text-main h2,
+.text-main h3,
+.sidebar .menu .item,
+.sidebar .menu .item .button,
+.swiper-slide .project-text {
+  text-align: right;
 }
 
-.body{
-    direction: rtl;
+.body {
+  direction: rtl;
 }
 
 button {
-    letter-spacing: 3px;
+  letter-spacing: 3px;
 }
 
 .text-main h1 {
-    line-height: 47px;
-}
-.text-main h2, .text-main h3{
-    line-height: 34px; 
+  line-height: 47px;
 }
 
-.sidebar .menu .item{
-    padding-left:initial;
-    padding-right: 9%;
+.text-main h2,
+.text-main h3 {
+  line-height: 34px;
 }
 
-.sidebar .menu .item .button{
-    left:initial;
-    bottom:40px;
-    right: 30%;
+.sidebar .menu .item {
+  padding-left: initial;
+  padding-right: 9%;
 }
 
-.about .text-secondary{
-    font-size:1.3rem;
+.sidebar .menu .item .button {
+  left: initial;
+  bottom: 40px;
+  right: 30%;
 }
 
-.contact .text-main{
-    margin-left:initial;
-    margin-right:7.5%;
+.about .text-secondary {
+  font-size: 1.3rem;
 }
 
-.contact .text-secondary{
-    margin-right: 6%;
-    font-size: 1.3rem;
+.contact .text-main {
+  margin-left: initial;
+  margin-right: 7.5%;
 }
 
-.contact .text-secondary span{
-    line-height: 22px;
+.contact .text-secondary {
+  margin-right: 6%;
+  font-size: 1.3rem;
 }
 
-.input_container{
-    border-left:none;
-    border-right:2px solid #FFA838;
+.contact .text-secondary span {
+  line-height: 22px;
 }
 
-.input_container.second, .submit_btn{
-    right:initial;
-    left:0;
+.input_container {
+  border-left: none;
+  border-right: 2px solid #ffa838;
 }
 
-.form input, .form textarea{
+.input_container.second,
+.submit_btn {
+  right: initial;
+  left: 0;
+}
+
+.form input,
+.form textarea {
+  padding-left: initial;
+  padding-right: 12px;
+}
+
+.home .text-main h1,
+.home .text-main h2,
+.home .text-main h3 {
+  left: -150px;
+}
+
+@media (min-width: 600px) and (min-height: 420px) {
+
+  .text-main h1,
+  .text-main h2,
+  .text-main h3 {
+    line-height: 60px;
+  }
+
+  .text-secondary {
     padding-left: initial;
-    padding-right:12px;
+    padding-right: 1.5%;
+  }
+
+  .sidebar {
+    left: initial;
+    right: 0;
+    border-right: initial;
+    border-left: 1px solid #ffa838;
+  }
+
+  .sidebar .logo {
+    margin-left: initial;
+    margin-right: 25px;
+    left: initial;
+    right: 0;
+  }
+
+  .sidebar .language_container {
+    right: initial;
+    left: 25px;
+  }
+
+  .sidebar .language_dropdown{
+    left:59px;
+  }
+
+  .sidebar .menu {
+    right:140px;
+    left:initial;
+    /* left: 140px; */
+  }
+
+  .sidebar .menu .item {
+    text-align: center;
+    padding-right: initial;
+  }
+
+  .sidebar .menu .item .button {
+    right: 0;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .home .text-secondary {
+    text-align: right;
+    margin-right: 10%;
+    padding-right: 0;
+    margin-left: initial;
+  }
+
+  .contact_btn {
+    margin-left: initial;
+    margin-right: 14.5%;
+  }
+
+  .content {
+    /* margin-left: initial;
+    margin-right: 7%;
+    width: 92%; */
+  }
+
+  .swiper-slide .project-text h2 {
+    text-align: right;
+  }
+
+  .contact .map_wrapper {
+    left: 0;
+    right: initial;
+  }
+
+  .contact .address {
+    right: 5%;
+    left: initial;
+  }
+
+  .form {
+    margin-left: initial;
+    margin-right: 7.5%;
+  }
+
+  .about .text-secondary {
+    margin-left: initial;
+    margin-right: 10%;
+    font-size: 1.5rem;
+  }
+
+  .about .text-main {
+    margin-left: initial;
+    margin-right: 11.5%;
+  }
+
+  .sidebar .lang_icon{
+    right: -1px;
+  }
 }
 
-.home .text-main h1, .home .text-main h2, .home .text-main h3{
-    left:-150px;
+@media (min-width: 1025px) and (min-height: 570px) {
+  .content {
+    /* margin-right: 5%;
+    width: 95%; */
+  }
+
+  .about .text-main {
+    margin-right: 14.5%;
+  }
+
+  .about .text-secondary {
+    margin-right: 13%;
+  }
 }
-
-@media (min-width: 600px) and (min-height: 420px){
-    .text-main h1, .text-main h2, .text-main h3 {
-        line-height: 60px;
-    }
-
-    .text-secondary{
-        padding-left:initial;
-        padding-right:1.5%;
-    }
-
-    .sidebar{
-        left:initial;
-        right:0;
-        border-right:initial;
-        border-left: 1px solid #FFA838; 
-    }
-
-    .sidebar .menu .item{
-        text-align: center;
-        padding-right:initial;
-    }
-
-    .sidebar .menu .item .button{
-        right: 0;
-        bottom: 32px;
-        text-align: center;
-    }
-
-    .home .text-secondary {
-        text-align: right;
-        margin-right: 10%;
-        padding-right:0;
-        margin-left:initial;
-    }
-
-    .contact_btn {
-        margin-left:initial;
-        margin-right: 14.5%;
-    }
-
-    .content{
-        margin-left:initial;
-        margin-right:7%;
-        width:92%;
-    }
-
-    .swiper-slide .project-text h2{
-        text-align: right;
-    }
-
-    .contact .map_wrapper{
-        left:0;
-        right:initial;
-    }
-
-    .contact .address{
-        right:5%;
-        left:initial;
-    }
-
-    .form{
-        margin-left:initial;
-        margin-right:7.5%;
-    }
-
-    .about .text-secondary{
-        margin-left:initial;
-        margin-right:10%;
-        font-size:1.5rem;
-    }
-
-    .about .text-main{
-        margin-left:initial;
-        margin-right: 11.5%;
-    }
-}
-
-@media (min-width:1025px) and (min-height: 570px) { 
-    .content{
-        margin-right:5%;
-        width: 95%;
-    }
-
-    .about .text-main{
-        margin-right: 14.5%;
-    }
-
-    .about .text-secondary{
-        margin-right:13%;
-    }
-}
-
