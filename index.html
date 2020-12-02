@@ -31,8 +31,14 @@
     <link rel="stylesheet" href="./style/swiper.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="shortcut icon" href="./resources/images/favicon.ico">
+
+    <script src="./src/lozad.min.js"></script>
     <script src="./src/current-device.min.js"></script>
-    <script src="./src/redirect.js"></script>
+    <script src="./src/jquery-3.5.1.min.js"></script>
+    <script src="./src/particles.min.js"></script>
+    <script src="./src/swiper.min.js"></script>
+    <script src="./src/script.min.js"></script>
+    <script src="./src/map.js"></script>
     <script>
         var isRtl = false;
         var pageLanguage = 'en'
@@ -42,54 +48,57 @@
 
 <body>
     <div class='loader'>
-        <img src="./resources/images/loading.gif" alt="loading page animation">
+        <video autoplay loop muted playsinline width="200" height="200">
+            <source src="./resources/videos/loading.webm" type="video/webm">
+            <source src="./resources/videos/loading.mp4" type="video/mp4">
+        </video>
     </div>
     <div class='body'>
         <div class='sidebar'>
             <div class="logo" value='home'>
-                <img src="./resources/images/logo.png" alt="logo">
+                <img class="lozad" data-src="./resources/images/logo.png" alt="logo" width="80" height="31">
             </div>
             <div value='phone' class="phone">
                 <a href="tel:+972-53-4267886">
-                    <img src="./resources/images/phone.png" alt="phone number">
+                    <img class="lozad" data-src="./resources/images/phone.png" alt="phone number" width="28" height="28">
                 </a>
             </div>
             <div class="hamburger_icon">
-                <img src="./resources/images/menu.png" alt="menu icon">
+                <img class="lozad" data-src="./resources/images/menu.png" alt="menu icon" width="28" height="28">
             </div>
             <div class="menu">
                 <div value='home' class="item">
-                    <img class='icon' src="./resources/images/home.png" alt="home navigation icon">
+                    <img class='icon lozad' data-src="./resources/images/home.png" alt="home navigation icon" width="30" height="30">
                     <button class='link button'>Home</button>
                 </div>
                 <div value='about' class="item">
-                    <img class='icon' src="./resources/images/about.png" alt="about page navigation icon">
+                    <img class='icon lozad' data-src="./resources/images/about.png" alt="about page navigation icon" width="30" height="30">
                     <button class='link button'>About</button>
                 </div>
                 <div value='portfolio' class="item">
-                    <img class='icon' src="./resources/images/portfolio.png" alt="portfolio page navigation icon">
+                    <img class='icon lozad' data-src="./resources/images/portfolio.png" alt="portfolio page navigation icon" width="30" height="30">
                     <button class='link button'>Portfolio</button>
                 </div>
                 <div value='contact' class="item">
-                    <img class='icon' src="./resources/images/email.png" alt="contact page navigation icon">
+                    <img class='icon lozad' data-src="./resources/images/email.png" alt="contact page navigation icon" width="30" height="30">
                     <button class='link button'>Contact</button>
                 </div>
                 <div value='linkedin' class="item">
-                    <img class='icon' src="./resources/images/linkedin.png" alt="linkedin profile link">
-                    <a href="https://www.linkedin.com/in/aviv-kandabi/" target="_blank">
+                    <img class='icon lozad' data-src="./resources/images/linkedin.png" alt="linkedin profile link" width="30" height="30">
+                    <a href="https://www.linkedin.com/in/aviv-kandabi/" target="_blank" rel="noreferrer">
                         <button class='link button'>Linkedin</button>
                     </a>
                 </div>
                 <div value='github' class="item" style='border-bottom:none'>
-                    <img class='icon' src="./resources/images/github.png" alt="github profile link">
-                    <a href="https://github.com/kandabi" target="_blank">
+                    <img class='icon lozad' data-src="./resources/images/github.png" alt="github profile link" width="30" height="30">
+                    <a href="https://github.com/kandabi" target="_blank" rel="noreferrer">
                         <button class='link button'>Github</button>
                     </a>
                 </div>
             </div>
             <div class="language_container">
                 <div class="lang_icon">
-                    <img src="./resources/images/translate.png" alt="translate menu icon">
+                    <img class="lozad" data-src="./resources/images/translate.png" alt="translate menu icon" width="30" height="30">
                 </div>
                 <div class="language_dropdown">
                     <button class="lang_text">Language</button>
@@ -100,7 +109,7 @@
                         <a href='./es/'>Español</a>
                     </div>
                     <div class="item disabled">
-                        <a>English</a>
+                        <span>English</span>
                     </div>
                 </div>
             </div>
@@ -161,7 +170,8 @@
                     Aviv
                 </span>
             </div>
-            <video autoplay loop>
+            <video autoplay loop muted playsinline>
+                <source src="./resources/videos/night.webm" type="video/webm">
                 <source src="./resources/videos/night.mp4" type="video/mp4">
             </video>
         </div>
@@ -190,13 +200,13 @@
                                 <br>
                                 <br>
                                 <span class='project-bottom-text'>
-                                    Developed the game as a Freelance developer for <a value='dgcore' target="_blank"
+                                    Developed the game as a Freelance developer for <a value='dgcore' target="_blank" rel="noreferrer"
                                         href='https://dgcore.co/'>DGCore</a>.
                                 </span>
                             </span>
                         </div>
                         <div class="project-content">
-                            <iframe id='telloVideo' width=100% height=100%
+                            <iframe title="Tello drone game youtube video" id='telloVideo' width=100% height=100%
                                 src="https://www.youtube.com/embed/_MmPO0d6ah8?enablejsapi=1" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
@@ -215,13 +225,16 @@
                                 <br>
                                 <br>
                                 <span class='project-bottom-text'>
-                                    Developed as an open-source project, hosted on <a value='openftp' target="_blank"
+                                    Developed as an open-source project, hosted on <a value='openftp' target="_blank" rel="noreferrer"
                                         href='https://github.com/kandabi/OpenFTP'>Github</a>.
                                 </span>
                             </span>
                         </div>
                         <div value='openftp' class="project-content">
-                            <img src="./resources/images/openftp.gif" alt="openftp past project">
+                            <video class="lozad" autoplay loop muted playsinline>
+                                <source data-src="./resources/videos/openftp.webm" type="video/webm">
+                                <source data-src="./resources/videos/openftp.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -242,8 +255,9 @@
                             </span>
                         </div>
                         <div value='object_detector' class="project-content">
-                            <video autoplay loop>
-                                <source src="./resources/videos/object-detector.mp4" type="video/mp4">
+                            <video class="lozad" autoplay loop muted playsinline>
+                                <source data-src="./resources/videos/object-detector.webm" type="video/webm">
+                                <source data-src="./resources/videos/object-detector.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -260,13 +274,16 @@
                                 <br>
                                 <span class='project-bottom-text'>
                                     Developed as a hobby project, released as open-source on <a
-                                        value='pixel-physics-simulation' target="_blank"
+                                        value='pixel-physics-simulation' target="_blank" rel="noreferrer"
                                         href='https://github.com/kandabi/Pixel-Physics-Simulation'>Github</a>.
                                 </span>
                             </span>
                         </div>
                         <div value='pixel-physics-simulation' class="project-content">
-                            <img src="./resources/images/pixel-simulation.gif" alt="pixel simulation past project">
+                            <video class="lozad" autoplay loop muted playsinline>
+                                <source data-src="./resources/videos/pixel-simulation.webm" type="video/webm">
+                                <source data-src="./resources/videos/pixel-simulation.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -284,14 +301,16 @@
                                 <br>
                                 <span class='project-bottom-text'>
                                     The entire application is available, released as open-source on <a
-                                        value='avivkandabi.com' target="_blank"
+                                        value='avivkandabi.com' target="_blank" rel="noreferrer"
                                         href='https://github.com/kandabi/kandabi-app'>Github</a>.
                                 </span>
                             </span>
                         </div>
                         <div value='avivkandabi.com' class="project-content">
-                            <img class='this-app' src="./resources/images/avivkandabi.gif"
-                                alt="porfolio website past project">
+                            <video  class="this-app lozad" autoplay loop muted playsinline>
+                                <source data-src="./resources/videos/avivkandabi.webm" type="video/webm">
+                                <source data-src="./resources/videos/avivkandabi.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -310,15 +329,18 @@
                                 <br>
                                 <br>
                                 <span class='project-bottom-text'>
-                                    Developed the application's Backend as an employee at <a value='slashapps'
-                                        target="_blank"
-                                        href='https://slash.co.il/en/portfolio/development-of-challenges-and-donations-application-just-donate'>Slash
-                                        Apps</a>.
+                                    Developed the application's Backend as an employee at 
+                                    <a value='slashapps' target="_blank" rel="noreferrer"
+                                    href='https://slash.co.il/en/portfolio/development-of-challenges-and-donations-application-just-donate'>
+                                        Slash Apps</a>.
                                 </span>
                             </span>
                         </div>
                         <div value='slashapps' class="project-content">
-                            <img src="./resources/images/justdonate.gif" alt="just donate past project">
+                            <video class="lozad" autoplay loop muted playsinline>
+                                <source data-src="./resources/videos/justdonate.webm" type="video/webm">
+                                <source data-src="./resources/videos/justdonate.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
 
@@ -327,13 +349,13 @@
                             <span>
                                 <h2>mega-building.co.il</h2>
                                 <span class='project-bottom-text'>
-                                    Developed as a freelance developer for <a value='mega-building' target="_blank"
+                                    Developed as a freelance developer for <a value='mega-building' target="_blank" rel="noreferrer"
                                         href='http://mega-building.co.il/'>mega-building</a>.
                                 </span>
                             </span>
                         </div>
                         <div value='avivkandabi.com' class="project-content">
-                            <img src="./resources/images/mega-building.png" alt="megabuilding past project">
+                            <img data-src="./resources/images/mega-building.png" class="lozad" alt="megabuilding past project">
                         </div>
                     </div>
                 </div>
@@ -376,20 +398,23 @@
                     </label>
                 </div>
                 <div class="input_container first">
-                    <input class="name" type='text' placeholder="Name" name='name'>
+                    <label class="hidden" for="name">Name</label>
+                    <input class="name" type='text' placeholder="Name" name='name' id="name">
                     <span class="border"></span>
-
                 </div>
                 <div class="input_container second">
-                    <input class="email" type="email" placeholder="Email" required name='email'>
+                    <label class="hidden" for="email">Email</label>
+                    <input class="email" type="email" placeholder="Email" required name='email' id="email">
                     <span class="border"></span>
                 </div>
                 <div class="input_container third">
-                    <input type="text" placeholder="Subject" name='subject'>
+                    <label class="hidden" for="subject">Subject</label>
+                    <input type="text" placeholder="Subject" name='subject' id="subject">
                     <span class="border"></span>
                 </div>
                 <div class="input_container fourth">
-                    <textarea placeholder="Message" required name='message'></textarea>
+                    <label class="hidden" for="message">Message</label>
+                    <textarea placeholder="Message" required name='message' id="message"></textarea>
                     <span class="border"></span>
                 </div>
                 <button class="submit_btn button" value='submit'>
@@ -421,27 +446,27 @@
         <div class="footer_social">
             <div value='phone' class="item">
                 <a href="tel:+972-53-4267886">
-                    <img class='icon' src="./resources/images/phone.png" alt="phone number">
+                    <img class='icon lozad' data-src="./resources/images/phone.png" alt="phone number" width="30" height="30">
                 </a>
             </div>
             <div value='linkedin' class="item">
-                <a href="https://www.linkedin.com/in/aviv-kandabi/" target="_blank">
-                    <img class='icon' src="./resources/images/linkedin.png" alt="linkedin profile link">
+                <a href="https://www.linkedin.com/in/aviv-kandabi/" target="_blank" rel="noreferrer">
+                    <img class='icon lozad' data-src="./resources/images/linkedin.png" alt="linkedin profile link" width="30" height="30">
                 </a>
             </div>
             <div value='facebook' class="item">
-                <a href="https://www.facebook.com/kandabiaviv/" target="_blank">
-                    <img class='icon' src="./resources/images/facebook.png" alt="facebook profile link">
+                <a href="https://www.facebook.com/kandabiaviv/" target="_blank" rel="noreferrer">
+                    <img class='icon lozad' data-src="./resources/images/facebook.png" alt="facebook profile link" width="30" height="30">
                 </a>
             </div>
             <div value='github' class="item">
-                <a href="https://github.com/kandabi" target="_blank">
-                    <img class='icon' src="./resources/images/github.png" alt="github profile link">
+                <a href="https://github.com/kandabi" target="_blank" rel="noreferrer">
+                    <img class='icon lozad' data-src="./resources/images/github.png" alt="github profile link" width="30" height="30">
                 </a>
             </div>
         </div>
         <div class="footer_logo">
-            <img src="./resources/images/logo.png" alt="logo">
+            <img class="lozad" data-src="./resources/images/logo.png" alt="logo" width="80" height="31">
         </div>
         <div class="footer_text">
             <span>
@@ -451,13 +476,6 @@
             </span>
         </div>
     </footer>
-
-    <script src="./src/jquery-3.5.1.min.js"></script>
-    <script src="./src/particles.min.js"></script>
-    <script src="./src/swiper.min.js"></script>
-    <script src="./src/script.js"></script>
-    <script src="./src/map.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
 </body>
-
 </html>

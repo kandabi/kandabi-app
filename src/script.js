@@ -17,6 +17,9 @@ function Init() {
   var prePath = pageLanguage == "en" ? "." : "..";
   particlesJS.load("particles", prePath + "/src/particles.json");
 
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
+
   $(".letter, .bounce").bind(
     "webkitAnimationEnd mozAnimationEnd animationend",
     function () {
@@ -70,49 +73,27 @@ function Init() {
     console.log("button_clicked: ", value);
     gtag("event", "click", { event_label: "button_clicked", value: value });
 
-    if (
-      value.includes("phone") ||
+    if (value.includes("phone") ||
       value.includes("linkedin") ||
       value.includes("github") ||
-      value.includes("facebook")
-    )
+      value.includes("facebook"))
       return;
 
-    $("html, body")
-      .stop()
-      .animate(
-        {
-          scrollTop: $("." + value).offset().top,
-        },
-        1500
-      );
+    $("html, body").stop().animate({ scrollTop: $("." + value).offset().top, }, 1500);
 
     if (menuActive) closeMenu();
   });
 
   $(".loader").fadeOut(500, function () {
-    $(".content, .sidebar").animate(
-      {
-        opacity: 1,
-      },
-      700
-    );
+    $(".content, .sidebar").animate({ opacity: 1, }, 700);
   });
 
-  var letters = $(
-    ".home .text-main h1, .home .text-main h2, .home .text-main h3"
-  );
+  var letters = $(".home .text-main h1, .home .text-main h2, .home .text-main h3");
   var time = 150;
   setTimeout(function () {
     letters.each(function (index) {
       setTimeout(function () {
-        $(letters[index]).animate(
-          {
-            left: "0",
-            opacity: 1,
-          },
-          450
-        );
+        $(letters[index]).animate({ left: "0", opacity: 1, }, 450);
       }, (time += 350));
     });
 
@@ -120,12 +101,7 @@ function Init() {
     time += 600;
     items.each(function (index) {
       setTimeout(function () {
-        $(items[index]).animate(
-          {
-            opacity: 1,
-          },
-          500
-        );
+        $(items[index]).animate({ opacity: 1, }, 500);
       }, (time += 350));
     });
   }, 1200);
@@ -162,7 +138,6 @@ function Init() {
 
   window.onscroll = function () {
     var scrollTop = document.documentElement.scrollTop;
-    //console.log('Window scrolltop:', scrollTop)
     if (!device.mobile()) setHeaderSelection(scrollTop);
 
     if (!mapIncluded) {
@@ -191,12 +166,30 @@ var menuAnimating = false;
 var player = null;
 var headerActive = false;
 
+function RedirectByLanguage(pageLanguage)
+{
+    var browserLanguage = navigator.language || navigator.browserLanguage;
+    cookie = key => ((new RegExp((key || '=') + '=(.*?); ', 'gm')).exec(document.cookie + '; ') || ['', null])[1]
+    var redirected = cookie('redirected')
+    console.log('redirected', redirected, ' language', browserLanguage);
+    if (redirected == null || !redirected && browserLanguage != pageLanguage) {
+        document.cookie = "redirected=true; path=/";
+        var path = pageLanguage == "en" ? "." : "..";
+        switch (browserLanguage) {
+            case 'he':
+                path += '/he/';
+                break;
+            case 'es':
+                path += '/es/';
+                break;
+        }
+
+        location = path;
+    }
+}
+
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player("telloVideo", {
-    events: {
-      onStateChange: onPlayerStateChange,
-    },
-  });
+  player = new YT.Player("telloVideo", { events: { onStateChange: onPlayerStateChange, }, });
 }
 
 function onPlayerStateChange(event) {
@@ -232,18 +225,9 @@ function openMenu() {
   }
 
   menuAnimating = true;
-  $(".sidebar").animate(
-    {
-      height: "100%",
-    },
-    150,
+  $(".sidebar").animate({ height: "100%", }, 150,
     function () {
-      $(".sidebar .menu").animate(
-        {
-          opacity: "1",
-        },
-        220
-      );
+      $(".sidebar .menu").animate({ opacity: "1", }, 220);
       menuAnimating = false;
     }
   );
@@ -259,22 +243,8 @@ function closeMenu() {
   }
 
   menuAnimating = true;
-  $(".sidebar").animate(
-    {
-      height: "56px",
-    },
-    200,
-    function () {
-      menuAnimating = false;
-    }
-  );
-
-  $(".sidebar .menu").animate(
-    {
-      opacity: "0",
-    },
-    200
-  );
+  $(".sidebar").animate({ height: "56px", }, 200, function () { menuAnimating = false; });
+  $(".sidebar .menu").animate({ opacity: "0", }, 200);
 
   console.log("closeMenu");
   menuActive = false;
@@ -290,23 +260,12 @@ function openLangMenu() {
   }
 
   menuAnimating = true;
-  $(".sidebar").animate(
-    {
-      height: "110px",
-    },
-    100,
+  $(".sidebar").animate({ height: "110px", }, 100,
     function () {
-      $(".sidebar .language_dropdown").animate(
-        {
-          opacity: "1",
-        },
-        100,
-        function () {
-          menuAnimating = false;
-        }
+      $(".sidebar .language_dropdown").animate({ opacity: "1", }, 100,
+        function () { menuAnimating = false; }
       );
-    }
-  );
+    });
 
   console.log("openLangMenu");
   gtag("event", "click", { event_label: "open_lang_menu" });
@@ -320,20 +279,10 @@ function closeLangMenu() {
   }
 
   menuAnimating = true;
-  $(".sidebar").animate(
-    {
-      height: "56px",
-    },
-    350
-  );
+  $(".sidebar").animate({ height: "56px", }, 350);
 
-  $(".sidebar .language_dropdown").animate({
-      opacity: "0",
-    },
-    350,
-    function () {
-      menuAnimating = false;
-    }
+  $(".sidebar .language_dropdown").animate({ opacity: "0", }, 350,
+    function () { menuAnimating = false; }
   );
 
   console.log("closeLangMenu");
@@ -343,7 +292,7 @@ function closeLangMenu() {
 function setHeaderSelection(scrollTop) {
   var selector = null;
 
-  if(!headerActive) {
+  if (!headerActive) {
     $('.sidebar').addClass("active_sidebar");
     headerActive = true;
   }
@@ -351,7 +300,7 @@ function setHeaderSelection(scrollTop) {
   if (document.documentElement.scrollHeight * 0.02 > scrollTop) {
     selector = "home";
 
-    if(headerActive) {
+    if (headerActive) {
       $('.sidebar').removeClass("active_sidebar");
       headerActive = false;
     }
@@ -362,7 +311,7 @@ function setHeaderSelection(scrollTop) {
   else if (document.documentElement.scrollHeight * 0.45 < scrollTop && document.documentElement.scrollHeight * 0.5 > scrollTop) {
     selector = "portfolio";
   }
-  else if (document.documentElement.scrollHeight * 0.7 < scrollTop && document.documentElement.scrollHeight * 0.8 > scrollTop) {
+  else if (document.documentElement.scrollHeight * 0.66 < scrollTop && document.documentElement.scrollHeight * 0.8 > scrollTop) {
     selector = "contact";
   }
 
@@ -376,9 +325,7 @@ function openTheater(item) {
   $(".overlay").css("display", "block");
 
   $(item).prev().addClass("blur");
-  $(
-    ".swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev"
-  ).addClass("blur");
+  $(".swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev").addClass("blur");
   $(item).addClass("theater-mode");
   $(".portfolio").addClass("height");
 
@@ -397,9 +344,7 @@ function closeTheater() {
 
   $(theaterItem).prev().removeClass("blur");
   $(theaterItem).removeClass("theater-mode");
-  $(
-    ".swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev"
-  ).removeClass("blur");
+  $(".swiper-pagination, .swiper-scrollbar, .swiper-button-next, .swiper-button-prev").removeClass("blur");
   $(".portfolio").removeClass("height");
 
   theaterItem = null;

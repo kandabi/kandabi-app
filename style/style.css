@@ -7,7 +7,7 @@ html {
   margin: 0;
   position: absolute;
   font-size: 12px;
-  font-family: "rubikregular";
+  font-family: "rubikregular", Arial, Helvetica, sans-serif;
 }
 
 div {
@@ -16,12 +16,13 @@ div {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "secular";
+  font-family: "secular", Arial, Helvetica, sans-serif;
   cursor: default;
   color: #fff;
 }
@@ -69,7 +70,7 @@ button {
   border: 1px solid #ffa838;
   position: relative;
   color: #ffa838;
-  font-family: "rubikregular";
+  font-family: "rubikregular", Arial, Helvetica, sans-serif;
   font-size: 18px;
   letter-spacing: 4px;
 }
@@ -79,11 +80,33 @@ button:focus {
 }
 
 textarea {
-  font-family: "rubikregular";
+  font-family: "rubikregular", Arial, Helvetica, sans-serif;
+}
+
+input::placeholder, textarea::placeholder{
+  color:#d9d9d9;
 }
 
 footer span, footer a{
   color:#fff;
+}
+
+@font-face {
+  font-family: "rubikregular";
+  src: url("../resources/fonts/rubik-regular.woff2") format("woff2"),
+    url("../resources/fonts/rubik-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "secular";
+  src: url("../resources/fonts/secularone.woff2") format("woff2"),
+    url("../resources/fonts/secularone.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 .footer{
@@ -129,6 +152,7 @@ footer span, footer a{
 }
 
 .content {
+  will-change: opacity;
   opacity: 0;
   height: 25%; 
   width: 100%;
@@ -176,12 +200,14 @@ footer span, footer a{
 }
 
 .contact_btn {
+  will-change: opacity;
   margin: auto;
   width: 195px;
   height: 60px;
 }
 
 .sidebar {
+  will-change: opacity;
   opacity: 0;
   background-color: #141414;
   width: 100%;
@@ -281,12 +307,13 @@ footer span, footer a{
   letter-spacing: 1.5px;
 }
 
-.sidebar .language_dropdown .item a {
+.sidebar .language_dropdown .item a, .sidebar .language_dropdown .item span{
   padding: 7% 12%;
   color: #fff;
 }
 
 .sidebar .menu {
+  will-change: opacity, top;
   opacity: 0;
   display: flex;
   flex-direction: column;
@@ -377,6 +404,7 @@ footer span, footer a{
 .home .text-main h1,
 .home .text-main h2,
 .home .text-main h3 {
+  will-change: opacity, left;
   left: 150px;
   position: relative;
 }
@@ -392,6 +420,7 @@ footer span, footer a{
 }
 
 .home .text-secondary {
+  will-change: opacity;
   text-align: center;
   line-height: 20px;
   margin-left: auto;
@@ -523,10 +552,15 @@ footer span, footer a{
   position: relative;
 }
 
+.hidden{
+  display:none;
+}
+
 .form input,
 .form textarea {
   background-color: #2b2b2b;
-  color: #848484;
+  /* color: #848484; */
+  color:#fff;
   width: 100%;
   height: 100%;
   font-size: 22px;
@@ -750,13 +784,14 @@ textarea:focus~.border {
 }
 
 .loader {
+  will-change: opacity;
   position: absolute;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
 }
 
-.loader img {
+.loader video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -905,7 +940,7 @@ textarea:focus~.border {
     z-index: 5;
   }
 
-  .sidebar .language_dropdown .item a {
+  .sidebar .language_dropdown .item a, .sidebar .language_dropdown .item span {
     color:#fff;
     padding: 5px;
   }
@@ -1268,18 +1303,3 @@ textarea:focus~.border {
   }
 }
 
-@font-face {
-  font-family: "rubikregular";
-  src: url("../resources/fonts/rubik-regular.woff2") format("woff2"),
-    url("../resources/fonts/rubik-regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "secular";
-  src: url("../resources/fonts/secularone.woff2") format("woff2"),
-    url("../resources/fonts/secularone.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
