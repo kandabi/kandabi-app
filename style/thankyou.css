@@ -38,7 +38,7 @@ a{
     border:1px solid #FFA838;
     border-radius: 8px;
     box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
-    font-family: 'rubikregular';
+    font-family: 'rubikregular', Arial, Helvetica, sans-serif;
     line-height: 10px;
 }
 
@@ -58,4 +58,5 @@ a{
         url('../resources/fonts/rubik-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
