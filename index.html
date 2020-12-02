@@ -32,29 +32,12 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="shortcut icon" href="./resources/images/favicon.ico">
     <script src="./src/current-device.min.js"></script>
+    <script src="./src/redirect.js"></script>
     <script>
         var isRtl = false;
-        var language = 'en'
-        var browserLanguage = navigator.language || navigator.browserLanguage;
-        var browserLanguage = language.slice(0, 2);
-        cookie = key => ((new RegExp((key || '=') + '=(.*?); ', 'gm')).exec(document.cookie + '; ') || ['', null])[1]
-        var redirected = cookie('redirected')
-
-        console.log('redirected', redirected, ' language', browserLanguage);
-
-        if (!redirected) {
-            switch (browserLanguage) {
-                case 'he':
-                    document.cookie = "redirected=true; domain=avivkandabi.com; path=/";
-                    window.location.href = "./he/"
-                case 'es':
-                    document.cookie = "redirected=true; domain=avivkandabi.com; path=/";
-                    window.location.href = "./es/"
-                    break;
-            }
-        }
+        var pageLanguage = 'en'
+        RedirectByLanguage(pageLanguage);
     </script>
-
 </head>
 
 <body>
