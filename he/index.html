@@ -5,10 +5,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVNVGK53ZC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-TVNVGK53ZC');
     </script>
@@ -34,10 +31,11 @@
     <link rel="stylesheet" href="../style/rtl.css">
     <link rel="shortcut icon" href="../resources/images/favicon.ico">
     <script src="../src/current-device.min.js"></script>
+    <script src="../src/redirect.js"></script>
     <script>
         var isRtl = true;
-        var language = 'he';
-        document.cookie = "redirected=true; domain=avivkandabi.com; path=/";
+        var pageLanguage = 'he';
+        RedirectByLanguage(pageLanguage);
     </script>
 </head>
 
