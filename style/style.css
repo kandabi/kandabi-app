@@ -879,7 +879,7 @@ textarea:focus~.border {
 
   .sidebar .menu {
     height: 100%;
-    width: 30%;
+    width: 60%;
     display: inline-table;
     top: 0;
     left: 140px;
