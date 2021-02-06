@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://avivkandabi.com/</loc> 
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://avivkandabi.com/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://avivkandabi.com/" /> 
-        <xhtml:link rel="alternate" hreflang="he" href="https://avivkandabi.com/he/" /> 
-        <xhtml:link rel="alternate" hreflang="es" href="https://avivkandabi.com/es/" /> 
+        <loc>https://kandabi.com/</loc> 
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://kandabi.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://kandabi.com/" /> 
+        <xhtml:link rel="alternate" hreflang="he" href="https://kandabi.com/he/" /> 
+        <xhtml:link rel="alternate" hreflang="es" href="https://kandabi.com/es/" /> 
     </url>
     <url>
-        <loc>https://avivkandabi.com/he/</loc> 
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://avivkandabi.com/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://avivkandabi.com/" /> 
-        <xhtml:link rel="alternate" hreflang="he" href="https://avivkandabi.com/he/" /> 
-        <xhtml:link rel="alternate" hreflang="es" href="https://avivkandabi.com/es/" /> 
+        <loc>https://kandabi.com/he/</loc> 
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://kandabi.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://kandabi.com/" /> 
+        <xhtml:link rel="alternate" hreflang="he" href="https://kandabi.com/he/" /> 
+        <xhtml:link rel="alternate" hreflang="es" href="https://kandabi.com/es/" /> 
     </url>
     <url>
-        <loc>https://avivkandabi.com/es/</loc> 
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://avivkandabi.com/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://avivkandabi.com/" /> 
-        <xhtml:link rel="alternate" hreflang="he" href="https://avivkandabi.com/he/" /> 
-        <xhtml:link rel="alternate" hreflang="es" href="https://avivkandabi.com/es/" /> 
+        <loc>https://kandabi.com/es/</loc> 
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://kandabi.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://kandabi.com/" /> 
+        <xhtml:link rel="alternate" hreflang="he" href="https://kandabi.com/he/" /> 
+        <xhtml:link rel="alternate" hreflang="es" href="https://kandabi.com/es/" /> 
     </url>
 </urlset>
