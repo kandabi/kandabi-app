@@ -83,12 +83,14 @@ textarea {
   font-family: "rubikregular", Arial, Helvetica, sans-serif;
 }
 
-input::placeholder, textarea::placeholder{
-  color:#d9d9d9;
+input::placeholder,
+textarea::placeholder {
+  color: #d9d9d9;
 }
 
-footer span, footer a{
-  color:#fff;
+footer span,
+footer a {
+  color: #fff;
 }
 
 @font-face {
@@ -102,14 +104,13 @@ footer span, footer a{
 
 @font-face {
   font-family: "secular";
-  src: url("../resources/fonts/secularone.woff2") format("woff2"),
-    url("../resources/fonts/secularone.woff") format("woff");
+  src: url("../resources/fonts/secularone.woff2") format("woff2"), url("../resources/fonts/secularone.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-.footer{
+.footer {
   top: 50px;
   text-align: center;
   height: 210px;
@@ -119,31 +120,30 @@ footer span, footer a{
   background-color: #141414;
 }
 
-.footer_text{
+.footer_text {
   top: 20px;
   position: relative;
   margin-left: 15px;
   line-height: 18px;
 }
 
-.footer_logo{
+.footer_logo {
   width: 80px;
   margin: auto;
   top: 10px;
   position: relative;
 }
 
-.footer_social{
+.footer_social {
   margin-top: 50px;
   display: flex;
   justify-content: center;
 }
 
-.footer_social .item{
-  width:30px;
+.footer_social .item {
+  width: 30px;
   padding: 0 9px;
 }
-
 
 .body {
   width: 100%;
@@ -154,18 +154,18 @@ footer span, footer a{
 .content {
   will-change: opacity;
   opacity: 0;
-  height: 25%; 
+  height: 25%;
   width: 100%;
   position: relative;
 }
 
 .home {
   overflow: hidden;
-  height:690px;
+  height: 690px;
 }
 
 .about {
-  height:650px;
+  height: 650px;
 }
 
 .portfolio {
@@ -204,6 +204,41 @@ footer span, footer a{
   margin: auto;
   width: 195px;
   height: 60px;
+}
+
+.cookie_popup {
+  position: fixed;
+  z-index: 50;
+  width: 90%;
+  bottom: 0;
+  margin: 5%;
+  opacity: 0.7;
+  border-radius: 4px;
+  background-color: #1b1b1b;
+  border: 2px solid #fff;
+  height: 55px;
+  opacity: 0;
+}
+
+.cookie_popup span {
+  text-align: left;
+  margin: 13px 0;
+  padding-left: 6px;
+  position: absolute;
+  font-size: 1.1rem;
+  width: 70%;
+}
+
+.cookie_popup .cookie_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  margin: 8px;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  border-width: 2px;
+  border-color: #ffa838;
 }
 
 .sidebar {
@@ -307,7 +342,8 @@ footer span, footer a{
   letter-spacing: 1.5px;
 }
 
-.sidebar .language_dropdown .item a, .sidebar .language_dropdown .item span{
+.sidebar .language_dropdown .item a,
+.sidebar .language_dropdown .item span {
   padding: 7% 12%;
   color: #fff;
 }
@@ -552,15 +588,15 @@ footer span, footer a{
   position: relative;
 }
 
-.hidden{
-  display:none;
+.hidden {
+  display: none;
 }
 
 .form input,
 .form textarea {
   background-color: #2b2b2b;
   /* color: #848484; */
-  color:#fff;
+  color: #fff;
   width: 100%;
   height: 100%;
   font-size: 22px;
@@ -603,8 +639,8 @@ footer span, footer a{
   padding-top: 17px;
 }
 
-input~.border,
-textarea~.border {
+input ~ .border,
+textarea ~ .border {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -614,8 +650,8 @@ textarea~.border {
   background-color: #ffa838;
 }
 
-input:focus~.border,
-textarea:focus~.border {
+input:focus ~ .border,
+textarea:focus ~ .border {
   width: 110%;
   transition: 0.4s;
 }
@@ -798,6 +834,7 @@ textarea:focus~.border {
   transform: translate(-50%, -50%);
 }
 
+/* Iphone 5 */
 @media (min-width: 325px) {
   .home .text-main {
     padding-top: 65%;
@@ -810,6 +847,13 @@ textarea:focus~.border {
   .text-main h3 {
     font-size: 2.2rem;
   }
+
+  .cookie_popup span {
+    padding-left: 15px;
+    font-size: 1.35rem;
+    margin: 9px 0;
+    width: 75%;
+  }
 }
 
 /* @media (min-width:480px) { smartphones, Android phones, landscape iPhone } */
@@ -818,12 +862,12 @@ textarea:focus~.border {
 
 @media (min-width: 600px) and (min-height: 420px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
-  .body{
-    height:400%;
+  .body {
+    height: 400%;
   }
 
-  .footer{
-    top:250px;
+  .footer {
+    top: 250px;
   }
 
   .sidebar {
@@ -831,13 +875,13 @@ textarea:focus~.border {
     width: 100%;
     max-height: initial;
     height: 60px;
-    background-color:rgba(29, 29, 29, 0);
-    border-bottom:none;
+    background-color: rgba(29, 29, 29, 0);
+    border-bottom: none;
     transition: all 500ms;
   }
 
-  .active_sidebar{
-    height:65px;
+  .active_sidebar {
+    height: 65px;
     background-color: #141414;
     border-bottom: 1px solid #ffa838;
   }
@@ -850,7 +894,7 @@ textarea:focus~.border {
     display: none;
   }
 
-  .sidebar .lang_icon{
+  .sidebar .lang_icon {
     left: -23px;
     top: -11px;
     position: absolute;
@@ -909,7 +953,7 @@ textarea:focus~.border {
 
   .sidebar .language_dropdown {
     opacity: 1;
-    bottom:initial;
+    bottom: initial;
     position: fixed;
     transition: 200ms ease-out;
   }
@@ -924,6 +968,7 @@ textarea:focus~.border {
     color: #fff;
     transition: 200ms ease-out;
     display: inline-block;
+    cursor: pointer;
   }
 
   .sidebar .language_dropdown .item {
@@ -934,18 +979,19 @@ textarea:focus~.border {
     font-size: 1.25rem;
     width: initial;
     border-radius: 4px;
-    border:1px solid #ffa838;
-    background-color:#1b1b1b;
+    border: 1px solid #ffa838;
+    background-color: #1b1b1b;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 5;
   }
 
-  .sidebar .language_dropdown .item a, .sidebar .language_dropdown .item span {
-    color:#fff;
+  .sidebar .language_dropdown .item a,
+  .sidebar .language_dropdown .item span {
+    color: #fff;
     padding: 5px;
   }
 
-  .language_dropdown:hover>.item {
+  .language_dropdown:hover > .item {
     opacity: 1;
     display: block;
   }
@@ -955,8 +1001,18 @@ textarea:focus~.border {
     margin-top: 14px;
   }
 
+  .cookie_popup {
+    width: 50%;
+    right: 0;
+    margin: 3%;
+  }
+
+  .cookie_popup span {
+    width: 80%;
+  }
+
   .content {
-    height:25%;
+    height: 25%;
   }
 
   .home .text-main {
@@ -981,7 +1037,6 @@ textarea:focus~.border {
     left: 0%;
     right: auto;
     width: 100%;
-    
   }
 
   .button:before {
@@ -996,7 +1051,6 @@ textarea:focus~.border {
     color: #000 !important;
     background: #ffa838;
     transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
-
   }
 
   .sidebar .menu .item .button {
@@ -1201,7 +1255,7 @@ textarea:focus~.border {
   }
 
   .active_sidebar:hover {
-    background-color:#1d1d1d !important;
+    background-color: #1d1d1d !important;
   }
 
   .selected {
@@ -1210,7 +1264,6 @@ textarea:focus~.border {
 }
 
 @media (min-width: 1025px) and (min-height: 570px) {
-
   /* big landscape tablets, laptops, and desktops */
   .content {
   }
@@ -1219,8 +1272,8 @@ textarea:focus~.border {
     height: 25%;
   }
 
-  .footer{
-    top:150px;
+  .footer {
+    top: 150px;
   }
 
   .home .text-main {
@@ -1232,29 +1285,32 @@ textarea:focus~.border {
     margin-left: 14.5%;
   }
 
+  .cookie_popup {
+    width: 35%;
+  }
+
   .about .text-secondary {
     font-size: 1.5rem;
     margin-left: 13%;
     max-width: 790px;
   }
 
-  .sidebar .menu .item .button{
-    font-size:1.3rem;
+  .sidebar .menu .item .button {
+    font-size: 1.3rem;
     padding: 12px 15px;
     margin: 0 5px;
   }
 
-  .sidebar .language_container{
-    top:23px;
+  .sidebar .language_container {
+    top: 23px;
   }
 
-  .sidebar .language_dropdown .lang_text{
+  .sidebar .language_dropdown .lang_text {
     font-size: 1.3rem;
   }
 }
 
 @media (min-width: 1200px) and (min-height: 740px) {
-
   /* hi-res laptops and desktops */
   .text-main h1,
   .text-main h2,
@@ -1264,7 +1320,10 @@ textarea:focus~.border {
 
   .A_letter {
     font-size: 5rem;
+  }
 
+  .cookie_popup {
+    width: 30%;
   }
 
   .home .text-main {
@@ -1302,4 +1361,3 @@ textarea:focus~.border {
     font-size: 1.3rem;
   }
 }
-
