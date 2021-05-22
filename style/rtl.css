@@ -38,6 +38,22 @@ button {
   right: 30%;
 }
 
+.cookie_popup {
+  left: 0;
+  right: initial;
+}
+
+.cookie_popup span {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.cookie_popup .cookie_btn {
+  left: 0;
+  right: initial;
+}
+
 .about .text-secondary {
   font-size: 1.3rem;
 }
@@ -80,7 +96,6 @@ button {
 }
 
 @media (min-width: 600px) and (min-height: 420px) {
-
   .text-main h1,
   .text-main h2,
   .text-main h3 {
@@ -111,13 +126,13 @@ button {
     left: 25px;
   }
 
-  .sidebar .language_dropdown{
-    left:59px;
+  .sidebar .language_dropdown {
+    left: 59px;
   }
 
   .sidebar .menu {
-    right:140px;
-    left:initial;
+    right: 140px;
+    left: initial;
     /* left: 140px; */
   }
 
@@ -180,7 +195,7 @@ button {
     margin-right: 11.5%;
   }
 
-  .sidebar .lang_icon{
+  .sidebar .lang_icon {
     right: -1px;
   }
 }
