@@ -1145,7 +1145,7 @@ textarea:focus ~ .border {
     .swiper-pagination .swiper-pagination-bullet {
         width: 15px;
         height: 15px;
-        margin: 0 10px !important;
+        margin: 0 9px !important;
         margin-bottom: 20px !important;
     }
 
